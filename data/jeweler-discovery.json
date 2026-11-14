@@ -1,0 +1,3803 @@
+[
+  {
+    "recipe_id": 13,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 14,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 15,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 17,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 18,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 21,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 1714,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3380,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3381,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3382,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3383,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3384,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3385,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3386,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3387,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3388,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3389,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3390,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3391,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3392,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3393,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3394,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3395,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3396,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3397,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3398,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3399,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3400,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3401,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3402,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3403,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3404,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3405,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3406,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3407,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3408,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3409,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3410,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3411,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3412,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3413,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3414,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3415,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3416,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3417,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3418,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3419,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3420,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3421,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3422,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3423,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3424,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3425,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3426,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3427,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3428,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3429,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3430,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3431,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3432,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3433,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3434,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3435,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3436,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3437,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3438,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3439,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3440,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3441,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3442,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3443,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3444,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3445,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3446,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3447,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3448,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3449,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3450,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3451,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3452,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3453,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3454,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3455,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3456,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3457,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3458,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3459,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3460,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3461,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3462,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3463,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3464,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3465,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3466,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3467,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3469,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3470,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3471,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3472,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3473,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3474,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3475,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3476,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3477,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3478,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3479,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3480,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3481,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3482,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3483,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3484,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3485,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3486,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3487,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3488,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3489,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3490,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3491,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3492,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3493,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3494,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3495,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3496,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3497,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3498,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3499,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3500,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3501,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3502,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3503,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3504,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3505,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3506,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3507,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3508,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3509,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3510,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3511,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3512,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3513,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3514,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3515,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3516,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3517,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3518,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3519,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3520,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3521,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3522,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3523,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3524,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3525,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3526,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3527,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3528,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3529,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3530,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3531,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3532,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3533,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3534,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3535,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3536,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3537,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3538,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3539,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3540,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3541,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3542,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3543,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3544,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3545,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3546,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3547,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3548,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3549,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3550,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3551,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3552,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3553,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3554,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3555,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3556,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3557,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3558,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3559,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3560,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3561,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3562,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3563,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3564,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3565,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3566,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3567,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3568,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3569,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3570,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3571,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3572,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3573,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3574,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3575,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3576,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3577,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3578,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3579,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3580,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3581,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3582,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3583,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3584,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3585,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3586,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3587,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3588,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3589,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3590,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3591,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3592,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3593,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3594,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3595,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3596,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3597,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3598,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3599,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3600,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3601,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3602,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3603,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3604,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3605,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3606,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3607,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3608,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3609,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3610,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3611,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3612,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3613,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3614,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3615,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3616,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3617,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3618,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3619,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3620,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3621,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3622,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3623,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3624,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3625,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3626,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3627,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3628,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3629,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3630,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3631,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3632,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3633,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3634,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3635,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3636,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3637,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3638,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3639,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3640,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3641,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3642,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3643,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3644,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3645,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3646,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3647,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3648,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3649,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3650,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3651,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3652,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3653,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3654,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3655,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3656,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3657,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3658,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3659,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3660,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3661,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3662,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3663,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3664,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3665,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3666,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3667,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3668,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3669,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3670,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3671,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3672,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3673,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3674,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3675,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3676,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3677,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3678,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3679,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3680,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3681,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3682,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3683,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3684,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3685,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3686,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3687,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3688,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3689,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3690,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3691,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3692,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3693,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3694,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3695,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3696,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3697,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3698,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3699,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3700,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3701,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3702,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3703,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3704,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3705,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3706,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3707,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3708,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3709,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3710,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3711,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3712,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3713,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3714,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3715,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3716,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3717,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3718,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3719,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3720,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3721,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3722,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3723,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3724,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3725,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3726,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3727,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3728,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3729,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 3730,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3731,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3732,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3733,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3734,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3735,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3736,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3737,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3738,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3739,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3740,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3741,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3742,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3743,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3744,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3745,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3746,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3747,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3748,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3749,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3750,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3751,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3752,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3753,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3754,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3755,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3756,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3757,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3758,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3759,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3760,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3761,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3762,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3763,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3764,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3765,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3766,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3767,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3768,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3769,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3770,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3771,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3772,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3773,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3774,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3775,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3776,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3777,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3778,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3779,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3780,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3781,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3782,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3783,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3784,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3785,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3786,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3787,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3788,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3789,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3790,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3791,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3792,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3793,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3794,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3795,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3796,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3797,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3798,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3799,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3800,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3801,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3802,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3803,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3804,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3805,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3806,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 3807,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3808,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3809,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3810,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3811,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3812,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3813,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3814,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3815,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3816,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3817,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3818,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3819,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3820,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3821,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3822,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3823,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3824,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3825,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3826,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3827,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3828,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3829,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3830,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3831,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3832,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3833,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 3834,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6483,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6484,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6485,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6510,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6511,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6512,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6513,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6514,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6515,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6516,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6517,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6518,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6519,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6520,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6521,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6522,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6523,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6524,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6525,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6526,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6527,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6528,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 6622,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6623,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6624,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6625,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6626,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6627,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6628,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6629,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6630,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6631,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6632,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6633,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6634,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6635,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6636,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6733,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6734,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6735,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6736,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6737,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6738,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6739,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6740,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6741,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6742,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6743,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6744,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6751,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6752,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6753,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6754,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6755,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6756,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6757,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6758,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6759,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6760,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6761,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 6762,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7036,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7037,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7038,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7134,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7135,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7136,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7137,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7138,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7139,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7140,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7141,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7142,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7143,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7144,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7145,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 7278,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 7279,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 7280,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 7281,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 7310,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 8391,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 8432,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 8433,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 8434,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 8435,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9274,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9275,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9276,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9277,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9278,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9280,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9281,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9282,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9283,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9284,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9285,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9286,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9664,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9722,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9723,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9724,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9725,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9793,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9814,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 9854,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9855,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9856,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9857,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9927,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9930,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 9953,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 10174,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10214,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10224,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10256,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10291,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 10297,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10325,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10331,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 10338,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10370,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 10466,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10497,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10576,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10662,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10743,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 10749,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 10768,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10780,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10819,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10835,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10880,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10908,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10930,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 10992,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 11139,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 11218,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 11285,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 11315,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 11444,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 11481,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 11607,
+    "unlock_category": "discovery_candidate",
+    "flags": []
+  },
+  {
+    "recipe_id": 11628,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 11701,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 11885,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12053,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 12142,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12151,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12183,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12210,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12228,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12259,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12277,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12279,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12458,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12459,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12460,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 12461,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13006,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 13046,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13050,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13066,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13385,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13389,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13514,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13516,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13523,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13524,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13528,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13553,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13559,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13577,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13578,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13596,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13616,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13630,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13641,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13648,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13686,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13702,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13716,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13734,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13738,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13741,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13746,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13796,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13823,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13827,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13858,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 13925,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 14035,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  },
+  {
+    "recipe_id": 14805,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 14846,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 15047,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 15120,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 15131,
+    "unlock_category": "automatic",
+    "flags": [
+      "AutoLearned"
+    ]
+  },
+  {
+    "recipe_id": 15419,
+    "unlock_category": "recipe_sheet",
+    "flags": [
+      "LearnedFromItem"
+    ]
+  }
+]

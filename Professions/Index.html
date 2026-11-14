@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crafting | Mrs.Chairmode</title>
+  <style>
+:root { --bg:#101827; --card:#1f2937; --card-hover:#293548; --gold:#e8b86d; --text:#f9fafb; --muted:#a5adbb; --track:#374151; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; background:var(--bg); color:var(--text); font-family:"Segoe UI",Arial,sans-serif; }
+.container { max-width:1050px; margin:auto; padding:45px 24px; }
+.back { display:inline-block; margin-bottom:35px; color:var(--muted); text-decoration:none; font-size:14px; transition:color .2s; }
+.back:hover { color:var(--gold); }
+.eyebrow { color:var(--gold); font-size:12px; letter-spacing:2px; font-weight:600; }
+h1 { font-size:38px; margin:12px 0; }
+.description { color:var(--muted); font-size:14px; margin-bottom:35px; }
+.overview { background:var(--card); border:1px solid #344052; border-radius:20px; padding:26px; margin-bottom:35px; }
+.overview-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; }
+.overview-title { font-weight:600; }
+.overview-value { color:var(--gold); font-size:24px; font-weight:700; }
+.progress-track { background:var(--track); height:9px; border-radius:99px; overflow:hidden; }
+.progress-fill { background:var(--gold); height:100%; width:0%; border-radius:99px; transition:width .4s ease; }
+.grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.profession { display:block; background:var(--card); border:1px solid #344052; border-radius:20px; padding:25px; color:inherit; text-decoration:none; transition:background .2s,border-color .2s,transform .2s; }
+.profession:hover { background:var(--card-hover); border-color:var(--gold); transform:translateY(-4px); }
+.profession:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+.profession-icon { display:flex; align-items:center; justify-content:center; width:48px; height:48px; background:#303a4b; color:var(--gold); border-radius:14px; font-size:25px; margin-bottom:18px; }
+.profession h2 { margin:0 0 8px; font-size:19px; }
+.profession p { margin:0; color:var(--muted); font-size:13px; }
+.status { margin-top:25px; color:var(--muted); font-size:12px; }
+footer { margin-top:55px; text-align:center; color:var(--muted); font-size:12px; }
+@media (max-width:650px) { .container { padding:25px 16px; } .grid { grid-template-columns:1fr; } h1 { font-size:30px; } }
+  
+/* Individual mastery and overall legendary state */
+.profession.mastered { border:2px solid #e8b86d; padding:24px; background:linear-gradient(135deg,#302b36,#252b39 70%); box-shadow:0 0 0 1px #e8b86d33,0 0 25px #e8b86d22; }
+.profession.mastered:hover { box-shadow:0 0 30px #e8b86d66; }
+.profession.mastered .profession-icon { background:#4b3a28; }
+.profession.mastered .status { color:#f2d28d; font-weight:700; }
+.profession .card-progress { margin-top:13px; height:5px; border-radius:30px; background:#374151; overflow:hidden; }
+.profession .card-progress-fill { height:100%; background:#b69cff; width:0%; transition:width .35s; }
+.profession.mastered .card-progress-fill { background:#e8b86d; }
+body.legendary { background:radial-gradient(ellipse at 50% 0%,#49391e 0%,#101827 65%); }
+body.legendary .overview { border:2px solid #f1cb75; background:linear-gradient(120deg,#423321,#252733); box-shadow:0 0 32px #e8b86d44; }
+body.legendary .overview-value { color:#ffe4a0; text-shadow:0 0 12px #e8b86d; }
+.legendary-banner { display:none; text-align:center; margin:0 0 28px; padding:22px; border:2px solid #e8b86d; border-radius:20px; color:#ffe2a1; background:linear-gradient(125deg,#49351f,#252838,#49351f); box-shadow:0 0 35px #e8b86d44; }
+body.legendary .legendary-banner { display:block; }
+.legendary-banner strong { display:block; font-size:clamp(22px,4vw,34px); letter-spacing:2px; }
+.legendary-banner span { display:block; font-size:12px; letter-spacing:2px; margin-top:8px; }
+.confetti-layer { pointer-events:none; position:fixed; inset:0; overflow:hidden; z-index:100; }
+.confetti-piece { position:absolute; top:-30px; width:9px; height:15px; opacity:0; animation:confetti-fall 3.5s ease-in forwards; }
+@keyframes confetti-fall { 0%{transform:translate3d(0,-20px,0) rotate(0);opacity:1} 100%{transform:translate3d(var(--drift),110vh,0) rotate(950deg);opacity:0} }
+@media(prefers-reduced-motion:reduce) { .confetti-piece {animation:none} }
+</style>
+</head>
+<body>
+  <main class="container">
+    <a class="back" href="../index.html">← Back to Dashboard</a>
+    <div class="eyebrow">MRS.CHAIRMODE ♥ COMPLETION TRACKER</div>
+    <h1>⚒ Crafting</h1>
+    <p class="description">Master every discipline. Discover every recipe.</p>
+    <div class="legendary-banner" role="status"><strong>👑 LEGENDARY CRAFTER 👑</strong><span>✦ EVERY DISCIPLINE MASTERED ✦</span></div>
+    <section class="overview" aria-label="Crafting completion">
+      <div class="overview-top">
+        <span class="overview-title">Crafting Completion</span>
+        <span class="overview-value">0%</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Crafting completion" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-fill"></div>
+      </div>
+    </section>
+    <div class="grid">
+      <a class="profession" href="armorsmith.html">
+        <div class="profession-icon">🛡</div>
+        <h2>Armorsmith</h2>
+        <p>Heavy armor crafting</p>
+        <div class="status">Not started</div>
+      </a>
+      <a class="profession" href="artificer.html">
+        <div class="profession-icon">✦</div>
+        <h2>Artificer</h2>
+        <p>Magical weapons and equipment</p>
+        <div class="status">Not started</div>
+      </a>
+      <a class="profession" href="chef.html">
+        <div class="profession-icon">🍳</div>
+        <h2>Chef</h2>
+        <p>Cooking, recipes and ingredients</p>
+        <div class="status">Tracker available</div>
+      </a>
+      <a class="profession" href="huntsman.html">
+        <div class="profession-icon">🏹</div>
+        <h2>Huntsman</h2>
+        <p>Ranged weapons and equipment</p>
+        <div class="status">Not started</div>
+      </a>
+      <a class="profession" href="jeweler.html">
+        <div class="profession-icon">💎</div>
+        <h2>Jeweler</h2>
+        <p>Jewelry and accessories</p>
+        <div class="status">Not started</div>
+      </a>
+      <a class="profession" href="leatherworker.html">
+        <div class="profession-icon">🧵</div>
+        <h2>Leatherworker</h2>
+        <p>Medium armor crafting</p>
+        <div class="status">Not started</div>
+      </a>
+      <a class="profession" href="scribe.html">
+        <div class="profession-icon">📜</div>
+        <h2>Scribe</h2>
+        <p>Guild decorations and items</p>
+        <div class="status">Not started</div>
+      </a>
+      <a class="profession" href="tailor.html">
+        <div class="profession-icon">🪡</div>
+        <h2>Tailor</h2>
+        <p>Light armor crafting</p>
+        <div class="status">Not started</div>
+      </a>
+      <a class="profession" href="weaponsmith.html">
+        <div class="profession-icon">⚔</div>
+        <h2>Weaponsmith</h2>
+        <p>Melee weapons and equipment</p>
+        <div class="status">Not started</div>
+      </a>
+      <a class="profession" href="handiworker.html">
+        <div class="profession-icon">🔧</div>
+        <h2>Handiworker</h2>
+        <p>Homestead crafting</p>
+        <div class="status">Not started</div>
+      </a>
+    </div>
+    <footer>Made with ♥ for Mrs.Chairmode</footer>
+  </main>
+  <script>
+    // Shared progress contract for future profession pages:
+    // localStorage.setItem("chairmode-<profession>-completion-v1", JSON.stringify({percent: 75, complete: false}));
+    // Use the actual profession slug (armorsmith, artificer, etc.).
+    const professionCards = [...document.querySelectorAll(".profession")];
+    const ids = professionCards.map(card => card.getAttribute("href").replace(".html", ""));
+    const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+    let initialized = false;
+    let wasLegendary = false;
+    let refreshToken = 0;
+    const readJSON = key => { try { return JSON.parse(localStorage.getItem(key) || "null"); } catch { return null; } };
+    function confetti() {
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const layer = document.createElement("div"); layer.className = "confetti-layer";
+      const colors = ["#e8b86d", "#ffe9a9", "#b69cff", "#ffffff"];
+      for (let i = 0; i < 85; i++) {
+        const piece = document.createElement("span"); piece.className = "confetti-piece";
+        piece.style.left = Math.random()*100 + "%";
+        piece.style.background = colors[i % colors.length];
+        piece.style.setProperty("--drift", (Math.random()*300-150) + "px");
+        piece.style.animationDelay = (Math.random()*.8) + "s";
+        layer.append(piece);
+      }
+      document.body.append(layer);
+      setTimeout(() => layer.remove(), 4600);
+    }
+    async function chefProgress() {
+      // Same Chef formula: 50% level + 50% known recipes, automatic recipes included.
+      // Recipe totals come from the actual JSON, not guessed counts.
+      try {
+        const [recipesResponse, discoveryResponse] = await Promise.all([
+          fetch("../data/chef-recipes-complete.json", {cache:"no-store"}),
+          fetch("../data/chef-discovery.json", {cache:"no-store"})
+        ]);
+        if (!recipesResponse.ok || !discoveryResponse.ok) throw Error("Chef data unavailable");
+        const rawRecipes = await recipesResponse.json();
+        const rawDiscovery = await discoveryResponse.json();
+        const recipes = Array.isArray(rawRecipes) ? rawRecipes : rawRecipes.recipes;
+        const discovery = Array.isArray(rawDiscovery) ? rawDiscovery : rawDiscovery.recipes;
+        if (!Array.isArray(recipes) || !recipes.length || !Array.isArray(discovery)) throw Error("Invalid Chef data");
+        const categories = new Map(discovery.map(r => [r.recipe_id, r.unlock_category]));
+        if (recipes.some(r => !categories.has(r.id))) throw Error("Incomplete Chef classification");
+        const unlockedRaw = readJSON("chairmode-chef-unlocked-ids-v1");
+        const unlocked = new Set(Array.isArray(unlockedRaw) ? unlockedRaw : []);
+        const known = recipes.filter(r => unlocked.has(r.id) || categories.get(r.id) === "automatic").length;
+        const level = Math.max(0, Math.min(500, Number(localStorage.getItem("chairmode-chef-level-v1")) || 0));
+        const percent = (level / 500 + known / recipes.length) * 50;
+        return {percent, complete:level===500 && known===recipes.length};
+      } catch (e) { return null; }
+    }
+    async function refresh() {
+      const token = ++refreshToken;
+      const chef = await chefProgress();
+      if (token !== refreshToken) return;
+      let total = 0, completeCount = 0;
+      professionCards.forEach((card, i) => {
+        const id = ids[i];
+        const progress = id === "chef" ? chef : readJSON(`chairmode-${id}-completion-v1`);
+        const valid = progress && typeof progress.percent === "number" && Number.isFinite(progress.percent);
+        const pct = valid ? clamp(progress.percent) : 0;
+        const done = valid && pct === 100 && progress.complete === true;
+        total += pct; if (done) completeCount++;
+        card.classList.toggle("mastered", done);
+        const status = card.querySelector(".status");
+        status.textContent = done ? "👑 MASTERED · 100%" : valid ? `${pct.toFixed(1).replace(/\.0$/, "")}% completed` : id === "chef" ? "Tracker available · open to view" : "Not started";
+        let track = card.querySelector(".card-progress");
+        if (!track) { track = document.createElement("div"); track.className="card-progress"; track.innerHTML='<div class="card-progress-fill"></div>'; card.append(track); }
+        track.querySelector(".card-progress-fill").style.width = pct + "%";
+      });
+      const percent = total / ids.length;
+      document.querySelector(".overview-value").textContent = percent.toFixed(1).replace(/\.0$/, "") + "%";
+      document.querySelector(".overview .progress-fill").style.width = percent + "%";
+      document.querySelector(".overview .progress-track").setAttribute("aria-valuenow", percent.toFixed(1));
+      const legendary = completeCount === ids.length;
+      document.body.classList.toggle("legendary", legendary);
+      if (initialized && legendary && !wasLegendary) confetti();
+      wasLegendary = legendary; initialized = true;
+    }
+    window.addEventListener("focus", refresh);
+    window.addEventListener("pageshow", refresh);
+    window.addEventListener("storage", refresh);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(); });
+    refresh();
+  </script>
+</body>
+</html>

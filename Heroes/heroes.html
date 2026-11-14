@@ -1,0 +1,122 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My Heroes | Mrs.Chairmode</title><style>
+:root{--bg:#101827;--card:#1f2937;--border:#344052;--gold:#e8b86d;--text:#f9fafb;--muted:#a5adbb;--purple:#b69cff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif}.wrap{max-width:1250px;margin:auto;padding:42px 24px}.back{color:var(--muted);text-decoration:none}.back:hover,a:hover{color:var(--gold)}.eyebrow{color:var(--gold);letter-spacing:2px;font-size:12px;margin-top:32px}h1{font-size:38px;margin:12px 0}h2{font-size:21px;margin:0 0 14px}.muted{color:var(--muted)}.panel,.hero{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px}.panel{margin:20px 0}.hero-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.hero{display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;color:inherit;text-decoration:none;transition:.2s}.hero:hover{border-color:var(--gold);transform:translateY(-2px)}.portrait{width:130px;height:185px;border-radius:12px;object-fit:cover;background:#111827;border:1px solid var(--border)}.portrait-column{width:130px;display:flex;flex-direction:column;gap:8px}.portrait-change{width:100%;padding:6px 5px;background:transparent;border:1px solid #465165;border-radius:8px;color:var(--muted);font-size:11px;cursor:pointer;transition:.2s}.portrait-change:hover{color:var(--gold);border-color:var(--gold)}.portrait-change:focus-visible{outline:2px solid var(--gold);outline-offset:2px}.placeholder{display:grid;place-items:center;color:var(--gold);font-size:48px}.name{font-size:22px;font-family:Georgia,serif;color:var(--gold);margin:0 0 8px}.meta{font-size:13px;color:#c4b5fd;line-height:1.6}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.chip{background:#303746;border:1px solid #475569;border-radius:9px;padding:5px 8px;font-size:12px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:13px 0}.stat small{display:block;color:var(--muted);margin-bottom:4px}.bar{height:9px;background:#374151;border-radius:20px;overflow:hidden;margin:7px 0}.fill{height:100%;background:var(--gold)}.section-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.list{display:grid;gap:8px}.entry{display:flex;align-items:center;gap:12px;background:#252f3d;border:1px solid var(--border);border-radius:10px;padding:10px}.entry img{width:42px;height:42px;object-fit:contain}.button{background:var(--purple);color:#171326;border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}input{background:#101827;color:white;border:1px solid var(--border);padding:12px;border-radius:9px;width:min(100%,540px)}.notice{font-size:13px;color:var(--muted);line-height:1.6}.error{color:#ff9ca7}.wide{grid-column:1/-1}footer{text-align:center;color:var(--muted);font-size:12px;margin:55px 0 10px}@media(max-width:850px){.hero-grid,.section-grid{grid-template-columns:1fr}}@media(max-width:520px){.wrap{padding:25px 15px}.hero{grid-template-columns:90px 1fr;gap:12px;padding:12px}.portrait{width:90px;height:135px}.portrait-column{width:90px}.portrait-change{font-size:10px}.name{font-size:18px}.stats{grid-template-columns:1fr}h1{font-size:30px}}
+
+.hero-cc{margin-top:11px;max-width:360px}.hero-cc-head{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:11px;color:#b9b5c9}.hero-cc-head strong{font-size:13px;color:#f4d39a}.hero-cc-track{height:9px;background:#111827;border:1px solid #46516a;border-radius:20px;overflow:hidden;margin-top:6px}.hero-cc-fill{height:100%;width:0;background:linear-gradient(90deg,#b69cff,#e8b86d);transition:width .3s}.hero-cc.perfect .hero-cc-head strong{color:#ffe6aa;text-shadow:0 0 10px #e8b86d}.hero-cc.perfect .hero-cc-track{border-color:#e8b86d;box-shadow:0 0 12px #e8b86d88}.hero-cc.perfect .hero-cc-fill{background:linear-gradient(90deg,#b69cff,#ffe4a6,#e8b86d)}
+</style></head><body><main class="wrap"><a class="back" href="../index.html">← Back to Tracker</a><div class="eyebrow">MRS.CHAIRMODE ♥ COMPLETION TRACKER</div><h1>⚔ My Heroes</h1><p class="muted">Your characters across Tyria</p><section class="panel" id="setup"><h2>GW2 API Connection</h2><p class="notice">Enter a GW2 API key with <b>characters</b>, <b>builds</b>, <b>inventories</b> and <b>progression</b> permissions. Stored only in this browser's localStorage; do not publish a key in your HTML files.</p><input type="password" id="key" placeholder="Paste your GW2 API key"><button class="button" id="save">Save & Load Heroes</button><button class="button" id="clear" style="background:#374151;color:white">Remove Key</button><p class="notice" id="status" role="status"></p></section><div class="hero-grid" id="heroes"></div><script>
+const MAP_GROUPS=[{"title":"Core Tyria","maps":[{"name":"Plains of Ashford","section":"Explorable maps","id":"plains-of-ashford"},{"name":"Queensdale","section":"Explorable maps","id":"queensdale"},{"name":"Caledon Forest","section":"Explorable maps","id":"caledon-forest"},{"name":"Metrica Province","section":"Explorable maps","id":"metrica-province"},{"name":"Wayfarer Foothills","section":"Explorable maps","id":"wayfarer-foothills"},{"name":"Diessa Plateau","section":"Explorable maps","id":"diessa-plateau"},{"name":"Kessex Hills","section":"Explorable maps","id":"kessex-hills"},{"name":"Brisban Wildlands","section":"Explorable maps","id":"brisban-wildlands"},{"name":"Snowden Drifts","section":"Explorable maps","id":"snowden-drifts"},{"name":"Gendarran Fields","section":"Explorable maps","id":"gendarran-fields"},{"name":"Lornar’s Pass","section":"Explorable maps","id":"lornar-s-pass"},{"name":"Fields of Ruin","section":"Explorable maps","id":"fields-of-ruin"},{"name":"Harathi Hinterlands","section":"Explorable maps","id":"harathi-hinterlands"},{"name":"Blazeridge Steppes","section":"Explorable maps","id":"blazeridge-steppes"},{"name":"Dredgehaunt Cliffs","section":"Explorable maps","id":"dredgehaunt-cliffs"},{"name":"Bloodtide Coast","section":"Explorable maps","id":"bloodtide-coast"},{"name":"Iron Marches","section":"Explorable maps","id":"iron-marches"},{"name":"Timberline Falls","section":"Explorable maps","id":"timberline-falls"},{"name":"Sparkfly Fen","section":"Explorable maps","id":"sparkfly-fen"},{"name":"Fireheart Rise","section":"Explorable maps","id":"fireheart-rise"},{"name":"Mount Maelstrom","section":"Explorable maps","id":"mount-maelstrom"},{"name":"Straits of Devastation","section":"Explorable maps","id":"straits-of-devastation"},{"name":"Frostgorge Sound","section":"Explorable maps","id":"frostgorge-sound"},{"name":"Malchor’s Leap","section":"Explorable maps","id":"malchor-s-leap"},{"name":"Cursed Shore","section":"Explorable maps","id":"cursed-shore"},{"name":"Black Citadel","section":"Cities","id":"black-citadel"},{"name":"Divinity’s Reach","section":"Cities","id":"divinity-s-reach"},{"name":"Hoelbrak","section":"Cities","id":"hoelbrak"},{"name":"Rata Sum","section":"Cities","id":"rata-sum"},{"name":"The Grove","section":"Cities","id":"the-grove"},{"name":"Lion’s Arch","section":"Cities","id":"lion-s-arch"},{"name":"Southsun Cove","section":"Additional maps","id":"southsun-cove"},{"name":"Dry Top","section":"Additional maps","id":"dry-top"},{"name":"The Silverwastes","section":"Additional maps","id":"the-silverwastes"},{"name":"Chantry of Secrets","section":"Special completion","id":"chantry-of-secrets"}]},{"title":"Heart of Thorns","maps":[{"name":"Verdant Brink","section":"Maps","id":"verdant-brink"},{"name":"Auric Basin","section":"Maps","id":"auric-basin"},{"name":"Tangled Depths","section":"Maps","id":"tangled-depths"},{"name":"Dragon’s Stand","section":"Maps","id":"dragon-s-stand"}]},{"title":"Path of Fire","maps":[{"name":"Crystal Oasis","section":"Maps","id":"crystal-oasis"},{"name":"Desert Highlands","section":"Maps","id":"desert-highlands"},{"name":"Elon Riverlands","section":"Maps","id":"elon-riverlands"},{"name":"The Desolation","section":"Maps","id":"the-desolation"},{"name":"Domain of Vabbi","section":"Maps","id":"domain-of-vabbi"}]},{"title":"End of Dragons","maps":[{"name":"Seitung Province","section":"Maps","id":"seitung-province"},{"name":"New Kaineng City","section":"Maps","id":"new-kaineng-city"},{"name":"The Echovald Wilds","section":"Maps","id":"the-echovald-wilds"},{"name":"Dragon’s End","section":"Maps","id":"dragon-s-end"},{"name":"Gyala Delve","section":"Maps","id":"gyala-delve"}]},{"title":"Secrets of the Obscure","maps":[{"name":"Skywatch Archipelago","section":"Maps","id":"skywatch-archipelago"},{"name":"Amnytas","section":"Maps","id":"amnytas"},{"name":"Inner Nayos","section":"Maps","id":"inner-nayos"},{"name":"The Wizard’s Tower","section":"Hub","id":"the-wizard-s-tower"}]},{"title":"Janthir Wilds","maps":[{"name":"Lowland Shore","section":"Maps","id":"lowland-shore"},{"name":"Janthir Syntri","section":"Maps","id":"janthir-syntri"},{"name":"Mistburned Barrens","section":"Maps","id":"mistburned-barrens"},{"name":"Bava Nisos","section":"Maps","id":"bava-nisos"}]},{"title":"Visions of Eternity","maps":[{"name":"Shipwreck Strand","section":"Maps","id":"shipwreck-strand"},{"name":"Starlit Weald","section":"Maps","id":"starlit-weald"},{"name":"Eternity’s Garden","section":"Maps","id":"eternity-s-garden"},{"name":"Leyspring Hollows","section":"Maps","id":"leyspring-hollows"}]}];
+
+// Character Completion: equal weight for Maps, Crafting Professions and Story.
+const CC_MAP_KEY='chairmode-gw2-map-completion-v1';
+const CC_CRAFT_KEY='chairmode-gw2-crafting-levels-v1';
+const CC_STORY_KEY='chairmode-gw2-story-manual-v1';
+const CC_CRAFTS=[['Armorsmith',500],['Artificer',500],['Chef',500],['Huntsman',500],['Jeweler',400],['Leatherworker',500],['Scribe',400],['Tailor',500],['Weaponsmith',500]];
+function ccRead(key){try{return JSON.parse(localStorage.getItem(key)||'{}')||{}}catch{return {}}}
+function ccStats(character,groups){
+ const maps=ccRead(CC_MAP_KEY)[character]||[];
+ const mapSet=new Set(Array.isArray(maps)?maps:[]);
+ const mapTotal=MAP_GROUPS.reduce((sum,g)=>sum+g.maps.length,0);
+ const mapDone=MAP_GROUPS.reduce((sum,g)=>sum+g.maps.filter(m=>mapSet.has(g.title+'|'+m.id)).length,0);
+ const levels=ccRead(CC_CRAFT_KEY)[character]||{};
+ const craftTotal=CC_CRAFTS.reduce((sum,[,max])=>sum+max,0);
+ const craftDone=CC_CRAFTS.reduce((sum,[title,max])=>sum+Math.max(0,Math.min(max,Math.floor(Number(levels[title])||0))),0);
+ const story=ccRead(CC_STORY_KEY)[character]||{};
+ let storyTotal=0,storyDone=0;
+ for(const g of groups||[]){for(const ch of g.chapters||[]){storyTotal++;if(story[g.name+'|'+(ch.id||ch)])storyDone++}}
+ const mapRatio=mapTotal?mapDone/mapTotal:0;
+ const craftRatio=craftTotal?craftDone/craftTotal:0;
+ const storyRatio=storyTotal?storyDone/storyTotal:0;
+ const ratio=(mapRatio+craftRatio+storyRatio)/3;
+ return {pct:Math.round(ratio*100),perfect:mapDone===mapTotal&&craftDone===craftTotal&&storyTotal>0&&storyDone===storyTotal,map:Math.round(mapRatio*100),craft:Math.round(craftRatio*100),story:Math.round(storyRatio*100)};
+}
+
+const KEY='chairmode-gw2-heroes-key-v1';const IMAGE_KEY='chairmode-gw2-hero-images-v1';
+const $=id=>document.getElementById(id);
+function apiKey(){return localStorage.getItem(KEY)||''}
+async function gw(path,query={}){const url=new URL('https://api.guildwars2.com/v2/'+path);url.searchParams.set('access_token',apiKey());url.searchParams.set('lang','en');for(const [k,v] of Object.entries(query))url.searchParams.set(k,v);const r=await fetch(url);if(!r.ok){let t='';try{t=(await r.json()).text||''}catch{}throw new Error('GW2 API '+r.status+(t?': '+t:''))}return r.json()}
+function h(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function playtime(s){return Number.isFinite(s)?Math.floor(s/3600).toLocaleString('en-US')+' h':'—'}
+function age(s){if(!s)return '—';const d=new Date(s);if(Number.isNaN(d.getTime()))return '—';const years=Math.floor((Date.now()-d.getTime())/86400000/365.2425);return years<1?Math.floor((Date.now()-d.getTime())/86400000)+' days':years+' years'}
+function portrait(name){try{return JSON.parse(localStorage.getItem(IMAGE_KEY)||'{}')[name]||null}catch{return null}}
+function setPortrait(name,data){let x={};try{x=JSON.parse(localStorage.getItem(IMAGE_KEY)||'{}')}catch{}x[name]=data;localStorage.setItem(IMAGE_KEY,JSON.stringify(x))}
+async function preparePortrait(file){
+ const url=URL.createObjectURL(file);
+ try{
+   const img=new Image();img.src=url;
+   await img.decode();
+   const scale=Math.min(1,650/img.naturalWidth,900/img.naturalHeight);
+   const canvas=document.createElement('canvas');
+   canvas.width=Math.max(1,Math.round(img.naturalWidth*scale));
+   canvas.height=Math.max(1,Math.round(img.naturalHeight*scale));
+   const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');
+   ctx.drawImage(img,0,0,canvas.width,canvas.height);
+   return canvas.toDataURL('image/jpeg',0.82);
+ }finally{URL.revokeObjectURL(url)}
+}
+function image(name){const p=portrait(name);return p?`<img class="portrait" src="${h(p)}" alt="Portrait of ${h(name)}">`:'<div class="portrait placeholder" aria-label="No portrait yet">♟</div>'}
+function craft(c){return (c.crafting||[]).filter(x=>x.active!==false).map(x=>x.discipline)}
+
+const CC_FALLBACK=[
+ {name:'Personal Story',chapters:[10,20,30,40,50,60,70,80].map(level=>({name:'Level '+level,id:'level-'+level}))},
+ {name:'Living World Season 1',chapters:['Flame and Frost','Sky Pirates','Clockwork Chaos','Tower of Nightmares','Battle for Lion’s Arch']},
+ {name:'Living World Season 2',chapters:['Gates of Maguuma','Entanglement','The Dragon’s Reach: Part 1','The Dragon’s Reach: Part 2','Echoes of the Past','Tangled Paths','Seeds of Truth','Point of No Return']}
+];
+async function ccCatalogue(){
+ try{
+  const [seasons,stories]=await Promise.all([fetch('https://api.guildwars2.com/v2/stories/seasons?ids=all&lang=en').then(r=>{if(!r.ok)throw Error('Seasons unavailable');return r.json()}),fetch('https://api.guildwars2.com/v2/stories?ids=all&lang=en').then(r=>{if(!r.ok)throw Error('Stories unavailable');return r.json()})]);
+  const bySeason=new Map();for(const season of seasons)bySeason.set(season.id,{name:season.name||'Story',id:season.id,order:season.order??0,chapters:[]});
+  for(const story of stories){const group=bySeason.get(story.season);if(!group)continue;const chapters=Array.isArray(story.chapters)&&story.chapters.length?story.chapters.map(x=>typeof x==='string'?x:x.name).filter(Boolean):[story.name];for(const chapter of chapters)group.chapters.push({name:chapter,id:String(story.id)+'|'+chapter,order:story.order??0})}
+  const groups=[...bySeason.values()].sort((a,b)=>a.order-b.order).map(g=>({name:g.name,chapters:g.chapters.sort((a,b)=>a.order-b.order).map(x=>({name:x.name,id:x.id}))})).filter(g=>g.chapters.length);
+  return [CC_FALLBACK[0],...groups.filter(g=>!/^(my story|personal story)$/i.test(g.name.trim()))];
+ }catch{return null}
+}
+function ccOverviewMarkup(character,groups){
+ if(!groups)return '<div class="hero-cc"><div class="hero-cc-head"><span>✦ Character Completion</span><strong>Story unavailable</strong></div></div>';
+ const s=ccStats(character,groups);
+ return `<div class="hero-cc ${s.perfect?'perfect':''}"><div class="hero-cc-head"><span>✦ Character Completion${s.perfect?' ✨':''}</span><strong>${s.pct}%</strong></div><div class="hero-cc-track" role="progressbar" aria-label="${h(character)} completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${s.pct}"><div class="hero-cc-fill" style="width:${s.pct}%"></div></div></div>`;
+}
+
+$('key').value=apiKey();$('save').onclick=()=>{const k=$('key').value.trim();if(!k)return;$('status').textContent='Loading…';localStorage.setItem(KEY,k);load()};$('clear').onclick=()=>{localStorage.removeItem(KEY);$('key').value='';$('heroes').replaceChildren();$('status').textContent='Key removed.'};
+async function load(){
+ if(!apiKey()){ $('status').textContent='Enter your API key to load characters.'; return; }
+ try {
+  $('status').textContent='Loading characters…';
+  const cataloguePromise=ccCatalogue();
+   const names=await gw('characters');
+   const ccGroups=await cataloguePromise;
+  const results=await Promise.allSettled(names.map(n=>gw('characters/'+encodeURIComponent(n))));
+  $('heroes').replaceChildren();
+  window.ccLatestGroups=ccGroups;
+   let loaded=0;
+  for(let i=0;i<names.length;i++){
+   if(results[i].status!=='fulfilled')continue;
+   const c=results[i].value;loaded++;
+   const a=document.createElement('div');a.className='hero';a.dataset.character=c.name;
+   const chips=craft(c).map(x=>'<span class="chip">'+h(x)+'</span>').join('')||'<span class="chip">No crafting disciplines</span>';
+   a.innerHTML=`<div class="portrait-column"><div class="portrait-slot">${image(c.name)}</div><button type="button" class="portrait-change">Change portrait</button><input class="portrait-file" type="file" accept="image/*" aria-label="Select portrait for ${h(c.name)}" hidden></div><div><div class="name">${h(c.name)}</div><div class="meta">${h(c.race)} · ${h(c.profession)} · Level ${h(c.level)}</div><div class="chips">${chips}</div><div class="stats"><div class="stat"><small>Playtime</small>${playtime(c.age)}</div><div class="stat"><small>Character age</small>${age(c.created)}</div></div><a class="meta" style="display:inline-block;margin-top:12px" href="hero-detail.html?name=${encodeURIComponent(c.name)}">View hero details →</a>${ccOverviewMarkup(c.name,ccGroups)}</div>`;
+   const button=a.querySelector('.portrait-change');
+   const fileInput=a.querySelector('.portrait-file');
+   button.addEventListener('click',()=>fileInput.click());
+   fileInput.addEventListener('change',async()=>{
+     const file=fileInput.files?.[0];
+     if(!file)return;
+     if(!file.type.startsWith('image/')){alert('Please select an image.');return;}
+     button.disabled=true;button.textContent='Saving…';
+     try{
+       const data=await preparePortrait(file);
+       setPortrait(c.name,data);
+       a.querySelector('.portrait-slot').innerHTML=image(c.name);
+       button.textContent='Change portrait';
+     }catch(e){alert('Could not save portrait: '+e.message);button.textContent='Change portrait';}
+     finally{button.disabled=false;fileInput.value='';}
+   });
+   $('heroes').append(a);
+  }
+  $('status').textContent=`${loaded} / ${names.length} characters loaded.`+(loaded<names.length?' Some characters could not be loaded.':'');
+  if(!names.length)$('heroes').innerHTML='<p class="muted">No characters found.</p>';
+ }catch(e){$('status').innerHTML='<span class="error">'+h(e.message)+'</span>'}
+}
+
+window.addEventListener('focus',()=>{if(window.ccLatestGroups){document.querySelectorAll('.hero').forEach(a=>{const n=a.dataset.character;if(n){const old=a.querySelector('.hero-cc');if(old)old.outerHTML=ccOverviewMarkup(n,window.ccLatestGroups)}})}});
+window.addEventListener('storage',()=>{if(window.ccLatestGroups){document.querySelectorAll('.hero').forEach(a=>{const n=a.dataset.character;if(n){const old=a.querySelector('.hero-cc');if(old)old.outerHTML=ccOverviewMarkup(n,window.ccLatestGroups)}})}});
+if(apiKey())load();
+</script><footer>Made with ♥ for Mrs.Chairmode</footer></main></body></html>

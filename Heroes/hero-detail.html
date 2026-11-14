@@ -1,0 +1,240 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hero Details | Mrs.Chairmode</title><style>
+:root{--bg:#101827;--card:#1f2937;--border:#344052;--gold:#e8b86d;--text:#f9fafb;--muted:#a5adbb;--purple:#b69cff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif}.wrap{max-width:1250px;margin:auto;padding:42px 24px}.back{color:var(--muted);text-decoration:none}.back:hover,a:hover{color:var(--gold)}.eyebrow{color:var(--gold);letter-spacing:2px;font-size:12px;margin-top:32px}h1{font-size:38px;margin:12px 0}h2{font-size:21px;margin:0 0 14px}.muted{color:var(--muted)}.panel,.hero{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px}.panel{margin:20px 0}.hero-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.hero{display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;color:inherit;text-decoration:none;transition:.2s}.hero:hover{border-color:var(--gold);transform:translateY(-2px)}.portrait{width:130px;height:185px;border-radius:12px;object-fit:cover;background:#111827;border:1px solid var(--border)}.placeholder{display:grid;place-items:center;color:var(--gold);font-size:48px}.name{font-size:22px;font-family:Georgia,serif;color:var(--gold);margin:0 0 8px}.meta{font-size:13px;color:#c4b5fd;line-height:1.6}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.chip{background:#303746;border:1px solid #475569;border-radius:9px;padding:5px 8px;font-size:12px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:13px 0}.stat small{display:block;color:var(--muted);margin-bottom:4px}.bar{height:9px;background:#374151;border-radius:20px;overflow:hidden;margin:7px 0}.fill{height:100%;background:var(--gold)}.section-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.list{display:grid;gap:8px}.entry{display:flex;align-items:center;gap:12px;background:#252f3d;border:1px solid var(--border);border-radius:10px;padding:10px}.entry img{width:42px;height:42px;object-fit:contain}.button{background:var(--purple);color:#171326;border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}input{background:#101827;color:white;border:1px solid var(--border);padding:12px;border-radius:9px;width:min(100%,540px)}.notice{font-size:13px;color:var(--muted);line-height:1.6}.error{color:#ff9ca7}.wide{grid-column:1/-1}footer{text-align:center;color:var(--muted);font-size:12px;margin:55px 0 10px}@media(max-width:850px){.hero-grid,.section-grid{grid-template-columns:1fr}}@media(max-width:520px){.wrap{padding:25px 15px}.hero{grid-template-columns:90px 1fr;gap:12px;padding:12px}.portrait{width:90px;height:135px}.name{font-size:18px}.stats{grid-template-columns:1fr}h1{font-size:30px}}
+
+[hidden]{display:none!important}.map-summary{background:#172131;border:1px solid #344052;border-radius:14px;padding:18px;margin:15px 0 18px}.map-summary-top,.map-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.map-summary strong{font-size:25px;color:var(--gold)}.map-groups{display:grid;gap:12px}.map-group{border:1px solid #344052;background:#1a2535;border-radius:14px;overflow:hidden}.map-group summary{cursor:pointer;list-style:none;padding:17px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}.map-group summary::-webkit-details-marker{display:none}.map-group summary::before{content:'▸';color:var(--gold);margin-right:5px}.map-group[open] summary::before{content:'▾'}.map-group summary:hover{background:#243145}.map-group-title{font-weight:650;flex:1}.map-group-stat{font-size:12px;color:var(--muted);white-space:nowrap}.map-inner{border-top:1px solid #344052;padding:14px 18px 18px}.map-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.map-row{display:flex;align-items:center;gap:11px;padding:11px 12px;background:#253144;border:1px solid #344052;border-radius:10px;cursor:pointer;min-width:0}.map-row:hover{border-color:#a18c6c}.map-row input{width:17px;height:17px;flex:none;accent-color:var(--gold);margin:0;cursor:pointer}.map-row.checked{background:#302d43;border-color:#74649e}.map-row.checked span{color:#f9fafb;text-decoration:none}.map-row.checked input{accent-color:var(--purple)}.map-group.complete{border:2px solid var(--purple);background:#22263a;box-shadow:0 0 0 1px rgba(182,156,255,.08)}.map-group.complete summary{color:#e1d5ff}.map-group.complete .map-group-stat{color:#d1c0ff}.map-group.complete .fill{background:var(--purple)}.map-section-label{color:var(--gold);font-size:12px;font-weight:650;letter-spacing:.4px;margin:13px 0 9px}.map-section-label:first-child{margin-top:0}.map-help{color:var(--muted);font-size:12px;line-height:1.6;margin-top:13px}.map-group .bar{height:6px;margin:0 18px 14px}.map-empty{color:var(--muted);font-size:13px;margin:12px 0}.map-summary .bar{height:11px;margin-top:13px}@media(max-width:720px){.map-list{grid-template-columns:1fr}}
+
+/* Main sections collapse independently while preserving their total progress. */
+.main-collapse>summary{list-style:none;display:flex;align-items:center;gap:12px;cursor:pointer;font-size:21px;font-weight:650;padding:2px 0 12px}
+.main-collapse>summary::-webkit-details-marker{display:none}
+.main-collapse>summary:before{content:'▾';font-size:17px;color:var(--gold)}
+.main-collapse:not([open])>summary:before{content:'▸'}
+.main-summary-stat{margin-left:auto;color:var(--gold);font-size:17px}
+.main-collapse>.bar{height:9px;margin:0 0 10px}
+.main-collapse:not([open])>.bar{margin-bottom:0}
+.craft-range-row{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+.craft-range{flex:1;min-width:180px;width:auto!important;padding:0!important;border:0!important;accent-color:var(--gold);cursor:pointer}
+.craft-range:focus-visible{outline:2px solid var(--purple);outline-offset:4px}
+/* Crafting: same visual system as map completion */
+.craft-grid{display:grid;gap:12px}.craft-group{background:#1a2535;border:1px solid #344052;border-radius:14px;overflow:hidden}.craft-group summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:17px 18px}.craft-group summary::-webkit-details-marker{display:none}.craft-group summary:before{content:'▸';color:var(--gold)}.craft-group[open] summary:before{content:'▾'}.craft-group summary:hover{background:#243145}.craft-title{flex:1;font-weight:650}.craft-stat{color:var(--muted);font-size:12px}.craft-inner{padding:16px 18px 19px;border-top:1px solid #344052}.craft-input-row{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 12px}.craft-level{width:110px;max-width:110px;padding:9px 11px}.craft-group .bar{height:6px;margin:0 18px 14px}.craft-group.complete{border:2px solid var(--purple);background:#22263a;box-shadow:0 0 0 1px rgba(182,156,255,.08)}.craft-group.complete .fill{background:var(--purple)}.craft-group.complete .craft-stat{color:#d1c0ff}.craft-milestones{display:flex;flex-wrap:wrap;gap:7px}.craft-milestone{border:1px solid #465267;background:#253144;border-radius:8px;color:var(--muted);font-size:11px;padding:5px 9px}.craft-milestone.done{border-color:#7c6ab4;background:#332d4c;color:#e4d8ff}.legendary-complete{border:2px solid #e8b86d!important;box-shadow:0 0 0 1px rgba(232,184,109,.22),0 0 25px rgba(232,184,109,.12)}.legendary-complete h2{color:#f4ce8b}.celebration{pointer-events:none;position:fixed;inset:0;overflow:hidden;z-index:9999}.confetti-piece{position:absolute;top:-24px;width:9px;height:14px;animation:confetti-fall 2.9s linear forwards;opacity:.95}@keyframes confetti-fall{to{transform:translate3d(var(--drift),110vh,0) rotate(var(--spin));opacity:0}}@media(prefers-reduced-motion:reduce){.confetti-piece{animation-duration:.01s}}
+
+/* Equipment inside character header */
+#profile{display:grid!important;grid-template-columns:130px minmax(0,1fr);align-items:start;gap:20px!important}
+#profile .portrait{grid-column:1;grid-row:1}
+.profile-content{min-width:0;grid-column:2;grid-row:1 / span 2}
+.profile-content h2{margin:0 0 6px;color:var(--gold)}
+.profile-info{color:var(--muted);font-size:13px;margin:0 0 12px}
+.equipment-title{font-size:13px;color:var(--gold);letter-spacing:.5px;margin:12px 0 9px;font-weight:700}
+.gear-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.gear-slot{display:flex;gap:9px;align-items:center;background:#111827;border:1px solid #39475a;border-left:3px solid var(--rarity,#586579);border-radius:9px;padding:7px;min-width:0}
+.gear-slot img{height:35px;width:35px;object-fit:contain;flex:none;border-radius:5px}
+.gear-slot-icon{height:35px;width:35px;flex:none;display:grid;place-items:center;background:#263345;border-radius:5px;color:var(--muted)}
+.gear-slot-text{min-width:0}.gear-slot-label{font-size:10px;color:#a5adbb}.gear-slot-name{font-size:11px;font-weight:600;color:#f9fafb;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.gear-slot-rarity{font-size:10px;color:var(--rarity,#a5adbb)}
+.gear-legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:10px}.gear-legend span:before{content:'●';color:var(--rarity);margin-right:4px}
+/* Manual story checklist */
+.story-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.story-help{color:var(--muted);font-size:12px;line-height:1.6;margin:12px 0}
+@media(max-width:950px){.gear-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){#profile{grid-template-columns:90px minmax(0,1fr)}.gear-grid,.story-list{grid-template-columns:1fr}}
+
+/* Two-column detail layout: existing tracker on left, manual equipment on right. */
+.wrap{max-width:1530px}
+#sections{display:grid;grid-template-columns:minmax(0,1fr) 300px;align-items:start;gap:18px}
+#sections>.panel.wide{grid-column:1;min-width:0;margin:0}
+#sections>#equipment-panel{grid-column:2;grid-row:1 / span 4;position:sticky;top:20px;margin:0}
+#profile{display:grid!important;grid-template-columns:130px minmax(0,1fr);gap:20px!important}
+#profile .portrait{grid-column:1;grid-row:1}
+.profile-content{grid-column:2;grid-row:1;min-width:0}
+.profile-content h2{margin:0 0 8px;color:var(--gold)}
+.equip-list{display:grid;gap:7px;margin-top:14px}
+.equip-line{display:grid;grid-template-columns:39px minmax(0,1fr);gap:7px;align-items:stretch}
+.equip-picker{position:relative;min-height:43px;border:1px solid var(--rarity,#45546a);background:var(--rarity-bg,#182335);border-radius:9px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.equip-picker select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;padding:0}
+.equip-picker:focus-within{outline:2px solid var(--gold);outline-offset:2px}
+.equip-picker:after{content:'▾';font-size:15px;color:var(--rarity,#a5adbb);pointer-events:none}
+.equip-value{border:1px solid var(--rarity,#344052);background:var(--rarity-bg,#172131);border-radius:9px;min-width:0;padding:6px 9px;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.equip-slotname{font-size:10px;color:#a5adbb;line-height:1.2}
+.equip-rarity{font-size:12px;font-weight:700;color:var(--rarity,#a5adbb);line-height:1.25}
+.equip-help{font-size:12px;line-height:1.5;color:var(--muted);margin:8px 0 0}
+@media(max-width:1050px){#sections{grid-template-columns:minmax(0,1fr)}#sections>#equipment-panel{grid-column:1;grid-row:auto;position:static}#sections>.panel.wide{grid-column:1}}
+@media(max-width:520px){#profile{grid-template-columns:90px minmax(0,1fr)}#sections{gap:14px}}
+
+/* Character completion: three equally weighted categories. */
+.character-completion{position:relative;overflow:hidden;background:linear-gradient(135deg,#1b2538,#242039 72%,#182d37);border:1px solid #7b6b96;border-radius:18px;padding:20px 22px;box-shadow:inset 0 1px 0 #ffffff0b}
+.character-completion .cc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.character-completion .cc-title{font-size:22px;font-family:Georgia,serif;font-weight:700;color:#f5d7a5}
+.character-completion .cc-percent{font-size:30px;font-weight:800;color:#f6d59b;font-variant-numeric:tabular-nums}
+.character-completion .cc-track{height:16px;margin:14px 0 10px;border-radius:20px;background:#0d1525;border:1px solid #4c4762;overflow:hidden}
+.character-completion .cc-fill{height:100%;width:0%;background:linear-gradient(90deg,#b69cff,#e8b86d);border-radius:20px;transition:width .4s ease}
+.character-completion .cc-breakdown{display:flex;gap:12px 22px;flex-wrap:wrap;color:#c6c4d5;font-size:12px}
+.character-completion.cc-perfect{border:2px solid #ffe2a3;background:radial-gradient(ellipse at 80% 5%,#69508b55,transparent 50%),linear-gradient(125deg,#33253d,#40321f 60%,#202b3e);box-shadow:0 0 16px #e8b86d55,0 0 38px #b69cff38,inset 0 0 20px #e8b86d18;animation:cc-glow 3s ease-in-out infinite alternate}
+.character-completion.cc-perfect .cc-title,.character-completion.cc-perfect .cc-percent{color:#ffe7ad;text-shadow:0 0 12px #e8b86d88}
+.character-completion.cc-perfect .cc-fill{background:linear-gradient(90deg,#b69cff,#ffe4a6,#e8b86d,#b69cff);background-size:200% 100%;animation:cc-shimmer 3s linear infinite}
+.character-completion.cc-perfect .cc-title:after{content:' ✨';font-family:Segoe UI,Arial,sans-serif}
+@keyframes cc-glow{to{box-shadow:0 0 27px #e8b86d80,0 0 55px #b69cff55,inset 0 0 25px #e8b86d25}}
+@keyframes cc-shimmer{to{background-position:200% 0}}
+@media(prefers-reduced-motion:reduce){.character-completion.cc-perfect,.character-completion.cc-perfect .cc-fill{animation:none}}
+</style></head><body><main class="wrap"><a class="back" href="heroes.html">← Back to My Heroes</a><div class="eyebrow">MRS.CHAIRMODE ♥ COMPLETION TRACKER</div><h1 id="name">Hero Details</h1><p class="muted" id="status">Loading character…</p><section id="character-completion" class="character-completion" hidden aria-label="Character completion"><div class="cc-top"><span class="cc-title">✦ Character Completion</span><span class="cc-percent" id="cc-percent">0%</span></div><div class="cc-track" role="progressbar" aria-label="Overall character completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="cc-track"><div class="cc-fill" id="cc-fill"></div></div><div class="cc-breakdown"><span id="cc-maps">🗺 Maps 0%</span><span id="cc-craft">🔨 Professions 0%</span><span id="cc-story">📖 Story 0%</span></div></section><div class="section-grid" id="sections" hidden><section class="panel wide"><div style="display:flex;gap:24px;flex-wrap:wrap" id="profile"></div><div style="margin-top:12px;grid-column:1;grid-row:2"><label for="portrait" class="button" style="display:inline-block;cursor:pointer;background:#303a4b;color:#e8b86d;font-size:12px;padding:8px 12px">Change portrait</label><input type="file" id="portrait" accept="image/png,image/jpeg,image/webp" style="position:absolute;width:1px;height:1px;opacity:0;overflow:hidden"></div></section><details class="panel wide main-collapse" id="map-panel" open><summary><span>🗺 Map Completion</span><span class="main-summary-stat" id="map-header-progress">0%</span></summary><div class="bar"><div class="fill" id="map-header-fill" style="width:0%"></div></div><div id="maps"></div></details><details class="panel wide main-collapse" id="crafting-panel" open><summary><span>🔨 Crafting Disciplines</span><span class="main-summary-stat" id="craft-header-progress">0%</span></summary><div class="bar"><div class="fill" id="craft-header-fill" style="width:0%"></div></div><div id="crafting"></div></details><details class="panel wide main-collapse" id="story-panel" open><summary><span>📖 Story Progress</span><span class="main-summary-stat" id="story-header-progress">0%</span></summary><div class="bar"><div class="fill" id="story-header-fill" style="width:0%"></div></div><div id="story"></div></details><aside class="panel" id="equipment-panel"><h2 style="margin-bottom:5px">⚔ Equipment</h2><p class="equip-help">Choose the rarity for each equipment slot. Saved separately for each hero.</p><div id="equipment-list" class="equip-list"></div></aside></div><script>
+const KEY='chairmode-gw2-heroes-key-v1';const IMAGE_KEY='chairmode-gw2-hero-images-v1';
+const $=id=>document.getElementById(id);
+function apiKey(){return localStorage.getItem(KEY)||''}
+async function gw(path,query={}){const url=new URL('https://api.guildwars2.com/v2/'+path);url.searchParams.set('access_token',apiKey());url.searchParams.set('lang','en');for(const [k,v] of Object.entries(query))url.searchParams.set(k,v);const r=await fetch(url);if(!r.ok){let t='';try{t=(await r.json()).text||''}catch{}throw new Error('GW2 API '+r.status+(t?': '+t:''))}return r.json()}
+function h(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function playtime(s){return Number.isFinite(s)?Math.floor(s/3600).toLocaleString('en-US')+' h':'—'}
+function age(s){if(!s)return '—';const d=new Date(s);if(Number.isNaN(d.getTime()))return '—';const years=Math.floor((Date.now()-d.getTime())/86400000/365.2425);return years<1?Math.floor((Date.now()-d.getTime())/86400000)+' days':years+' years'}
+function world(c){const n=c.world_completion;return typeof n==='number'&&n>=0&&n<=100?n:null}
+function portrait(name){try{return JSON.parse(localStorage.getItem(IMAGE_KEY)||'{}')[name]||null}catch{return null}}
+function setPortrait(name,data){let x={};try{x=JSON.parse(localStorage.getItem(IMAGE_KEY)||'{}')}catch{}x[name]=data;localStorage.setItem(IMAGE_KEY,JSON.stringify(x))}
+function image(name){const p=portrait(name);return p?`<img class="portrait" src="${h(p)}" alt="Portrait of ${h(name)}">`:'<div class="portrait placeholder" aria-label="No portrait yet">♟</div>'}
+function craft(c){return (c.crafting||[]).filter(x=>x.active!==false).map(x=>x.discipline)}
+function spec(c){const a=c.specializations;if(!a)return 'Not available';const sets=Object.values(a);const specs=sets.find(x=>Array.isArray(x)&&x.some(v=>v&&v.id))||[];return 'Specialization data available on detail page'}
+function progress(c){const p=world(c);return p===null?'<span class="muted">Not provided by API</span>':`<strong>${p}%</strong><div class="bar"><div class="fill" style="width:${p}%"></div></div>`}
+
+
+const MAP_GROUPS=[{"title":"Core Tyria","maps":[{"name":"Plains of Ashford","section":"Explorable maps","id":"plains-of-ashford"},{"name":"Queensdale","section":"Explorable maps","id":"queensdale"},{"name":"Caledon Forest","section":"Explorable maps","id":"caledon-forest"},{"name":"Metrica Province","section":"Explorable maps","id":"metrica-province"},{"name":"Wayfarer Foothills","section":"Explorable maps","id":"wayfarer-foothills"},{"name":"Diessa Plateau","section":"Explorable maps","id":"diessa-plateau"},{"name":"Kessex Hills","section":"Explorable maps","id":"kessex-hills"},{"name":"Brisban Wildlands","section":"Explorable maps","id":"brisban-wildlands"},{"name":"Snowden Drifts","section":"Explorable maps","id":"snowden-drifts"},{"name":"Gendarran Fields","section":"Explorable maps","id":"gendarran-fields"},{"name":"Lornar’s Pass","section":"Explorable maps","id":"lornar-s-pass"},{"name":"Fields of Ruin","section":"Explorable maps","id":"fields-of-ruin"},{"name":"Harathi Hinterlands","section":"Explorable maps","id":"harathi-hinterlands"},{"name":"Blazeridge Steppes","section":"Explorable maps","id":"blazeridge-steppes"},{"name":"Dredgehaunt Cliffs","section":"Explorable maps","id":"dredgehaunt-cliffs"},{"name":"Bloodtide Coast","section":"Explorable maps","id":"bloodtide-coast"},{"name":"Iron Marches","section":"Explorable maps","id":"iron-marches"},{"name":"Timberline Falls","section":"Explorable maps","id":"timberline-falls"},{"name":"Sparkfly Fen","section":"Explorable maps","id":"sparkfly-fen"},{"name":"Fireheart Rise","section":"Explorable maps","id":"fireheart-rise"},{"name":"Mount Maelstrom","section":"Explorable maps","id":"mount-maelstrom"},{"name":"Straits of Devastation","section":"Explorable maps","id":"straits-of-devastation"},{"name":"Frostgorge Sound","section":"Explorable maps","id":"frostgorge-sound"},{"name":"Malchor’s Leap","section":"Explorable maps","id":"malchor-s-leap"},{"name":"Cursed Shore","section":"Explorable maps","id":"cursed-shore"},{"name":"Black Citadel","section":"Cities","id":"black-citadel"},{"name":"Divinity’s Reach","section":"Cities","id":"divinity-s-reach"},{"name":"Hoelbrak","section":"Cities","id":"hoelbrak"},{"name":"Rata Sum","section":"Cities","id":"rata-sum"},{"name":"The Grove","section":"Cities","id":"the-grove"},{"name":"Lion’s Arch","section":"Cities","id":"lion-s-arch"},{"name":"Southsun Cove","section":"Additional maps","id":"southsun-cove"},{"name":"Dry Top","section":"Additional maps","id":"dry-top"},{"name":"The Silverwastes","section":"Additional maps","id":"the-silverwastes"},{"name":"Chantry of Secrets","section":"Special completion","id":"chantry-of-secrets"}]},{"title":"Heart of Thorns","maps":[{"name":"Verdant Brink","section":"Maps","id":"verdant-brink"},{"name":"Auric Basin","section":"Maps","id":"auric-basin"},{"name":"Tangled Depths","section":"Maps","id":"tangled-depths"},{"name":"Dragon’s Stand","section":"Maps","id":"dragon-s-stand"}]},{"title":"Path of Fire","maps":[{"name":"Crystal Oasis","section":"Maps","id":"crystal-oasis"},{"name":"Desert Highlands","section":"Maps","id":"desert-highlands"},{"name":"Elon Riverlands","section":"Maps","id":"elon-riverlands"},{"name":"The Desolation","section":"Maps","id":"the-desolation"},{"name":"Domain of Vabbi","section":"Maps","id":"domain-of-vabbi"}]},{"title":"End of Dragons","maps":[{"name":"Seitung Province","section":"Maps","id":"seitung-province"},{"name":"New Kaineng City","section":"Maps","id":"new-kaineng-city"},{"name":"The Echovald Wilds","section":"Maps","id":"the-echovald-wilds"},{"name":"Dragon’s End","section":"Maps","id":"dragon-s-end"},{"name":"Gyala Delve","section":"Maps","id":"gyala-delve"}]},{"title":"Secrets of the Obscure","maps":[{"name":"Skywatch Archipelago","section":"Maps","id":"skywatch-archipelago"},{"name":"Amnytas","section":"Maps","id":"amnytas"},{"name":"Inner Nayos","section":"Maps","id":"inner-nayos"},{"name":"The Wizard’s Tower","section":"Hub","id":"the-wizard-s-tower"}]},{"title":"Janthir Wilds","maps":[{"name":"Lowland Shore","section":"Maps","id":"lowland-shore"},{"name":"Janthir Syntri","section":"Maps","id":"janthir-syntri"},{"name":"Mistburned Barrens","section":"Maps","id":"mistburned-barrens"},{"name":"Bava Nisos","section":"Maps","id":"bava-nisos"}]},{"title":"Visions of Eternity","maps":[{"name":"Shipwreck Strand","section":"Maps","id":"shipwreck-strand"},{"name":"Starlit Weald","section":"Maps","id":"starlit-weald"},{"name":"Eternity’s Garden","section":"Maps","id":"eternity-s-garden"},{"name":"Leyspring Hollows","section":"Maps","id":"leyspring-hollows"}]}];
+
+// Character Completion: equal weight for Maps, Crafting Professions and Story.
+const CC_MAP_KEY='chairmode-gw2-map-completion-v1';
+const CC_CRAFT_KEY='chairmode-gw2-crafting-levels-v1';
+const CC_STORY_KEY='chairmode-gw2-story-manual-v1';
+const CC_CRAFTS=[['Armorsmith',500],['Artificer',500],['Chef',500],['Huntsman',500],['Jeweler',400],['Leatherworker',500],['Scribe',400],['Tailor',500],['Weaponsmith',500]];
+function ccRead(key){try{return JSON.parse(localStorage.getItem(key)||'{}')||{}}catch{return {}}}
+function ccStats(character,groups){
+ const maps=ccRead(CC_MAP_KEY)[character]||[];
+ const mapSet=new Set(Array.isArray(maps)?maps:[]);
+ const mapTotal=MAP_GROUPS.reduce((sum,g)=>sum+g.maps.length,0);
+ const mapDone=MAP_GROUPS.reduce((sum,g)=>sum+g.maps.filter(m=>mapSet.has(g.title+'|'+m.id)).length,0);
+ const levels=ccRead(CC_CRAFT_KEY)[character]||{};
+ const craftTotal=CC_CRAFTS.reduce((sum,[,max])=>sum+max,0);
+ const craftDone=CC_CRAFTS.reduce((sum,[title,max])=>sum+Math.max(0,Math.min(max,Math.floor(Number(levels[title])||0))),0);
+ const story=ccRead(CC_STORY_KEY)[character]||{};
+ let storyTotal=0,storyDone=0;
+ for(const g of groups||[]){for(const ch of g.chapters||[]){storyTotal++;if(story[g.name+'|'+(ch.id||ch)])storyDone++}}
+ const mapRatio=mapTotal?mapDone/mapTotal:0;
+ const craftRatio=craftTotal?craftDone/craftTotal:0;
+ const storyRatio=storyTotal?storyDone/storyTotal:0;
+ const ratio=(mapRatio+craftRatio+storyRatio)/3;
+ return {pct:Math.round(ratio*100),perfect:mapDone===mapTotal&&craftDone===craftTotal&&storyTotal>0&&storyDone===storyTotal,map:Math.round(mapRatio*100),craft:Math.round(craftRatio*100),story:Math.round(storyRatio*100)};
+}
+
+let ccStoryGroups=null;
+function refreshCharacterCompletion(){
+ if(!name)return;
+ const s=ccStats(name,ccStoryGroups);
+ const panel=$('character-completion');panel.hidden=false;
+ $('cc-percent').textContent=s.pct+'%';$('cc-fill').style.width=s.pct+'%';$('cc-track').setAttribute('aria-valuenow',s.pct);
+ $('cc-maps').textContent='🗺 Maps '+s.map+'%';$('cc-craft').textContent='🔨 Professions '+s.craft+'%';$('cc-story').textContent=ccStoryGroups?'📖 Story '+s.story+'%':'📖 Story loading…';
+ panel.classList.toggle('cc-perfect',s.perfect);
+ if(s.perfect){let all=ccRead('chairmode-gw2-character-celebrated-v1');if(!all[name]){all[name]=true;try{localStorage.setItem('chairmode-gw2-character-celebrated-v1',JSON.stringify(all))}catch{}celebrateCharacterCompletion()}}
+}
+function celebrateCharacterCompletion(){
+ const layer=document.createElement('div');layer.className='celebration';layer.setAttribute('aria-hidden','true');
+ const colors=['#ffe4a6','#e8b86d','#b69cff','#ffffff'];
+ for(let i=0;i<130;i++){const bit=document.createElement('i');bit.className='confetti-piece';bit.style.left=(Math.random()*100)+'%';bit.style.background=colors[i%colors.length];bit.style.animationDelay=(Math.random()*1.2)+'s';bit.style.setProperty('--drift',(Math.random()*350-175)+'px');bit.style.setProperty('--spin',(Math.random()*1400-700)+'deg');layer.appendChild(bit)}
+ document.body.appendChild(layer);setTimeout(()=>layer.remove(),4800);
+}
+const MAP_KEY='chairmode-gw2-map-completion-v1';
+function mapStore(){try{return JSON.parse(localStorage.getItem(MAP_KEY)||'{}')}catch{return {}}}
+function savedMaps(name){const data=mapStore();return new Set(Array.isArray(data[name])?data[name]:[])}
+function storeMaps(name,selected){const data=mapStore();data[name]=[...selected];try{localStorage.setItem(MAP_KEY,JSON.stringify(data))}catch(e){alert('Could not save map completion: browser storage is full.')}}
+function renderMaps(character){
+ const root=$('maps');const selected=savedMaps(character);
+ const total=MAP_GROUPS.reduce((n,g)=>n+g.maps.length,0);
+ root.innerHTML=`<div class="map-summary"><div class="map-summary-top"><div><div class="muted" style="font-size:13px">Overall Map Completion</div><strong id="map-total-pct">0%</strong></div><span class="muted" id="map-total-count"></span></div><div class="bar"><div class="fill" id="map-total-fill" style="width:0%"></div></div></div><div class="map-groups">${MAP_GROUPS.map((group,gi)=>`<details class="map-group" data-group="${gi}" ${gi===0?'open':''}><summary><span class="map-group-title">${h(group.title)}</span><span class="map-group-stat" id="map-group-count-${gi}"></span></summary><div class="bar"><div class="fill" id="map-group-fill-${gi}" style="width:0%"></div></div><div class="map-inner">${group.maps.length?group.maps.map((m,i)=>`${i===0||group.maps[i-1].section!==m.section?`<div class="map-section-label">${h(m.section)}</div>`:''}<label class="map-row ${selected.has(group.title+'|'+m.id)?'checked':''}"><input type="checkbox" data-map="${h(group.title+'|'+m.id)}" ${selected.has(group.title+'|'+m.id)?'checked':''}><span>${h(m.name)}</span></label>`).join(''):'<p class="map-empty">No separate map-completion areas in this story season.</p>'}</div></details>`).join('')}</div><p class="map-help">Manually tracked per character and saved in this browser. Each listed map counts once. Living World maps are not included for now. This is a custom tracker, not the official in-game world completion percentage.</p>`;
+ // Group checkbox rows into columns without disrupting section headings
+ root.querySelectorAll('.map-inner').forEach(inner=>{const nodes=[...inner.children];let section=null;for(const node of nodes){if(node.classList.contains('map-section-label')){section=document.createElement('div');section.className='map-list';node.after(section)}else if(node.classList.contains('map-row')&&section){section.append(node)}}});
+ let previousDone=selected.size;function refresh(){let done=0;MAP_GROUPS.forEach((g,gi)=>{const count=g.maps.filter(m=>selected.has(g.title+'|'+m.id)).length;done+=count;const pct=g.maps.length?Math.round(count/g.maps.length*100):0;$('map-group-count-'+gi).textContent=g.maps.length?`${count} / ${g.maps.length} · ${pct}%`:'—';$('map-group-fill-'+gi).style.width=pct+'%';root.querySelector('[data-group="'+gi+'"]').classList.toggle('complete',g.maps.length>0&&count===g.maps.length)});const pct=total?Math.round(done/total*100):0;$('map-total-pct').textContent=pct+'%';$('map-total-count').textContent=`${done} / ${total} areas`;$('map-total-fill').style.width=pct+'%';$('map-header-progress').textContent=pct+'%';$('map-header-fill').style.width=pct+'%';const completed=total>0&&done===total;$('map-panel').classList.toggle('legendary-complete',completed);if(completed&&previousDone<total)celebrateOnce(character);previousDone=done;refreshCharacterCompletion()}
+ root.addEventListener('change',e=>{const el=e.target;if(!el.matches('input[data-map]'))return;const key=el.dataset.map;if(el.checked)selected.add(key);else selected.delete(key);el.closest('.map-row').classList.toggle('checked',el.checked);storeMaps(character,selected);refresh()});refresh();
+}
+
+
+// Manual crafting levels, stored independently for each character.
+const CRAFT_KEY='chairmode-gw2-crafting-levels-v1';
+const CRAFTS=[['Armorsmith',500],['Artificer',500],['Chef',500],['Huntsman',500],['Jeweler',400],['Leatherworker',500],['Scribe',400],['Tailor',500],['Weaponsmith',500]];
+function craftStore(){try{return JSON.parse(localStorage.getItem(CRAFT_KEY)||'{}')}catch{return {}}}
+function renderCrafting(character){
+ const root=$('crafting'),saved=craftStore(),levels={...(saved[character]||{})};
+ root.innerHTML=`<div class="map-summary"><div class="map-summary-top"><div><div class="muted" style="font-size:13px">Overall Crafting Progress</div><strong id="craft-total-pct">0%</strong></div><span class="muted" id="craft-total-count"></span></div><div class="bar"><div class="fill" id="craft-total-fill" style="width:0%"></div></div></div><div class="craft-grid">${CRAFTS.map(([title,max],i)=>`<details class="craft-group" data-craft="${i}"><summary><span class="craft-title">${title}</span><span class="craft-stat" id="craft-stat-${i}"></span></summary><div class="bar"><div class="fill" id="craft-fill-${i}" style="width:0%"></div></div><div class="craft-inner"><div class="craft-range-row"><label for="craft-level-${i}" class="muted">Current level</label><input class="craft-range" type="range" id="craft-range-${i}" data-craft-level="${i}" min="0" max="${max}" step="1" value="${Math.max(0,Math.min(max,Number(levels[title])||0))}" aria-label="${title} level slider"><input class="craft-level" type="number" id="craft-level-${i}" data-craft-level="${i}" min="0" max="${max}" step="1" value="${Math.max(0,Math.min(max,Number(levels[title])||0))}" aria-label="${title} level"><span class="muted">/ ${max}</span></div></div></details>`).join('')}</div><p class="map-help">Enter each crafting discipline's level manually. Progress is saved separately for each hero in this browser.</p>`;
+ function refresh(){let earned=0,total=0,complete=0;CRAFTS.forEach(([title,max],i)=>{const n=Math.max(0,Math.min(max,Math.floor(Number(levels[title])||0)));earned+=n;total+=max;if(n===max)complete++;const pct=Math.round(n/max*100);$('craft-stat-'+i).textContent=`${n} / ${max} · ${pct}%`;$('craft-fill-'+i).style.width=pct+'%';root.querySelector(`[data-craft="${i}"]`).classList.toggle('complete',n===max);$('craft-range-'+i).value=n; if(document.activeElement!==$('craft-level-'+i))$('craft-level-'+i).value=n});const pct=Math.round(earned/total*100);$('craft-total-pct').textContent=pct+'%';$('craft-total-count').textContent=`${complete} / ${CRAFTS.length} disciplines · ${earned} / ${total} levels`;$('craft-total-fill').style.width=pct+'%';$('craft-header-progress').textContent=pct+'%';$('craft-header-fill').style.width=pct+'%';$('crafting-panel').classList.toggle('legendary-complete',complete===CRAFTS.length);refreshCharacterCompletion()}
+ root.addEventListener('input',e=>{const i=Number(e.target.dataset.craftLevel);if(!Number.isInteger(i)||!CRAFTS[i])return;const [title,max]=CRAFTS[i];levels[title]=Math.max(0,Math.min(max,Math.floor(Number(e.target.value)||0)));$('craft-range-'+i).value=levels[title];if(e.target.type==='range')$('craft-level-'+i).value=levels[title];const all=craftStore();all[character]=levels;try{localStorage.setItem(CRAFT_KEY,JSON.stringify(all))}catch{alert('Crafting progress could not be saved.')}refresh()});
+ root.addEventListener('change',e=>{if(!e.target.matches('[data-craft-level]'))return;const i=Number(e.target.dataset.craftLevel);if(CRAFTS[i])e.target.value=levels[CRAFTS[i][0]]||0});refresh();
+}
+// A one-time celebration per character, only on the transition to 100% map completion.
+const MAP_CELEBRATED_KEY='chairmode-gw2-map-celebrated-v1';
+function celebrateOnce(character){let all={};try{all=JSON.parse(localStorage.getItem(MAP_CELEBRATED_KEY)||'{}')}catch{}if(all[character])return;all[character]=true;try{localStorage.setItem(MAP_CELEBRATED_KEY,JSON.stringify(all))}catch{}const layer=document.createElement('div');layer.className='celebration';layer.setAttribute('aria-hidden','true');const colors=['#e8b86d','#b69cff','#f4ce8b','#fff1c8'];for(let i=0;i<100;i++){const bit=document.createElement('i');bit.className='confetti-piece';bit.style.left=(Math.random()*100)+'%';bit.style.background=colors[i%colors.length];bit.style.animationDelay=(Math.random()*.9)+'s';bit.style.setProperty('--drift',(Math.random()*300-150)+'px');bit.style.setProperty('--spin',(Math.random()*1300-650)+'deg');layer.appendChild(bit)}document.body.appendChild(layer);setTimeout(()=>layer.remove(),4300)}
+
+const EQUIPMENT_KEY='chairmode-gw2-manual-equipment-v1';
+const EQUIPMENT_SLOTS=[['Helm','Head'],['Shoulders','Shoulders'],['Coat','Chest'],['Gloves','Hands'],['Leggings','Legs'],['Boots','Feet'],['WeaponA1','Mainhand 1'],['WeaponA2','Offhand 1'],['WeaponB1','Mainhand 2'],['WeaponB2','Offhand 2'],['Backpack','Back'],['Accessory1','Accessory 1'],['Accessory2','Accessory 2'],['Ring1','Ring 1'],['Ring2','Ring 2'],['Amulet','Amulet'],['Relic','Relic'],['HelmAquatic','Aquatic Head'],['WeaponAquaticA','Aquatic 1'],['WeaponAquaticB','Aquatic 2']];
+const EQUIPMENT_RARITIES={Empty:'#526074',Basic:'#d7dbe1',Fine:'#62a8ed',Masterwork:'#58bf7b',Rare:'#f6d45e',Exotic:'#ffa405',Ascended:'#ed72bd',Legendary:'#b78aff'};
+const name=new URLSearchParams(location.search).get('name');
+function showPortrait(){const target=$('profile').querySelector('.portrait');if(target)target.outerHTML=image(name)}
+function resizeImage(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=()=>reject(new Error('Could not read image'));reader.onload=()=>{const img=new Image();img.onerror=()=>reject(new Error('Could not open image'));img.onload=()=>{const scale=Math.min(1,900/img.width,1200/img.height);const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,canvas.width,canvas.height);resolve(canvas.toDataURL('image/jpeg',.82))};img.src=reader.result};reader.readAsDataURL(file)})}
+$('portrait').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file||!name)return;try{if(!file.type.startsWith('image/'))throw new Error('Please choose an image.');const data=await resizeImage(file);setPortrait(name,data);showPortrait()}catch(err){alert('Portrait could not be saved: '+err.message)}finally{e.target.value=''}});
+if(!name){$('status').textContent='No character selected. Open this page from Heroes overview.'}else{
+ $('name').textContent=name;document.title=name+' | Mrs.Chairmode';$('sections').hidden=false;
+ $('profile').innerHTML=image(name)+`<div class="profile-content"><h2>${h(name)}</h2><p class="profile-info">Character overview</p></div>`;
+  renderManualEquipment(name);
+ renderMaps(name);
+ renderCrafting(name);
+ renderStory(name);
+ loadCharacter();
+  window.addEventListener('focus',refreshCharacterCompletion);
+  window.addEventListener('storage',refreshCharacterCompletion);
+}
+async function loadCharacter(){
+ if(!apiKey()){$('status').textContent='Manual equipment, maps, crafting and story work without an API key. Enter one on the Heroes overview for character details.';return}
+ try{
+  const c=await gw('characters/'+encodeURIComponent(name));
+  $('status').textContent='';
+  $('profile').innerHTML=image(name)+`<div class="profile-content"><h2>${h(c.name)}</h2><p class="profile-info">${h(c.race)} · ${h(c.profession)} · Level ${h(c.level)} · ${playtime(c.age)} played</p></div>`;
+  // Crafting progression is intentionally tracked manually, independent of the API.
+  // Equipment rarity is entered manually in the right-hand panel.
+ }catch(e){$('status').textContent='Character API data unavailable: '+e.message+'. Manual map completion and portraits still work.';}
+}
+// Manual equipment rarity, per character. No API dependency.
+function equipmentStore(){try{return JSON.parse(localStorage.getItem(EQUIPMENT_KEY)||'{}')}catch{return {}}}
+function renderManualEquipment(character){
+ const root=$('equipment-list');if(!root)return;
+ const all=equipmentStore();const chosen={...(all[character]||{})};
+ root.innerHTML=EQUIPMENT_SLOTS.map(([id,label])=>`<div class="equip-line" data-equipment-slot="${id}"><label class="equip-picker" title="Choose ${h(label)} rarity"><select aria-label="${h(label)} rarity" data-rarity-slot="${id}">${Object.keys(EQUIPMENT_RARITIES).map(r=>`<option value="${r}" ${chosen[id]===r?'selected':''}>${r}</option>`).join('')}</select></label><div class="equip-value"><span class="equip-slotname">${h(label)}</span><span class="equip-rarity">Empty</span></div></div>`).join('');
+ function refresh(){root.querySelectorAll('[data-equipment-slot]').forEach(row=>{const rarity=chosen[row.dataset.equipmentSlot]||'Empty';const color=EQUIPMENT_RARITIES[rarity];row.style.setProperty('--rarity',color);row.style.setProperty('--rarity-bg',rarity==='Empty'?'#172131':color+'19');row.querySelector('.equip-rarity').textContent=rarity;row.querySelector('select').value=rarity})}
+ root.addEventListener('change',e=>{if(!e.target.matches('select[data-rarity-slot]'))return;chosen[e.target.dataset.raritySlot]=e.target.value;const data=equipmentStore();data[character]=chosen;try{localStorage.setItem(EQUIPMENT_KEY,JSON.stringify(data))}catch{alert('Equipment could not be saved.')}refresh()});refresh();
+}
+
+// Story chapters are loaded from the PUBLIC GW2 story catalogue, not guessed.
+// Individual story steps are manually checked per hero. Personal-story branches can be skipped.
+const STORY_KEY='chairmode-gw2-story-manual-v1';
+function storySaved(character){try{return JSON.parse(localStorage.getItem(STORY_KEY)||'{}')[character]||{}}catch{return {}}}
+function saveStory(character,values){try{const all=JSON.parse(localStorage.getItem(STORY_KEY)||'{}');all[character]=values;localStorage.setItem(STORY_KEY,JSON.stringify(all))}catch{alert('Story progress could not be saved.')}}
+const STORY_FALLBACK=[
+ {name:'Personal Story',chapters:[10,20,30,40,50,60,70,80].map(level=>({name:'Level '+level+' · Chapter '+(level/10),id:'level-'+level}))},
+ {name:'Living World Season 1',chapters:['Flame and Frost','Sky Pirates','Clockwork Chaos','Tower of Nightmares','Battle for Lion’s Arch']},
+ {name:'Living World Season 2',chapters:['Gates of Maguuma','Entanglement','The Dragon’s Reach: Part 1','The Dragon’s Reach: Part 2','Echoes of the Past','Tangled Paths','Seeds of Truth','Point of No Return']},
+ {name:'Heart of Thorns',chapters:[]},{name:'Living World Season 3',chapters:[]},
+ {name:'Path of Fire',chapters:[]},{name:'Living World Season 4',chapters:[]},
+ {name:'The Icebrood Saga',chapters:[]},{name:'End of Dragons',chapters:[]},
+ {name:'Secrets of the Obscure',chapters:[]},{name:'Janthir Wilds',chapters:[]},{name:'Visions of Eternity',chapters:[]}
+];
+function storyKey(group,chapter){return group+'|'+chapter}
+async function storyCatalogue(){
+ const [seasons,stories]=await Promise.all([fetch('https://api.guildwars2.com/v2/stories/seasons?ids=all&lang=en').then(r=>{if(!r.ok)throw Error('Seasons unavailable');return r.json()}),fetch('https://api.guildwars2.com/v2/stories?ids=all&lang=en').then(r=>{if(!r.ok)throw Error('Stories unavailable');return r.json()})]);
+ const bySeason=new Map();for(const season of seasons)bySeason.set(season.id,{name:season.name||'Story',id:season.id,order:season.order??0,chapters:[]});
+ for(const story of stories){const group=bySeason.get(story.season);if(!group)continue;const chapters=Array.isArray(story.chapters)&&story.chapters.length?story.chapters.map(x=>typeof x==='string'?x:x.name).filter(Boolean):[story.name];for(const chapter of chapters)group.chapters.push({name:chapter,id:String(story.id)+'|'+chapter,order:story.order??0})}
+ // Personal Story is race/choice-dependent in the API. Track only its eight level chapters.
+ const personal=STORY_FALLBACK[0];
+ const groups=[...bySeason.values()].sort((a,b)=>a.order-b.order).map(g=>({name:g.name,chapters:g.chapters.sort((a,b)=>a.order-b.order).map(x=>({name:x.name,id:x.id}))})).filter(g=>g.chapters.length);
+ // The API labels this season "My Story"; remove all its branching chapters.
+ const remaining=groups.filter(g=>!/^\s*(my story|personal story)\s*$/i.test(g.name));
+ return [personal,...remaining];
+}
+async function renderStory(character){
+ const root=$('story');const saved=storySaved(character);
+ function draw(groups,source){
+   ccStoryGroups=groups;
+  root.innerHTML=`<div class="map-summary"><div class="map-summary-top"><div><div class="muted" style="font-size:13px">Overall Story Progress</div><strong id="story-total-pct">0%</strong></div><span class="muted" id="story-total-count"></span></div><div class="bar"><div class="fill" id="story-total-fill"></div></div></div><p class="story-help">Manually check completed chapters. Saved separately for each character. ${source==='fallback'?'The public story catalogue is unavailable; a reduced offline list is shown.':''}</p><div class="map-groups">${groups.map((g,gi)=>`<details class="map-group" data-story-group="${gi}"><summary><span class="map-group-title">${h(g.name)}</span><span class="map-group-stat" id="story-group-stat-${gi}"></span></summary><div class="bar"><div class="fill" id="story-group-fill-${gi}"></div></div><div class="map-inner"><div class="story-list">${g.chapters.map(ch=>{const key=storyKey(g.name,ch.id||ch);return `<label class="map-row ${saved[key]?'checked':''}"><input type="checkbox" data-story-key="${h(key)}" ${saved[key]?'checked':''}><span>${h(ch.name||ch)}</span></label>`}).join('')||'<p class="muted">No chapters available offline.</p>'}</div></div></details>`).join('')}</div>`;
+  function refresh(){let total=0,done=0;groups.forEach((g,gi)=>{const keys=g.chapters.map(ch=>storyKey(g.name,ch.id||ch));const count=keys.filter(k=>saved[k]).length;total+=keys.length;done+=count;const pct=keys.length?Math.round(count/keys.length*100):0;$('story-group-stat-'+gi).textContent=`${count} / ${keys.length} · ${pct}%`;$('story-group-fill-'+gi).style.width=pct+'%';root.querySelector(`[data-story-group="${gi}"]`).classList.toggle('complete',keys.length>0&&count===keys.length)});const pct=total?Math.round(done/total*100):0;$('story-total-pct').textContent=pct+'%';$('story-total-count').textContent=`${done} / ${total} chapters`;$('story-total-fill').style.width=pct+'%';$('story-header-progress').textContent=pct+'%';$('story-header-fill').style.width=pct+'%';$('story-panel').classList.toggle('legendary-complete',total>0&&done===total);refreshCharacterCompletion()}
+  root.addEventListener('change',e=>{const input=e.target;if(!input.matches('[data-story-key]'))return;saved[input.dataset.storyKey]=input.checked;input.closest('.map-row').classList.toggle('checked',input.checked);saveStory(character,saved);refresh()},{once:false});refresh();
+ }
+ root.innerHTML='<p class="story-help">Loading story chapter catalogue…</p>';
+ try{draw(await storyCatalogue(),'api')}catch{draw(STORY_FALLBACK,'fallback')}
+}
+</script><footer>Made with ♥ for Mrs.Chairmode</footer></main></body></html>

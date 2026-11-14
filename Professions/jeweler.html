@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Jeweler | Mrs.Chairmode</title>
+<style>
+    :root {
+      --bg: #101827;
+      --card: #1f2937;
+      --border: #344052;
+      --gold: #e8b86d;
+      --text: #f9fafb;
+      --muted: #a5adbb;
+      --track: #374151;
+      --lavender: #b69cff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .container {
+      max-width: 1500px;
+      margin: auto;
+      padding: 45px 24px;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 35px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .back:hover { color: var(--gold); }
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 38px;
+      margin: 12px 0;
+    }
+    .description {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px;
+      margin-bottom: 20px;
+      transition:
+        background 0.35s,
+        border-color 0.35s,
+        box-shadow 0.35s;
+    }
+    .card-title {
+      font-size: 19px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .card-description {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 0 20px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 18px;
+    }
+    .value {
+      color: var(--gold);
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .progress-track {
+      height: 11px;
+      background: var(--track);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 99px;
+      transition:
+        width 0.25s ease,
+        background-color 0.25s ease;
+    }
+    .small-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 12px 0 0;
+    }
+    /* Cooking Level */
+    .level-controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    input[type="range"] {
+      flex: 1;
+      min-width: 0;
+      cursor: pointer;
+      accent-color: var(--lavender);
+    }
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    select {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px;
+      font: inherit;
+    }
+    input[type="number"] { width: 90px; }
+    input:focus,
+    select:focus {
+      outline: 2px solid var(--lavender);
+      outline-offset: 2px;
+    }
+    /* Royal Mastery */
+    .card.mastered {
+      background: #29243e;
+      border: 2px solid var(--lavender);
+      box-shadow:
+        0 0 18px rgba(182,156,255,0.20),
+        inset 0 0 22px rgba(182,156,255,0.05);
+    }
+    .card.just-mastered {
+      animation: royalReveal 0.85s ease-out;
+    }
+    @keyframes royalReveal {
+      0% {
+        transform: scale(0.99);
+        box-shadow: 0 0 0 rgba(182,156,255,0);
+      }
+      45% {
+        transform: scale(1.012);
+        box-shadow: 0 0 35px rgba(182,156,255,0.65);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .royal-badge {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 14px;
+      background: #3b3153;
+      text-align: center;
+    }
+    .mastered .royal-badge {
+      display: block;
+    }
+    .royal-crown {
+      font-size: 29px;
+      margin-bottom: 6px;
+    }
+    .royal-title {
+      color: var(--gold);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .royal-subtitle {
+      color: #c4b5fd;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    /* Discovery */
+    details.card {
+      padding: 0;
+      overflow: hidden;
+    }
+    details summary {
+      padding: 26px;
+      cursor: pointer;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details summary::marker {
+      content: "";
+    }
+    .discovery-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .chevron {
+      color: var(--lavender);
+      font-size: 24px;
+      transition: transform 0.2s;
+    }
+    details[open] .chevron {
+      transform: rotate(180deg);
+    }
+    .discovery-content {
+      border-top: 1px solid var(--border);
+      padding: 26px;
+    }
+    .discovery-content h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .discovery-form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .discovery-form input { flex: 1; min-width: 0; }
+    button {
+      background: var(--lavender);
+      color: #171326;
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { background: #cbbaff; }
+    .feedback {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .feedback.unlock-success {
+      margin: 12px 0 20px;
+      padding: 16px 18px;
+      background: #29243e;
+      border: 2px solid var(--lavender);
+      border-radius: 14px;
+      color: #c4b5fd;
+      box-shadow: 0 0 22px rgba(182,156,255,.24);
+      animation: unlockReveal .55s ease-out;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .unlock-success strong {
+      color: #b69cff;
+      display: block;
+      font-size: 16px;
+      letter-spacing: .6px;
+    }
+    @keyframes unlockReveal {
+      0% { opacity: 0; transform: translateY(8px) scale(.98); box-shadow: 0 0 0 rgba(182,156,255,0); }
+      65% { opacity: 1; transform: translateY(0) scale(1.01); box-shadow: 0 0 32px rgba(182,156,255,.45); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin: 22px 0 16px;
+    }
+    .toolbar input { flex: 1; min-width: 0; }
+    .recipe-list {
+      display: grid;
+      gap: 10px;
+    }
+    .recipe {
+      background: #252f3d;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .recipe.unlocked {
+      background: #302944;
+      border-color: var(--lavender);
+    }
+    .recipe-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .recipe-state {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .recipe.unlocked .recipe-state {
+      color: var(--lavender);
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 55px;
+    }
+    @media (max-width: 650px) {
+      .container { padding: 25px 16px; }
+      h1 { font-size: 30px; }
+      .card { padding: 20px; }
+      details summary,
+      .discovery-content { padding: 20px; }
+      .discovery-form,
+      .toolbar { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    .category-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:16px 0; }
+    .category-box { background:#252f3d; border:1px solid var(--border); border-radius:12px; padding:15px; }
+    .category-box strong { color:var(--gold); font-size:19px; display:block; margin-top:7px; }
+    .data-row { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0; align-items:center; }
+    .data-row label { font-size:12px; color:var(--muted); }
+    .data-row input[type=file] { max-width:240px; font-size:12px; }
+    .item-icon { width:36px; height:36px; object-fit:contain; flex-shrink:0; }
+    .recipe-left { display:flex; gap:10px; align-items:center; min-width:0; }
+    .recipe-name { overflow-wrap:anywhere; }
+    .recipe-meta { color:var(--muted); font-size:11px; margin-top:4px; }
+    .recipe-state { text-align:right; }
+    .recipe-actions { display:flex; align-items:center; gap:10px; }
+    .small-action { padding:7px 10px; font-size:12px; }
+    .recipe-list { max-height:570px; overflow-y:auto; padding-right:4px; }
+    @media(max-width:650px){.category-grid{grid-template-columns:1fr}.recipe{align-items:flex-start}.recipe-actions{flex-direction:column}}
+
+    .craft-heading { margin: 28px 0 12px; font-size: 18px; }
+    .craft-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; margin-bottom: 18px; }
+    .craft-category { text-align: left; background: #252f3d; color: var(--text); border: 1px solid var(--border); border-radius: 14px; padding: 16px; font: inherit; }
+    .craft-category:hover, .craft-category.selected { border-color: var(--gold); background: #303746; }
+    .craft-category.mastered { border: 2px solid var(--lavender); background: #29243e; box-shadow: 0 0 16px rgba(182,156,255,.22); }
+    .craft-category-head { display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:12px; }
+    .craft-category-name { font-size:14px; font-weight:650; }
+    .craft-category-count { color:var(--gold); white-space:nowrap; font-weight:700; font-size:14px; }
+    .craft-category.mastered .craft-category-count { color:var(--lavender); }
+    .craft-category .progress-track { height: 8px; }
+    .category-context { margin: 18px 0 10px; color:var(--gold); font-weight:650; }
+    @media (max-width: 1150px) { .craft-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+    @media (max-width: 850px) { .craft-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+    @media (max-width: 650px) { .craft-grid { grid-template-columns: 1fr; } }
+
+    /* Golden Legendary Chef — only when the full Chef tracker reaches 100% */
+    body { transition: background 0.7s ease; }
+    body.golden-mastered {
+      background: radial-gradient(ellipse at 50% 0%, #382b1c 0%, #201b16 42%, #101827 100%);
+    }
+    body.golden-mastered .eyebrow { color: #f3d77a; }
+    body.golden-mastered .card:not(.mastered),
+    body.golden-mastered details.card {
+      border-color: #806238;
+      box-shadow: 0 0 16px rgba(232,184,109,.10);
+    }
+    body.golden-mastered #jewelerCard {
+      background: linear-gradient(135deg, #38291c, #272018);
+      border: 2px solid #f3d77a;
+      box-shadow: 0 0 28px rgba(243,215,122,.26), inset 0 0 24px rgba(243,215,122,.06);
+    }
+    body.golden-mastered #jewelerPercent { color: #f3d77a !important; }
+    body.golden-mastered #jewelerBar { background-color: #f3d77a !important; }
+    body.golden-mastered .craft-category.mastered {
+      border-color: #d5a44e;
+      background: #35291d;
+      box-shadow: 0 0 12px rgba(243,215,122,.16);
+    }
+    body.golden-mastered .craft-category.mastered .craft-category-count { color: #f3d77a; }
+    #legendaryBanner {
+      display: none;
+      margin: 18px 0 0;
+      padding: 23px 18px;
+      border-radius: 15px;
+      border: 1px solid #b88d43;
+      background: linear-gradient(120deg, #392b1e, #4a3520, #392b1e);
+      text-align: center;
+      box-shadow: inset 0 0 22px rgba(243,215,122,.08);
+    }
+    body.golden-mastered #legendaryBanner { display: block; }
+    .legendary-crown { font-size: 38px; }
+    .legendary-title { color: #f3d77a; font-size: 23px; font-weight: 800; letter-spacing: 2px; }
+    .legendary-subtitle { color: #e8c88d; font-size: 12px; margin-top: 7px; letter-spacing: 1px; }
+    body.golden-mastered #jewelerCard .royal-badge { display: none; }
+    body.golden-mastered.golden-reveal #legendaryBanner { animation: goldenReveal 1.2s ease-out; }
+    @keyframes goldenReveal {
+      0% { opacity: 0; transform: translateY(12px) scale(.96); box-shadow: 0 0 0 rgba(243,215,122,0); }
+      55% { opacity: 1; transform: translateY(0) scale(1.025); box-shadow: 0 0 40px rgba(243,215,122,.6); }
+      100% { transform: none; box-shadow: inset 0 0 22px rgba(243,215,122,.08); }
+    }
+    .golden-confetti-layer { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 9999; }
+    .golden-confetti-piece { position: absolute; top: -20px; width: 8px; height: 13px; border-radius: 2px; animation: goldenFall 2.6s linear forwards; }
+    @keyframes goldenFall { to { transform: translate3d(var(--drift), 105vh, 0) rotate(700deg); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .golden-confetti-layer { display: none; }
+      body.golden-mastered.golden-reveal #legendaryBanner { animation: none; }
+    }
+
+    /* Discovery Ingredients */
+    .ingredient-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .ingredient-tile {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:9px;
+      min-width:0;
+      text-align:center;
+      background:#252f3d;
+      color:var(--text);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px 10px;
+      cursor:pointer;
+      font:inherit;
+    }
+    .ingredient-tile:hover,.ingredient-tile.selected {
+      border-color:var(--lavender);
+      background:#303044;
+    }
+    .ingredient-tile.completed {
+      border:2px solid #e8b86d;
+      box-shadow:0 0 14px rgba(232,184,109,.20), inset 0 0 12px rgba(232,184,109,.05);
+    }
+    .ingredient-icon-frame {
+      width:76px;height:76px;padding:5px;
+      border:2px solid var(--border);
+      border-radius:12px;
+      background:#111827;
+      display:grid;place-items:center;
+    }
+    .ingredient-tile.completed .ingredient-icon-frame {
+      border:3px solid #e8b86d;
+      box-shadow:0 0 12px rgba(232,184,109,.35);
+    }
+    .ingredient-icon {width:100%;height:100%;object-fit:contain;}
+    .ingredient-name {font-size:14px;font-weight:650;overflow-wrap:anywhere;}
+    .ingredient-count {font-size:17px;font-weight:750;color:var(--gold);}
+    .ingredient-tile.completed .ingredient-count {color:#e8b86d;}
+    .ingredient-mini-track {width:100%;height:7px;background:var(--track);border-radius:99px;overflow:hidden;}
+    .ingredient-mini-fill {height:100%;border-radius:99px;}
+    .ingredient-remaining {font-size:11px;color:var(--muted);}
+    .ingredient-detail {
+      margin-top:18px;padding:20px;background:#1a2433;
+      border:1px solid var(--border);border-radius:14px;
+    }
+    .ingredient-detail-head {display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+    .ingredient-detail-head img {width:56px;height:56px;object-fit:contain;}
+    .ingredient-recipe-list {display:grid;gap:8px;margin-top:12px;}
+    .ingredient-recipe-row {
+      display:flex;justify-content:space-between;gap:12px;align-items:center;
+      padding:10px 12px;background:#252f3d;border:1px solid var(--border);border-radius:10px;
+      font-size:13px;
+    }
+    .ingredient-recipe-row.known {border-color:var(--lavender);background:#302944;}
+    .ingredient-recipe-row .state {font-size:11px;color:var(--muted);white-space:nowrap;}
+    .ingredient-recipe-row.known .state {color:var(--lavender);}
+    @media(max-width:850px){.ingredient-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:520px){.ingredient-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ingredient-tile{padding:11px 7px}.ingredient-icon-frame{width:64px;height:64px}}
+
+  
+/* Jeweler-specific sections — same Chef design tokens and spacing */
+#otherList .recipe{cursor:pointer}#otherList .recipe input[type=checkbox]{accent-color:var(--lavender);width:18px;height:18px;flex-shrink:0}
+.family-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.family-tile{background:#252f3d;border:1px solid var(--border);border-radius:14px;padding:17px;min-width:0}
+.family-tile.mastered{border:2px solid var(--gold);box-shadow:0 0 18px rgba(232,184,109,.22);background:#332b26}
+.family-head{display:flex;align-items:center;gap:12px;cursor:pointer;width:100%;text-align:left;background:none;color:inherit;padding:0;border:0}
+.family-head:hover{background:none;color:var(--gold)}
+.family-head img{width:43px;height:43px;object-fit:contain}
+.family-name{font-size:15px;font-weight:650;overflow-wrap:anywhere}
+.family-meta{font-size:12px;color:var(--muted);margin-top:4px}
+.family-progress{display:flex;justify-content:space-between;align-items:center;margin:14px 0 8px;font-size:12px;color:var(--muted)}
+.family-variants{margin-top:14px;border-top:1px solid var(--border);padding-top:12px;display:grid;gap:8px}
+.variant-option{display:flex;align-items:center;gap:9px;background:#172030;border-radius:9px;padding:10px;font-size:13px;cursor:pointer}
+.variant-option input{accent-color:var(--lavender);width:17px;height:17px;flex-shrink:0}
+.family-variants[hidden]{display:none}
+.family-tile.mastered .family-progress{color:var(--gold)}
+.family-grid .empty{grid-column:1/-1;color:var(--muted);font-size:13px}
+.discover-note{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 17px}
+#familyCount{color:var(--gold);font-size:13px;font-weight:650}
+#otherStatus{font-size:13px;color:var(--muted);margin-top:14px}
+@media(max-width:1100px){.family-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.family-grid{grid-template-columns:1fr}}
+
+/* Preserve Chef's spacing, palette, and three-column tiles */
+#recipeCategories .craft-category{cursor:pointer}
+#recipeCategories .craft-category.selected{border-color:var(--lavender)}
+#recipeCategories .craft-category.mastered{border-color:var(--gold);background:#332b26}
+#recipeList .recipe{cursor:pointer}
+#recipeList .recipe.auto-recipe{cursor:default}
+#recipeList .recipe input{width:17px;height:17px;accent-color:var(--lavender);flex-shrink:0}
+#recipeList .recipe input:disabled{cursor:not-allowed}
+#ingredientSearch,#materialsSearch{width:100%;margin-bottom:10px}
+.ingredient-detail .ingredient-recipe-row{gap:12px}
+.material-kind{font-size:11px;color:var(--muted)}
+.material-detail-note{font-size:12px;color:var(--muted);line-height:1.6}
+
+/* Compact, Chef-compatible collapsible subsections */
+.subsection-collapse{margin-top:16px;border-top:1px solid var(--border);padding-top:4px}
+.subsection-collapse>summary{display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;list-style:none;padding:16px 0}
+.subsection-collapse>summary::-webkit-details-marker{display:none}
+.subsection-collapse>summary::marker{content:""}
+.subsection-title{font-size:18px;font-weight:600;color:var(--text)}
+.subsection-right{display:flex;align-items:center;gap:14px;color:var(--muted);font-size:13px}
+.subsection-collapse .family-grid{margin-top:8px}
+</style></head>
+<body><main class="container">
+<a class="back" href="index.html">← Back to Crafting</a>
+<div class="eyebrow">MRS.CHAIRMODE ♥ COMPLETION TRACKER</div>
+<h1>💎 Jeweler</h1>
+<p class="description">Forge heavy armor. Discover every recipe. Master the discipline.</p>
+<section class="card" id="jewelerCard">
+ <div class="topline"><h2 class="card-title">Jeweler Completion</h2><span class="value" id="jewelerPercent">—</span></div>
+ <div class="progress-track"><div class="progress-fill" id="jewelerBar"></div></div>
+ <p class="small-note" id="overallNote">Loading Jeweler recipes…</p>
+ <div id="legendaryBanner" role="status"><div class="legendary-crown">🏆</div><div class="legendary-title">LEGENDARY JEWELER</div><div class="legendary-subtitle">✦ FORGED TO PERFECTION ✦</div><div class="legendary-subtitle">Every recipe. Every level. Mastered.</div></div>
+ <div class="royal-badge"><div class="royal-crown">👑</div><div class="royal-title">JEWELER MASTERED</div><div class="royal-subtitle">✦ All Jeweler objectives completed ✦</div></div>
+</section>
+<section class="card" id="levelCard">
+ <div class="topline"><h2 class="card-title">Jeweler Level</h2><span class="value" id="levelDisplay">0 / 400</span></div>
+ <div class="level-controls"><input type="range" id="levelSlider" min="0" max="400" value="0" aria-label="Jeweler level slider"><input type="number" id="levelInput" min="0" max="400" value="0" aria-label="Jeweler level number"></div>
+ <div class="progress-track"><div class="progress-fill" id="levelBar"></div></div>
+ <p class="small-note" id="levelStatus"></p>
+ <div class="royal-badge"><div class="royal-crown">👑</div><div class="royal-title">MASTER JEWELER</div><div class="royal-subtitle">✦ Level 400 Complete ✦</div></div>
+</section>
+<details class="card" id="familyCard" open><summary><div class="discovery-heading"><div><h2 class="card-title">⚒ Equipment Discovery</h2><p class="small-note" id="familySummary">Discover a family once, then check its individual stat recipes.</p></div><span class="chevron" aria-hidden="true">⌄</span></div></summary>
+<div class="discovery-content">
+<p class="discover-note">Enter an equipment family name once. This only reveals its variants; it does not unlock any recipes.</p>
+<form class="discovery-form" id="familyForm"><input id="familyInput" type="text" autocomplete="off" placeholder="e.g. Steel Gauntlets" aria-label="Equipment family name"><button type="submit">Discover</button></form>
+<div class="feedback" id="familyFeedback" role="status"></div>
+<details class="subsection-collapse" id="equipmentFamiliesToggle" open><summary><span class="subsection-title">Equipment Families</span><span class="subsection-right"><span id="familyCount">—</span><span class="chevron" aria-hidden="true">⌄</span></span></summary><div class="family-grid" id="familyGrid"></div></details>
+</div></details>
+<section class="card" id="recipesCard"><div class="topline"><h2 class="card-title">📖 Recipes</h2><span class="value" id="recipeCount">—</span></div><p class="card-description">In-game crafting categories · automatic recipes follow your crafting level.</p><div class="craft-grid" id="recipeCategories"></div><details class="subsection-collapse" id="recipeUnlockToggle" open><summary><span class="subsection-title">Unlock Recipes</span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="data-row"><label for="recipeMode">Unlock type</label><select id="recipeMode"><option value="all">All unlock types</option><option value="automatic">Automatically learned</option><option value="recipe_sheet">Recipe sheets</option><option value="discovery_candidate">Discovery candidates (provisional)</option></select><input type="search" id="recipeSearch" placeholder="Search recipes…" aria-label="Search recipes" style="flex:1;min-width:180px"></div><label class="variant-option" style="display:inline-flex;margin:4px 0 12px"><input type="checkbox" id="recipesOpenOnly" checked> Only show unfinished recipes</label><div id="recipeStatus" class="small-note"></div><div class="recipe-list" id="recipeList" style="margin-top:14px"></div></details></section>
+<details class="card" id="ingredientsCard"><summary><div class="discovery-heading"><div><h2 class="card-title">💎 Discovery Ingredients</h2><p class="small-note" id="ingredientSummary">Direct ingredients used in discovery candidates</p></div><span class="chevron" aria-hidden="true">⌄</span></div></summary><div class="discovery-content"><p class="discover-note">Each tile tracks the recipes using that direct ingredient. Candidate classification is provisional until verified.</p><label class="variant-option" style="display:inline-flex;margin-bottom:14px"><input type="checkbox" id="ingredientsOpenOnly" checked> Only show ingredients with unfinished discovery recipes</label><input type="search" id="ingredientSearch" placeholder="Search ingredients…" aria-label="Search discovery ingredients"><div class="ingredient-grid" id="ingredientGrid"></div><div id="ingredientDetail"></div></div></details>
+<details class="card" id="materialsCard"><summary><div class="discovery-heading"><div><h2 class="card-title">🌿 Basic Materials</h2><p class="small-note" id="materialSummary">Potential farming materials for unfinished discovery recipes</p></div><span class="chevron" aria-hidden="true">⌄</span></div></summary><div class="discovery-content"><label class="variant-option" style="display:inline-flex;margin-bottom:14px"><input type="checkbox" id="materialsOpenOnly" checked> Only show materials relevant to unfinished discovery recipes</label><input type="search" id="materialsSearch" placeholder="Search materials…" aria-label="Search basic materials"><div class="ingredient-grid" id="materialsGrid"></div><div id="materialsDetail"></div></div></details>
+<footer>Made with ♥ for Mrs.Chairmode</footer></main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),PREFIX='chairmode-jeweler-';
+const read=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(PREFIX+key));return v??fallback}catch{return fallback}};
+let discovered=new Set(read('families-v1',[]).map(String));
+let unlocked=new Set(read('unlocked-ids-v1',[]).map(Number));
+let level=Math.max(0,Math.min(400,Number(localStorage.getItem(PREFIX+'level-v1'))||0));
+let families=[],recipes=[],recipeById=new Map(),categories=new Map(),dataReady=false,firstRender=true,openFamilies=new Set();
+let recipeCategory='all',recipePage=0,ingredientSelected=null,materialSelected=null;
+let directIngredients=[],materialRecords=[],materialSources=new Map();
+const PAGE=100,normalize=s=>String(s||'').trim().toLocaleLowerCase('en').replace(/\s+/g,' ');
+const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function color(p){if(p<=20)return '#e56b85';if(p<=40)return '#f5a66b';if(p<=60)return '#f3d77a';if(p<=80)return '#86ddb0';if(p<100)return '#65dad9';return '#b69cff'}
+function bar(id,p){const e=$(id);e.style.width=p+'%';e.style.backgroundColor=color(p)}
+function royal(id,complete){const e=$(id),was=e.classList.contains('mastered');e.classList.toggle('mastered',complete);if(complete&&!was){e.classList.remove('just-mastered');void e.offsetWidth;e.classList.add('just-mastered')}if(!complete)e.classList.remove('just-mastered')}
+function confetti(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const layer=document.createElement('div');layer.className='golden-confetti-layer';const colors=['#f3d77a','#e8b86d','#fff0b8','#d5a44e'];for(let i=0;i<45;i++){const p=document.createElement('span');p.className='golden-confetti-piece';p.style.left=Math.random()*100+'%';p.style.backgroundColor=colors[i%colors.length];p.style.setProperty('--drift',(Math.random()*240-120)+'px');p.style.animationDelay=Math.random()*.65+'s';layer.append(p)}document.body.append(layer);setTimeout(()=>layer.remove(),3700)}
+function save(){try{localStorage.setItem(PREFIX+'families-v1',JSON.stringify([...discovered]));localStorage.setItem(PREFIX+'unlocked-ids-v1',JSON.stringify([...unlocked]));localStorage.setItem(PREFIX+'level-v1',String(level))}catch(e){}}
+const kind=r=>categories.get(r.id)||'unknown';
+const known=r=>kind(r)==='automatic'?level>=Number(r.min_rating||0):unlocked.has(r.id);
+function progress(){const count=recipes.filter(known).length,pct=dataReady?(level/400+count/recipes.length)*50:0,complete=dataReady&&level===400&&count===recipes.length;
+$('jewelerPercent').textContent=dataReady?pct.toFixed(1).replace('.0','')+'%':'—';bar('jewelerBar',pct);$('overallNote').textContent=dataReady?`${count} / ${recipes.length} recipes unlocked · 50% level + 50% recipes`:'Recipe data could not be loaded.';
+royal('jewelerCard',complete);const was=document.body.classList.contains('golden-mastered');document.body.classList.toggle('golden-mastered',complete);if(complete&&!was&&!firstRender){document.body.classList.add('golden-reveal');confetti()}if(!complete)document.body.classList.remove('golden-reveal');firstRender=false;
+try{if(dataReady)localStorage.setItem(PREFIX+'completion-v1',JSON.stringify({percent:pct,complete}));else localStorage.removeItem(PREFIX+'completion-v1')}catch(e){}
+}
+function updateLevel(v){level=Math.max(0,Math.min(400,Math.round(Number(v)||0)));$('levelSlider').value=level;$('levelInput').value=level;$('levelDisplay').textContent=level+' / 400';bar('levelBar',level/4);royal('levelCard',level===400);$('levelDisplay').style.color=level===400?'#b69cff':'#e8b86d';$('levelStatus').textContent=level===400?'✓ Maximum Jeweler level reached!':'';save();refresh()}
+$('levelSlider').addEventListener('input',e=>updateLevel(e.target.value));$('levelInput').addEventListener('input',e=>updateLevel(e.target.value));
+function setRecipe(id,value){const r=recipeById.get(id);if(!r||kind(r)==='automatic')return;if(value)unlocked.add(id);else unlocked.delete(id);save();refresh()}
+function renderFamilies(){const host=$('familyGrid');host.replaceChildren();const shown=families.filter(f=>discovered.has(f.id));$('familyCount').textContent=`${shown.length} / ${families.length} discovered`;
+for(const f of shown){const ids=f.recipe_ids.filter(id=>categories.get(id)==='discovery_candidate');const done=ids.filter(id=>known(recipeById.get(id))).length;const card=document.createElement('article');card.className='family-tile'+(ids.length&&done===ids.length?' mastered':'');
+const head=document.createElement('button');head.type='button';head.className='family-head';head.setAttribute('aria-expanded',String(openFamilies.has(f.id)));if(f.icon){const img=document.createElement('img');img.src=f.icon;img.alt='';img.loading='lazy';head.append(img)}const label=document.createElement('span');const name=document.createElement('span');name.className='family-name';name.textContent=f.name;const sub=document.createElement('span');sub.className='family-meta';sub.style.display='block';sub.textContent=f.description||'Equipment discovery';label.append(name,sub);head.append(label);card.append(head);
+const line=document.createElement('div');line.className='family-progress';const left=document.createElement('span');left.textContent=ids.length&&done===ids.length?'👑 Family complete':'Discovery progress';const count=document.createElement('strong');count.textContent=done+' / '+ids.length;line.append(left,count);card.append(line);const track=document.createElement('div');track.className='progress-track';const fill=document.createElement('div');fill.className='progress-fill';fill.style.width=(ids.length?done/ids.length*100:0)+'%';fill.style.backgroundColor=color(ids.length?done/ids.length*100:0);track.append(fill);card.append(track);
+const variants=document.createElement('div');variants.className='family-variants';variants.hidden=!openFamilies.has(f.id);head.addEventListener('click',()=>{if(openFamilies.has(f.id))openFamilies.delete(f.id);else openFamilies.add(f.id);variants.hidden=!openFamilies.has(f.id);head.setAttribute('aria-expanded',String(!variants.hidden))});for(const id of ids){const r=recipeById.get(id);if(!r)continue;const option=document.createElement('label');option.className='variant-option';const cb=document.createElement('input');cb.type='checkbox';cb.checked=known(r);cb.addEventListener('change',()=>setRecipe(id,cb.checked));const text=document.createElement('span');text.textContent=(r.output_item_name||'Recipe '+id)+' · '+(r.output_item_rarity||'Unknown rarity')+' · Lv '+r.min_rating+' · #'+id;option.append(cb,text);variants.append(option)}card.append(variants);host.append(card)}if(!shown.length){const p=document.createElement('p');p.className='empty';p.textContent=families.length?'No equipment families discovered yet.':'Equipment family data not loaded.';host.append(p)}$('familySummary').textContent=families.length?`${shown.length} of ${families.length} families discovered`:'Discover a family once, then check its individual stat recipes.'}
+$('familyForm').addEventListener('submit',e=>{e.preventDefault();const input=$('familyInput'),match=families.find(f=>normalize(f.name)===normalize(input.value));const feedback=$('familyFeedback');feedback.classList.remove('unlock-success');if(!match){feedback.textContent=families.length?'Unknown family. Enter an exact equipment family name.':'Family database not loaded.';return}if(discovered.has(match.id)){feedback.textContent='This equipment family is already discovered.';return}discovered.add(match.id);openFamilies.add(match.id);save();renderFamilies();feedback.classList.add('unlock-success');feedback.textContent=match.name+' discovered! Check its individual stat recipes.';input.value=''});
+function renderRecipes(){if(!dataReady)return;const host=$('recipeCategories');host.replaceChildren();const types=['all',...[...new Set(recipes.map(r=>r.type))].sort((a,b)=>a.localeCompare(b))];for(const type of types){const group=type==='all'?recipes:recipes.filter(r=>r.type===type),done=group.filter(known).length,p=100*done/group.length;const btn=document.createElement('button');btn.type='button';btn.className='craft-category'+(recipeCategory===type?' selected':'')+(done===group.length?' mastered':'');btn.innerHTML=`<div class="craft-category-head"><span class="craft-category-name">${esc(type==='all'?'All':type)}</span><span class="craft-category-count">${done}/${group.length}</span></div><div class="progress-track"><div class="progress-fill" style="width:${p}%;background:${color(p)}"></div></div>`;btn.addEventListener('click',()=>{recipeCategory=type;recipePage=0;renderRecipes()});host.append(btn)}
+const q=normalize($('recipeSearch').value),mode=$('recipeMode').value;const matching=recipes.filter(r=>(recipeCategory==='all'||r.type===recipeCategory)&&(mode==='all'||kind(r)===mode)&&(!q||normalize(r.output_item_name).includes(q)));const done=matching.filter(known).length;const filtered=$('recipesOpenOnly').checked?matching.filter(r=>!known(r)):matching;const shown=filtered.slice(0,(recipePage+1)*PAGE);const list=$('recipeList');list.replaceChildren();$('recipeCount').textContent=recipes.filter(known).length+' / '+recipes.length;$('recipeStatus').textContent=`${recipeCategory==='all'?'All categories':recipeCategory} · ${done}/${matching.length} known · Showing ${shown.length}${$('recipesOpenOnly').checked?' unfinished':''}`;
+for(const r of shown){const auto=kind(r)==='automatic',isKnown=known(r);const line=document.createElement('label');line.className='recipe'+(isKnown?' unlocked':'')+(auto?' auto-recipe':'');const left=document.createElement('span');left.className='recipe-left';if(r.output_item_icon){const img=document.createElement('img');img.className='item-icon';img.src=r.output_item_icon;img.alt='';img.loading='lazy';left.append(img)}const info=document.createElement('span');const name=document.createElement('span');name.className='recipe-name';name.textContent=r.output_item_name||'Recipe '+r.id;const meta=document.createElement('span');meta.className='recipe-meta';meta.style.display='block';meta.textContent=`${auto?'🔒 Automatic':kind(r)==='recipe_sheet'?'Recipe sheet':'Discovery candidate (provisional)'} · Lv ${r.min_rating} · #${r.id}`;info.append(name,meta);left.append(info);line.append(left);const cb=document.createElement('input');cb.type='checkbox';cb.checked=isKnown;cb.disabled=auto;cb.title=auto?'Automatically unlocked at crafting level '+r.min_rating:'Mark recipe as learned';cb.addEventListener('change',()=>setRecipe(r.id,cb.checked));line.append(cb);list.append(line)}if(shown.length<filtered.length){const more=document.createElement('button');more.type='button';more.textContent=`Show more (${filtered.length-shown.length} remaining)`;more.addEventListener('click',()=>{recipePage++;renderRecipes()});list.append(more)}}
+$('recipeSearch').addEventListener('input',()=>{recipePage=0;renderRecipes()});$('recipeMode').addEventListener('change',()=>{recipePage=0;renderRecipes()});$('recipesOpenOnly').addEventListener('change',()=>{recipePage=0;renderRecipes()});
+function tile(item,done,total,onClick){const el=document.createElement('button');el.type='button';el.className='ingredient-tile'+(total&&done===total?' completed':'');const frame=document.createElement('span');frame.className='ingredient-icon-frame';if(item.icon){const img=document.createElement('img');img.className='ingredient-icon';img.src=item.icon;img.alt='';img.loading='lazy';frame.append(img)}else frame.textContent='⚒';const title=document.createElement('span');title.className='ingredient-name';title.textContent=item.name;const count=document.createElement('span');count.className='ingredient-count';count.textContent=done+'/'+total;const track=document.createElement('div');track.className='ingredient-mini-track';const fill=document.createElement('div');fill.className='ingredient-mini-fill';fill.style.width=(total?100*done/total:0)+'%';fill.style.background=color(total?100*done/total:0);track.append(fill);const rem=document.createElement('span');rem.className='ingredient-remaining';rem.textContent=(total-done)+' unknown recipes';el.append(frame,title,count,track,rem);el.addEventListener('click',onClick);return el}
+function buildIndexes(){const direct=new Map();const candidates=recipes.filter(r=>kind(r)==='discovery_candidate');for(const r of candidates)for(const ing of r.ingredients||[]){if(ing.type!=='Item')continue;let item=direct.get(ing.item_id);if(!item){item={id:ing.item_id,name:ing.item_name||'Item '+ing.item_id,icon:ing.item_icon,recipeIds:new Set()};direct.set(ing.item_id,item)}item.recipeIds.add(r.id)}directIngredients=[...direct.values()].sort((a,b)=>a.name.localeCompare(b.name));
+// The available Jeweler recipe list is NOT a complete game-wide production graph.
+// Preserve unknown intermediates as unresolved; never mislabel them as farmable resources.
+const produced=new Map();for(const r of recipes){if(!produced.has(r.output_item_id))produced.set(r.output_item_id,[]);produced.get(r.output_item_id).push(r)}
+const basic=new Map();materialSources=new Map();function expand(ing,origin,visited,depth){const id=Number(ing.item_id);if(visited.has(id)||depth>12)return;const producers=produced.get(id)||[];const suitable=producers.filter(r=>kind(r)==='automatic'||kind(r)==='discovery_candidate'||kind(r)==='recipe_sheet');if(!suitable.length){if(!basic.has(id))basic.set(id,{id,name:ing.item_name||'Item '+id,icon:ing.item_icon,unresolved:true});if(!materialSources.has(id))materialSources.set(id,new Set());materialSources.get(id).add(origin);return}const recipe=suitable.find(r=>kind(r)==='automatic')||suitable[0];const next=new Set(visited);next.add(id);for(const sub of recipe.ingredients||[])if(sub.type==='Item')expand(sub,origin,next,depth+1)}
+for(const r of candidates)for(const ing of r.ingredients||[])if(ing.type==='Item')expand(ing,r.id,new Set(),0);
+materialRecords=[...basic.values()].sort((a,b)=>a.name.localeCompare(b.name));}
+function renderIngredients(){if(!dataReady)return;const host=$('ingredientGrid');host.replaceChildren();const q=normalize($('ingredientSearch').value),openOnly=$('ingredientsOpenOnly').checked,filtered=directIngredients.filter(x=>normalize(x.name).includes(q)&&(!openOnly||[...x.recipeIds].some(id=>!known(recipeById.get(id)))));$('ingredientSummary').textContent=`${directIngredients.length} direct ingredients · provisional discovery candidates`;
+for(const item of filtered){const ids=[...item.recipeIds],done=ids.filter(id=>known(recipeById.get(id))).length;host.append(tile(item,done,ids.length,()=>{ingredientSelected=item.id;renderIngredientDetail()}))}if(ingredientSelected!==null&&!filtered.some(x=>x.id===ingredientSelected))ingredientSelected=null;renderIngredientDetail()}
+function renderIngredientDetail(){const host=$('ingredientDetail');host.replaceChildren();const item=directIngredients.find(x=>x.id===ingredientSelected);if(!item)return;const detail=document.createElement('div');detail.className='ingredient-detail';const ids=[...item.recipeIds],done=ids.filter(id=>known(recipeById.get(id))).length;detail.innerHTML=`<h3>${esc(item.name)} · ${done}/${ids.length} discovered</h3><p class="small-note">Unknown recipes are hidden until marked discovered.</p>`;const list=document.createElement('div');list.className='ingredient-recipe-list';for(const id of ids){const r=recipeById.get(id),isKnown=known(r);const row=document.createElement('div');row.className='ingredient-recipe-row'+(isKnown?' known':'');const name=document.createElement('span');name.textContent=isKnown?(r.output_item_name||'Recipe '+id):'🔒 Unknown recipe';const state=document.createElement('span');state.className='state';state.textContent=isKnown?'✓ Discovered':'Not discovered';row.append(name,state);list.append(row)}detail.append(list);host.append(detail)}
+$('ingredientSearch').addEventListener('input',renderIngredients);$('ingredientsOpenOnly').addEventListener('change',renderIngredients);
+function renderMaterials(){if(!dataReady)return;const host=$('materialsGrid');host.replaceChildren();const q=normalize($('materialsSearch').value),openOnly=$('materialsOpenOnly').checked;const filtered=materialRecords.filter(item=>normalize(item.name).includes(q)&&(!openOnly||[...materialSources.get(item.id)].some(id=>!known(recipeById.get(id)))));$('materialSummary').textContent=`${filtered.length} potential materials · no inventory quantities`;
+for(const item of filtered){const ids=[...materialSources.get(item.id)],open=ids.filter(id=>!known(recipeById.get(id))).length;const el=document.createElement('button');el.type='button';el.className='ingredient-tile'+(open===0?' completed':'');const frame=document.createElement('span');frame.className='ingredient-icon-frame';if(item.icon){const img=document.createElement('img');img.className='ingredient-icon';img.src=item.icon;img.alt='';img.loading='lazy';frame.append(img)}const name=document.createElement('span');name.className='ingredient-name';name.textContent=item.name;const desc=document.createElement('span');desc.className='ingredient-remaining';desc.textContent=open===0?'✓ All related discovery recipes completed':'Relevant to '+open+' unfinished candidates';const note=document.createElement('span');note.className='material-kind';note.textContent='Unresolved source / possible basic material';el.append(frame,name,desc,note);el.addEventListener('click',()=>{materialSelected=item.id;renderMaterialDetail()});host.append(el)}renderMaterialDetail()}
+function renderMaterialDetail(){const host=$('materialsDetail');host.replaceChildren();const item=materialRecords.find(x=>x.id===materialSelected);if(!item)return;const ids=[...materialSources.get(item.id)],open=ids.filter(id=>!known(recipeById.get(id))).length;const detail=document.createElement('div');detail.className='ingredient-detail';detail.innerHTML=`<h3>${esc(item.name)}</h3><p class="material-detail-note">Used somewhere in the known production chains for ${open} unfinished discovery candidates. A missing Jeweler production recipe does not prove this item is a raw/farmable material. Inventory ownership and required quantities are unknown.</p>`;host.append(detail)}
+$('materialsSearch').addEventListener('input',renderMaterials);$('materialsOpenOnly').addEventListener('change',renderMaterials);
+function refresh(){progress();renderFamilies();renderRecipes();renderIngredients();renderMaterials()}
+async function load(){try{const urls=['../data/jeweler-recipes.json','../data/jeweler-discovery.json','../data/jeweler-families.json'];const responses=await Promise.all(urls.map(u=>fetch(u,{cache:'no-store'})));if(responses.some(r=>!r.ok))throw Error('Missing data file');const [r,d,f]=await Promise.all(responses.map(x=>x.json()));if(!Array.isArray(r)||!Array.isArray(d)||!Array.isArray(f))throw Error('Invalid JSON structure');recipes=r.map(x=>({...x,id:Number(x.id)}));recipeById=new Map(recipes.map(x=>[x.id,x]));categories=new Map(d.map(x=>[Number(x.recipe_id),x.unlock_category]));families=f.map(x=>({...x,id:String(x.id),recipe_ids:(x.recipe_ids||[]).map(Number)}));const ids=new Set(recipes.map(x=>x.id));dataReady=recipes.length>0&&recipes.every(x=>Number.isInteger(x.id)&&categories.has(x.id))&&families.every(x=>x.id&&x.name&&x.recipe_ids.every(id=>ids.has(id)));if(!dataReady)throw Error('Invalid data relationships');buildIndexes();}catch(e){dataReady=false;$('recipeStatus').textContent='Data loading failed: '+e.message+' — check the three JSON files in /data.'}refresh()}
+$('levelSlider').value=level;$('levelInput').value=level;$('levelDisplay').textContent=level+' / 400';bar('levelBar',level/4);royal('levelCard',level===400);$('levelStatus').textContent=level===400?'✓ Maximum Jeweler level reached!':'';load();
+})();
+</script></body></html>

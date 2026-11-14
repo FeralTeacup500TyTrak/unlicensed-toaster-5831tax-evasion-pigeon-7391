@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chef | Mrs.Chairmode</title>
+  <style>
+    :root {
+      --bg: #101827;
+      --card: #1f2937;
+      --border: #344052;
+      --gold: #e8b86d;
+      --text: #f9fafb;
+      --muted: #a5adbb;
+      --track: #374151;
+      --lavender: #b69cff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .container {
+      max-width: 1500px;
+      margin: auto;
+      padding: 45px 24px;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 35px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .back:hover { color: var(--gold); }
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 38px;
+      margin: 12px 0;
+    }
+    .description {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px;
+      margin-bottom: 20px;
+      transition:
+        background 0.35s,
+        border-color 0.35s,
+        box-shadow 0.35s;
+    }
+    .card-title {
+      font-size: 19px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .card-description {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 0 20px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 18px;
+    }
+    .value {
+      color: var(--gold);
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .progress-track {
+      height: 11px;
+      background: var(--track);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 99px;
+      transition:
+        width 0.25s ease,
+        background-color 0.25s ease;
+    }
+    .small-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 12px 0 0;
+    }
+    /* Cooking Level */
+    .level-controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    input[type="range"] {
+      flex: 1;
+      min-width: 0;
+      cursor: pointer;
+      accent-color: var(--lavender);
+    }
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    select {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px;
+      font: inherit;
+    }
+    input[type="number"] { width: 90px; }
+    input:focus,
+    select:focus {
+      outline: 2px solid var(--lavender);
+      outline-offset: 2px;
+    }
+    /* Royal Mastery */
+    .card.mastered {
+      background: #29243e;
+      border: 2px solid var(--lavender);
+      box-shadow:
+        0 0 18px rgba(182,156,255,0.20),
+        inset 0 0 22px rgba(182,156,255,0.05);
+    }
+    .card.just-mastered {
+      animation: royalReveal 0.85s ease-out;
+    }
+    @keyframes royalReveal {
+      0% {
+        transform: scale(0.99);
+        box-shadow: 0 0 0 rgba(182,156,255,0);
+      }
+      45% {
+        transform: scale(1.012);
+        box-shadow: 0 0 35px rgba(182,156,255,0.65);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .royal-badge {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 14px;
+      background: #3b3153;
+      text-align: center;
+    }
+    .mastered .royal-badge {
+      display: block;
+    }
+    .royal-crown {
+      font-size: 29px;
+      margin-bottom: 6px;
+    }
+    .royal-title {
+      color: var(--gold);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .royal-subtitle {
+      color: #c4b5fd;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    /* Discovery */
+    details.card {
+      padding: 0;
+      overflow: hidden;
+    }
+    details summary {
+      padding: 26px;
+      cursor: pointer;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details summary::marker {
+      content: "";
+    }
+    .discovery-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .chevron {
+      color: var(--lavender);
+      font-size: 24px;
+      transition: transform 0.2s;
+    }
+    details[open] .chevron {
+      transform: rotate(180deg);
+    }
+    .discovery-content {
+      border-top: 1px solid var(--border);
+      padding: 26px;
+    }
+    .discovery-content h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .discovery-form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .discovery-form input { flex: 1; min-width: 0; }
+    button {
+      background: var(--lavender);
+      color: #171326;
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { background: #cbbaff; }
+    .feedback {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .feedback.unlock-success {
+      margin: 12px 0 20px;
+      padding: 16px 18px;
+      background: #29243e;
+      border: 2px solid var(--lavender);
+      border-radius: 14px;
+      color: #c4b5fd;
+      box-shadow: 0 0 22px rgba(182,156,255,.24);
+      animation: unlockReveal .55s ease-out;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .unlock-success strong {
+      color: #b69cff;
+      display: block;
+      font-size: 16px;
+      letter-spacing: .6px;
+    }
+    @keyframes unlockReveal {
+      0% { opacity: 0; transform: translateY(8px) scale(.98); box-shadow: 0 0 0 rgba(182,156,255,0); }
+      65% { opacity: 1; transform: translateY(0) scale(1.01); box-shadow: 0 0 32px rgba(182,156,255,.45); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin: 22px 0 16px;
+    }
+    .toolbar input { flex: 1; min-width: 0; }
+    .recipe-list {
+      display: grid;
+      gap: 10px;
+    }
+    .recipe {
+      background: #252f3d;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .recipe.unlocked {
+      background: #302944;
+      border-color: var(--lavender);
+    }
+    .recipe-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .recipe-state {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .recipe.unlocked .recipe-state {
+      color: var(--lavender);
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 55px;
+    }
+    @media (max-width: 650px) {
+      .container { padding: 25px 16px; }
+      h1 { font-size: 30px; }
+      .card { padding: 20px; }
+      details summary,
+      .discovery-content { padding: 20px; }
+      .discovery-form,
+      .toolbar { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    .category-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:16px 0; }
+    .category-box { background:#252f3d; border:1px solid var(--border); border-radius:12px; padding:15px; }
+    .category-box strong { color:var(--gold); font-size:19px; display:block; margin-top:7px; }
+    .data-row { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0; align-items:center; }
+    .data-row label { font-size:12px; color:var(--muted); }
+    .data-row input[type=file] { max-width:240px; font-size:12px; }
+    .item-icon { width:36px; height:36px; object-fit:contain; flex-shrink:0; }
+    .recipe-left { display:flex; gap:10px; align-items:center; min-width:0; }
+    .recipe-name { overflow-wrap:anywhere; }
+    .recipe-meta { color:var(--muted); font-size:11px; margin-top:4px; }
+    .recipe-state { text-align:right; }
+    .recipe-actions { display:flex; align-items:center; gap:10px; }
+    .small-action { padding:7px 10px; font-size:12px; }
+    .recipe-list { max-height:570px; overflow-y:auto; padding-right:4px; }
+    @media(max-width:650px){.category-grid{grid-template-columns:1fr}.recipe{align-items:flex-start}.recipe-actions{flex-direction:column}}
+
+    .craft-heading { margin: 28px 0 12px; font-size: 18px; }
+    .craft-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; margin-bottom: 18px; }
+    .craft-category { text-align: left; background: #252f3d; color: var(--text); border: 1px solid var(--border); border-radius: 14px; padding: 16px; font: inherit; }
+    .craft-category:hover, .craft-category.selected { border-color: var(--gold); background: #303746; }
+    .craft-category.mastered { border: 2px solid var(--lavender); background: #29243e; box-shadow: 0 0 16px rgba(182,156,255,.22); }
+    .craft-category-head { display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:12px; }
+    .craft-category-name { font-size:14px; font-weight:650; }
+    .craft-category-count { color:var(--gold); white-space:nowrap; font-weight:700; font-size:14px; }
+    .craft-category.mastered .craft-category-count { color:var(--lavender); }
+    .craft-category .progress-track { height: 8px; }
+    .category-context { margin: 18px 0 10px; color:var(--gold); font-weight:650; }
+    @media (max-width: 1150px) { .craft-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+    @media (max-width: 850px) { .craft-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+    @media (max-width: 650px) { .craft-grid { grid-template-columns: 1fr; } }
+
+    /* Golden Legendary Chef — only when the full Chef tracker reaches 100% */
+    body { transition: background 0.7s ease; }
+    body.golden-mastered {
+      background: radial-gradient(ellipse at 50% 0%, #382b1c 0%, #201b16 42%, #101827 100%);
+    }
+    body.golden-mastered .eyebrow { color: #f3d77a; }
+    body.golden-mastered .card:not(.mastered),
+    body.golden-mastered details.card {
+      border-color: #806238;
+      box-shadow: 0 0 16px rgba(232,184,109,.10);
+    }
+    body.golden-mastered #chefCard {
+      background: linear-gradient(135deg, #38291c, #272018);
+      border: 2px solid #f3d77a;
+      box-shadow: 0 0 28px rgba(243,215,122,.26), inset 0 0 24px rgba(243,215,122,.06);
+    }
+    body.golden-mastered #chefPercent { color: #f3d77a !important; }
+    body.golden-mastered #chefBar { background-color: #f3d77a !important; }
+    body.golden-mastered .craft-category.mastered {
+      border-color: #d5a44e;
+      background: #35291d;
+      box-shadow: 0 0 12px rgba(243,215,122,.16);
+    }
+    body.golden-mastered .craft-category.mastered .craft-category-count { color: #f3d77a; }
+    #legendaryBanner {
+      display: none;
+      margin: 18px 0 0;
+      padding: 23px 18px;
+      border-radius: 15px;
+      border: 1px solid #b88d43;
+      background: linear-gradient(120deg, #392b1e, #4a3520, #392b1e);
+      text-align: center;
+      box-shadow: inset 0 0 22px rgba(243,215,122,.08);
+    }
+    body.golden-mastered #legendaryBanner { display: block; }
+    .legendary-crown { font-size: 38px; }
+    .legendary-title { color: #f3d77a; font-size: 23px; font-weight: 800; letter-spacing: 2px; }
+    .legendary-subtitle { color: #e8c88d; font-size: 12px; margin-top: 7px; letter-spacing: 1px; }
+    body.golden-mastered #chefCard .royal-badge { display: none; }
+    body.golden-mastered.golden-reveal #legendaryBanner { animation: goldenReveal 1.2s ease-out; }
+    @keyframes goldenReveal {
+      0% { opacity: 0; transform: translateY(12px) scale(.96); box-shadow: 0 0 0 rgba(243,215,122,0); }
+      55% { opacity: 1; transform: translateY(0) scale(1.025); box-shadow: 0 0 40px rgba(243,215,122,.6); }
+      100% { transform: none; box-shadow: inset 0 0 22px rgba(243,215,122,.08); }
+    }
+    .golden-confetti-layer { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 9999; }
+    .golden-confetti-piece { position: absolute; top: -20px; width: 8px; height: 13px; border-radius: 2px; animation: goldenFall 2.6s linear forwards; }
+    @keyframes goldenFall { to { transform: translate3d(var(--drift), 105vh, 0) rotate(700deg); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .golden-confetti-layer { display: none; }
+      body.golden-mastered.golden-reveal #legendaryBanner { animation: none; }
+    }
+
+    /* Discovery Ingredients */
+    .ingredient-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .ingredient-tile {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:9px;
+      min-width:0;
+      text-align:center;
+      background:#252f3d;
+      color:var(--text);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px 10px;
+      cursor:pointer;
+      font:inherit;
+    }
+    .ingredient-tile:hover,.ingredient-tile.selected {
+      border-color:var(--lavender);
+      background:#303044;
+    }
+    .ingredient-tile.completed {
+      border:2px solid #e8b86d;
+      box-shadow:0 0 14px rgba(232,184,109,.20), inset 0 0 12px rgba(232,184,109,.05);
+    }
+    .ingredient-icon-frame {
+      width:76px;height:76px;padding:5px;
+      border:2px solid var(--border);
+      border-radius:12px;
+      background:#111827;
+      display:grid;place-items:center;
+    }
+    .ingredient-tile.completed .ingredient-icon-frame {
+      border:3px solid #e8b86d;
+      box-shadow:0 0 12px rgba(232,184,109,.35);
+    }
+    .ingredient-icon {width:100%;height:100%;object-fit:contain;}
+    .ingredient-name {font-size:14px;font-weight:650;overflow-wrap:anywhere;}
+    .ingredient-count {font-size:17px;font-weight:750;color:var(--gold);}
+    .ingredient-tile.completed .ingredient-count {color:#e8b86d;}
+    .ingredient-mini-track {width:100%;height:7px;background:var(--track);border-radius:99px;overflow:hidden;}
+    .ingredient-mini-fill {height:100%;border-radius:99px;}
+    .ingredient-remaining {font-size:11px;color:var(--muted);}
+    .ingredient-detail {
+      margin-top:18px;padding:20px;background:#1a2433;
+      border:1px solid var(--border);border-radius:14px;
+    }
+    .ingredient-detail-head {display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+    .ingredient-detail-head img {width:56px;height:56px;object-fit:contain;}
+    .ingredient-recipe-list {display:grid;gap:8px;margin-top:12px;}
+    .ingredient-recipe-row {
+      display:flex;justify-content:space-between;gap:12px;align-items:center;
+      padding:10px 12px;background:#252f3d;border:1px solid var(--border);border-radius:10px;
+      font-size:13px;
+    }
+    .ingredient-recipe-row.known {border-color:var(--lavender);background:#302944;}
+    .ingredient-recipe-row .state {font-size:11px;color:var(--muted);white-space:nowrap;}
+    .ingredient-recipe-row.known .state {color:var(--lavender);}
+    @media(max-width:850px){.ingredient-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:520px){.ingredient-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ingredient-tile{padding:11px 7px}.ingredient-icon-frame{width:64px;height:64px}}
+
+  </style>
+</head>
+<body>
+  <main class="container">
+    <a class="back" href="index.html">
+      ← Back to Crafting
+    </a>
+    <div class="eyebrow">
+      MRS.CHAIRMODE ♥ COMPLETION TRACKER
+    </div>
+    <h1>🍳 Chef</h1>
+    <p class="description">
+      Master the art of cooking in Tyria.
+    </p>
+    <!-- Chef Completion -->
+    <section class="card" id="chefCard">
+      <div class="topline">
+        <h2 class="card-title">Chef Completion</h2>
+        <span class="value" id="chefPercent">—</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="chefBar"></div>
+      </div>
+      <div id="legendaryBanner" role="status">
+        <div class="legendary-crown">🏆</div>
+        <div class="legendary-title">LEGENDARY CHEF</div>
+        <div class="legendary-subtitle">✦ CULINARY PERFECTION ✦</div>
+        <div class="legendary-subtitle">Every recipe. Every level. Mastered.</div>
+      </div>
+      <div class="royal-badge">
+        <div class="royal-crown">👑</div>
+        <div class="royal-title">CHEF MASTERED</div>
+        <div class="royal-subtitle">
+          ✦ All Chef objectives completed ✦
+        </div>
+      </div>
+    </section>
+    <!-- Cooking Level -->
+    <section class="card" id="levelCard">
+      <div class="topline">
+        <h2 class="card-title">Cooking Level</h2>
+        <span class="value" id="levelDisplay">0 / 500</span>
+      </div>
+      <div class="level-controls">
+        <input
+          type="range"
+          id="levelSlider"
+          min="0"
+          max="500"
+          value="0"
+          aria-label="Cooking level slider"
+        >
+        <input
+          type="number"
+          id="levelInput"
+          min="0"
+          max="500"
+          value="0"
+          aria-label="Cooking level number"
+        >
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="levelBar"></div>
+      </div>
+      <p class="small-note" id="levelStatus"></p>
+      <div class="royal-badge">
+        <div class="royal-crown">👑</div>
+        <div class="royal-title">MASTER CHEF</div>
+        <div class="royal-subtitle">
+          ✦ Level 500 Complete ✦
+        </div>
+      </div>
+    </section>
+    <!-- Real recipe tracker -->
+  <details class="card" id="discoveryCard">
+    <summary>
+      <div class="discovery-heading">
+        <div>
+          <h2 class="card-title">📖 Recipes</h2>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="discoveryBar"></div></div>
+      <p class="small-note" id="discoveryStatus">Loading Chef recipes…</p>
+    </summary>
+    <div class="discovery-content">
+      <p class="feedback" id="loadFeedback" role="status">Loading Chef recipes…</p>
+      <div class="category-grid">
+        <div class="category-box">🔍 Discovery candidates<strong id="discoveryCount">—</strong></div>
+        <div class="category-box">📜 Recipe Sheets<strong id="sheetCount">—</strong></div>
+      </div>
+      <p class="small-note" id="automaticCount">Automatic recipes: —</p>
+      <h3>🔮 Unlock a Recipe</h3>
+      <form class="discovery-form" id="recipeForm">
+        <input type="text" id="recipeInput" placeholder="Enter recipe name..." autocomplete="off" aria-label="Learned recipe name">
+        <button type="submit">Unlock ✨</button>
+      </form>
+      <div class="feedback" id="recipeFeedback" role="status"></div>
+      <h3 class="craft-heading">📖 Recipe Categories</h3>
+      <div class="craft-grid" id="craftGrid"></div>
+      <p class="category-context" id="categoryContext"></p>
+      <div class="toolbar">
+        <input type="search" id="recipeSearch" placeholder="Search unlocked recipes..." aria-label="Search unlocked recipes">
+        <select id="recipeCategory" aria-label="Recipe category">
+          <option value="all">All recipes</option>
+          <option value="discovery_candidate">Discovery candidates</option>
+          <option value="recipe_sheet">Recipe Sheets</option>
+          <option value="automatic">Automatic</option>
+        </select>
+        <select id="recipeFilter" aria-label="Completion filter">
+          <option value="all">All</option>
+          <option value="unlocked">Unlocked</option>
+          <option value="locked">Locked</option>
+        </select>
+      </div>
+      <div class="recipe-list" id="recipeList"></div>
+    </div>
+  </details>
+
+  <details class="card" id="ingredientsCard">
+    <summary>
+      <div class="discovery-heading">
+        <div>
+          <h2 class="card-title">🥕 Discovery Ingredients</h2>
+          <p class="small-note" id="ingredientSummary">Loading Discovery Ingredients…</p>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </div>
+    </summary>
+    <div class="discovery-content">
+      <div class="toolbar">
+        <input type="search" id="ingredientSearch" placeholder="Search ingredients…" aria-label="Search Discovery Ingredients">
+        <select id="ingredientSort" aria-label="Sort ingredients">
+          <option value="name">Alphabetical</option>
+          <option value="remaining">Most remaining</option>
+          <option value="progress">Highest progress</option>
+        </select>
+      </div>
+      <div class="ingredient-grid" id="ingredientGrid"></div>
+      <div class="ingredient-detail" id="ingredientDetail" hidden></div>
+    </div>
+  </details>
+  <footer>
+      Made with ♥ for Mrs.Chairmode
+    </footer>
+  </main>
+  <script>
+    const $ = id => document.getElementById(id);
+    function progressColor(percent) {
+      if (percent <= 20) return "#e56b85";
+      if (percent <= 40) return "#f5a66b";
+      if (percent <= 60) return "#f3d77a";
+      if (percent <= 80) return "#86ddb0";
+      if (percent < 100) return "#65dad9";
+      return "#b69cff";
+    }
+    function setBar(el, percent) {
+      el.style.width = percent + "%";
+      el.style.backgroundColor = progressColor(percent);
+    }
+    function updateRoyal(card, completed) {
+      const wasMastered = card.classList.contains("mastered");
+      card.classList.toggle("mastered", completed);
+      if (completed && !wasMastered) {
+        card.classList.remove("just-mastered");
+        void card.offsetWidth;
+        card.classList.add("just-mastered");
+      }
+      if (!completed) card.classList.remove("just-mastered");
+    }
+    // Only animate a newly achieved completion, not an already completed saved state.
+    let goldenCompletionInitialized = false;
+    function showGoldenConfetti() {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const layer = document.createElement("div");
+      layer.className = "golden-confetti-layer";
+      const colors = ["#f3d77a", "#e8b86d", "#fff0b8", "#d5a44e"];
+      for (let i = 0; i < 45; i++) {
+        const piece = document.createElement("span");
+        piece.className = "golden-confetti-piece";
+        piece.style.left = Math.random() * 100 + "%";
+        piece.style.backgroundColor = colors[i % colors.length];
+        piece.style.setProperty("--drift", (Math.random() * 240 - 120) + "px");
+        piece.style.animationDelay = (Math.random() * .65) + "s";
+        layer.appendChild(piece);
+      }
+      document.body.appendChild(layer);
+      setTimeout(() => layer.remove(), 3700);
+    }
+    function updateGoldenMastery(completed) {
+      const previouslyCompleted = document.body.classList.contains("golden-mastered");
+      document.body.classList.toggle("golden-mastered", completed);
+      if (completed && !previouslyCompleted && goldenCompletionInitialized) {
+        document.body.classList.remove("golden-reveal");
+        void document.body.offsetWidth;
+        document.body.classList.add("golden-reveal");
+        showGoldenConfetti();
+      }
+      if (!completed) document.body.classList.remove("golden-reveal");
+      goldenCompletionInitialized = true;
+    }
+    // Equal weight for Cooking Level and recipe collection.
+    // No overall percentage until both recipe databases are loaded.
+    function updateChefCompletion() {
+      const display = $("chefPercent");
+      const bar = $("chefBar");
+      const card = $("chefCard");
+      if (!recipes.length || categories.size !== recipes.length) {
+        display.textContent = "—";
+        setBar(bar, 0);
+        updateRoyal(card, false);
+        document.body.classList.remove("golden-mastered", "golden-reveal");
+        return;
+      }
+      const level = Number($("levelSlider").value) || 0;
+      const known = recipes.filter(craftKnown).length;
+      const levelProgress = level / 500;
+      const recipeProgress = known / recipes.length;
+      const percent = (levelProgress + recipeProgress) * 50;
+      display.textContent = percent.toFixed(1).replace(".0", "") + "%";
+      setBar(bar, percent);
+      display.style.color = percent === 100 ? "#b69cff" : "#e8b86d";
+      updateRoyal(card, level === 500 && known === recipes.length);
+      updateGoldenMastery(level === 500 && known === recipes.length);
+    }
+    function updateLevel(value) {
+      const level = Math.max(0, Math.min(500, Math.round(Number(value) || 0)));
+      const percent = level / 500 * 100;
+      $("levelSlider").value = level;
+      $("levelInput").value = level;
+      $("levelDisplay").textContent = level + " / 500";
+      setBar($("levelBar"), percent);
+      updateRoyal($("levelCard"), level === 500);
+      $("levelDisplay").style.color = level === 500 ? "#b69cff" : "#e8b86d";
+      $("levelStatus").textContent = level === 500 ? "✓ Maximum cooking level reached!" : "";
+      updateChefCompletion();
+      try { localStorage.setItem("chairmode-chef-level-v1", String(level)); } catch(e) {}
+    }
+    $("levelSlider").addEventListener("input", () => updateLevel($("levelSlider").value));
+    $("levelInput").addEventListener("input", () => updateLevel($("levelInput").value));
+    let recipes = [];
+    let ingredients = [];
+    let categories = new Map();
+    let unlocked = new Set();
+    let activeCraftCategory = null;
+    const CRAFT_CATEGORIES = [
+      ["Backpack", ["Backpack"]], ["Consumable", ["Consumable"]],
+      ["Cooking Ingredient", ["IngredientCooking"]],
+      ["Crafting Component", ["Component", "LegendaryComponent"]],
+      ["Dessert", ["Dessert"]], ["Dye", ["Dye"]],
+      ["Feast", ["Feast"]], ["Meal", ["Meal"]],
+      ["Obsidian Refinement", ["RefinementObsidian"]],
+      ["Refinement", ["Refinement"]], ["Seasoning", ["Seasoning"]],
+      ["Snack", ["Snack"]], ["Soup", ["Soup"]]
+    ];
+    function craftKnown(r) { return unlocked.has(r.id) || kind(r) === "automatic"; }
+    function craftStats(types) {
+      const matching = recipes.filter(r => types.includes(r.type));
+      return [matching.filter(craftKnown).length, matching.length];
+    }
+    function renderCraftCategories() {
+      const grid = $("craftGrid");
+      grid.replaceChildren();
+      for (const [name, types] of [["All", CRAFT_CATEGORIES.flatMap(entry => entry[1])], ...CRAFT_CATEGORIES]) {
+        const [done, total] = craftStats(types);
+        const percent = total ? done / total * 100 : 0;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "craft-category" + ((activeCraftCategory === name || (name === "All" && !activeCraftCategory)) ? " selected" : "") + (total && done === total ? " mastered" : "");
+        button.setAttribute("aria-pressed", String(activeCraftCategory === name || (name === "All" && !activeCraftCategory)));
+        const head = document.createElement("div");
+        head.className = "craft-category-head";
+        const label = document.createElement("span");
+        label.className = "craft-category-name";
+        label.textContent = name + (total && done === total ? " 👑" : "");
+        const count = document.createElement("span");
+        count.className = "craft-category-count";
+        count.textContent = done + " / " + total;
+        head.append(label, count);
+        const track = document.createElement("div");
+        track.className = "progress-track";
+        const fill = document.createElement("div");
+        fill.className = "progress-fill";
+        setBar(fill, percent);
+        track.append(fill);
+        button.append(head, track);
+        button.addEventListener("click", () => {
+          activeCraftCategory = name === "All" ? null : name;
+          refresh();
+        });
+        grid.append(button);
+      }
+      $("categoryContext").textContent = activeCraftCategory || "";
+    }
+
+    const KEY = "chairmode-chef-unlocked-ids-v1";
+    try {
+      const saved = JSON.parse(localStorage.getItem(KEY) || "[]");
+      if (Array.isArray(saved)) unlocked = new Set(saved.filter(Number.isInteger));
+    } catch(e) {}
+    function saveUnlocks() {
+      try { localStorage.setItem(KEY, JSON.stringify([...unlocked])); }
+      catch(e) { $("recipeFeedback").textContent = "Warning: Browser storage unavailable; progress may not persist."; }
+    }
+    const normalize = text => String(text || "").trim().toLocaleLowerCase("en").replace(/\s+/g, " ");
+    function kind(recipe) { return categories.get(recipe.id) || "unclassified"; }
+    function counts(kindName) {
+      const subset = recipes.filter(r => kind(r) === kindName);
+      return [subset.filter(r => unlocked.has(r.id)).length, subset.length];
+    }
+    function refresh() {
+      const [d,dt] = counts("discovery_candidate");
+      const [s,st] = counts("recipe_sheet");
+      const [a,at] = counts("automatic");
+      $("discoveryCount").textContent = d + " / " + dt;
+      $("sheetCount").textContent = s + " / " + st;
+      $("automaticCount").textContent = "⚙️ Automatic recipes: " + at + " (not counted toward manual completion)";
+      const total = dt + st;
+      const completed = d + s;
+      const percent = total ? completed / total * 100 : 0;
+      setBar($("discoveryBar"), percent);
+      $("discoveryStatus").textContent = recipes.length ? "Manually learned: " + completed + " / " + total + " (provisional classification)" : "Loading Chef recipes…";
+      renderCraftCategories();
+      updateChefCompletion();
+      if (ingredients.length) renderIngredients();
+      const query = normalize($("recipeSearch").value);
+      const filter = $("recipeFilter").value;
+      const category = $("recipeCategory").value;
+      $("recipeList").replaceChildren();
+      const filtered = recipes.filter(r => {
+        const known = unlocked.has(r.id) || kind(r) === "automatic";
+        if (category !== "all" && kind(r) !== category) return false;
+        if (activeCraftCategory) {
+          const selected = CRAFT_CATEGORIES.find(c => c[0] === activeCraftCategory);
+          if (selected && !selected[1].includes(r.type)) return false;
+        }
+        if (filter === "unlocked" && !known) return false;
+        if (filter === "locked" && known) return false;
+        // Never search locked recipe names, including recipe sheets.
+        if (query && (!known || !normalize(r.output_item_name).includes(query))) return false;
+        return true;
+      });
+      filtered.sort((a,b) => a.min_rating - b.min_rating || a.id - b.id);
+      const shown = filtered.slice(0, 200);
+      for (const recipe of shown) {
+        const categoryName = kind(recipe);
+        const automatic = categoryName === "automatic";
+        const known = automatic || unlocked.has(recipe.id);
+        const row = document.createElement("div");
+        row.className = "recipe" + (known ? " unlocked" : "");
+        const left = document.createElement("div");
+        left.className = "recipe-left";
+        const img = document.createElement("img");
+        img.className = "item-icon";
+        img.alt = "";
+        if (known && recipe.output_item_icon) img.src = recipe.output_item_icon;
+        else img.style.display = "none";
+        const info = document.createElement("div");
+        const name = document.createElement("div");
+        name.className = "recipe-name";
+        name.textContent = known ? recipe.output_item_name : "🔒 Unknown Recipe";
+        const meta = document.createElement("div");
+        meta.className = "recipe-meta";
+        meta.textContent = (categoryName === "recipe_sheet" ? "📜 Recipe Sheet" : categoryName === "discovery_candidate" ? "🔍 Discovery candidate" : categoryName === "automatic" ? "⚙️ Automatic" : "Unclassified") + " · Cooking " + recipe.min_rating;
+        info.append(name,meta);
+        left.append(img,info);
+        const actions = document.createElement("div");
+        actions.className = "recipe-actions";
+        const state = document.createElement("span");
+        state.className = "recipe-state";
+        state.textContent = automatic ? "Known automatically" : known ? "✓ Learned" : "???";
+        actions.append(state);
+        if (!automatic && known) {
+          const undo = document.createElement("button");
+          undo.className = "small-action";
+          undo.textContent = "Undo";
+          undo.setAttribute("aria-label", "Mark " + recipe.output_item_name + " as not learned");
+          undo.addEventListener("click", () => { unlocked.delete(recipe.id); saveUnlocks(); refresh(); });
+          actions.append(undo);
+        }
+        row.append(left,actions);
+        $("recipeList").append(row);
+      }
+      if (filtered.length > shown.length) {
+        const more = document.createElement("p");
+        more.className = "small-note";
+        more.textContent = "Showing the first 200 of " + filtered.length + " recipes. Use filters to narrow the list.";
+        $("recipeList").append(more);
+      }
+      if (!filtered.length) {
+        const empty = document.createElement("p");
+        empty.className = "small-note";
+        empty.textContent = recipes.length ? "No matching recipes." : "No recipes loaded yet.";
+        $("recipeList").append(empty);
+      }
+    }
+
+    let selectedIngredientId = null;
+    function ingredientRecipeIds(item) {
+      const candidateIds = new Set(recipes.filter(r => kind(r) === "discovery_candidate").map(r => r.id));
+      return (item.recipe_ids || []).filter(id => candidateIds.has(id));
+    }
+    function renderIngredientDetail(item) {
+      const panel = $("ingredientDetail");
+      if (!item) { panel.hidden = true; panel.replaceChildren(); return; }
+      const ids = ingredientRecipeIds(item);
+      const knownRecipes = ids.map(id => recipes.find(r => r.id === id)).filter(r => r && unlocked.has(r.id));
+      const unknownCount = ids.length - knownRecipes.length;
+      panel.hidden = false;
+      panel.replaceChildren();
+
+      const head = document.createElement("div");
+      head.className = "ingredient-detail-head";
+      const icon = document.createElement("img");
+      icon.src = item.item_icon;
+      icon.alt = "";
+      const info = document.createElement("div");
+      const title = document.createElement("h3");
+      title.textContent = item.item_name;
+      title.style.margin = "0 0 5px";
+      const count = document.createElement("div");
+      count.className = "ingredient-count";
+      count.textContent = knownRecipes.length + " / " + ids.length + " discovered";
+      info.append(title, count);
+      head.append(icon, info);
+      panel.append(head);
+
+      const knownHeading = document.createElement("h3");
+      knownHeading.textContent = "✓ Discovered recipes (" + knownRecipes.length + ")";
+      panel.append(knownHeading);
+      const list = document.createElement("div");
+      list.className = "ingredient-recipe-list";
+      knownRecipes.forEach(recipe => {
+        const row = document.createElement("div");
+        row.className = "ingredient-recipe-row known";
+        const name = document.createElement("span");
+        name.textContent = recipe.output_item_name;
+        const state = document.createElement("span");
+        state.className = "state";
+        state.textContent = "✓ Unlocked";
+        row.append(name, state);
+        list.append(row);
+      });
+      if (!knownRecipes.length) {
+        const empty = document.createElement("p");
+        empty.className = "small-note";
+        empty.textContent = "No recipes discovered yet.";
+        list.append(empty);
+      }
+      panel.append(list);
+
+      const unknownHeading = document.createElement("h3");
+      unknownHeading.style.marginTop = "20px";
+      unknownHeading.textContent = "🔒 Unknown recipes (" + unknownCount + ")";
+      panel.append(unknownHeading);
+      if (unknownCount) {
+        const unknownNote = document.createElement("p");
+        unknownNote.className = "small-note";
+        unknownNote.textContent = "Recipe names stay hidden until they are unlocked.";
+        panel.append(unknownNote);
+        const unknownList = document.createElement("div");
+        unknownList.className = "ingredient-recipe-list";
+        for (let i = 0; i < unknownCount; i++) {
+          const row = document.createElement("div");
+          row.className = "ingredient-recipe-row";
+          const name = document.createElement("span");
+          name.textContent = "🔒 Unknown Recipe";
+          const state = document.createElement("span");
+          state.className = "state";
+          state.textContent = "Not unlocked";
+          row.append(name, state);
+          unknownList.append(row);
+        }
+        panel.append(unknownList);
+      } else {
+        const done = document.createElement("p");
+        done.className = "small-note";
+        done.textContent = "All Discovery recipes using this ingredient are unlocked. ✨";
+        panel.append(done);
+      }
+    }
+    function renderIngredients() {
+      const grid = $("ingredientGrid");
+      if (!grid) return;
+      grid.replaceChildren();
+      const query = normalize($("ingredientSearch").value);
+      const sort = $("ingredientSort").value;
+      const rows = ingredients.map(item => {
+        const ids = ingredientRecipeIds(item);
+        const done = ids.filter(id => unlocked.has(id)).length;
+        return {item, ids, done, remaining: ids.length - done};
+      }).filter(x => x.ids.length && normalize(x.item.item_name).includes(query));
+      rows.sort((a,b) => sort === "remaining" ? b.remaining-a.remaining || a.item.item_name.localeCompare(b.item.item_name)
+        : sort === "progress" ? (b.done/b.ids.length)-(a.done/a.ids.length) || a.item.item_name.localeCompare(b.item.item_name)
+        : a.item.item_name.localeCompare(b.item.item_name));
+      $("ingredientSummary").textContent = rows.length + " Discovery ingredients";
+      for (const entry of rows) {
+        const {item,ids,done,remaining} = entry;
+        const percent = ids.length ? done / ids.length * 100 : 0;
+        const tile = document.createElement("button");
+        tile.type = "button";
+        tile.className = "ingredient-tile" + (remaining === 0 ? " completed" : "") + (selectedIngredientId === item.item_id ? " selected" : "");
+        const frame = document.createElement("span");
+        frame.className = "ingredient-icon-frame";
+        const img = document.createElement("img");
+        img.className = "ingredient-icon";
+        img.src = item.item_icon;
+        img.alt = "";
+        frame.append(img);
+        const name = document.createElement("span");
+        name.className = "ingredient-name";
+        name.textContent = item.item_name;
+        const count = document.createElement("span");
+        count.className = "ingredient-count";
+        count.textContent = done + " / " + ids.length;
+        const track = document.createElement("span");
+        track.className = "ingredient-mini-track";
+        const fill = document.createElement("span");
+        fill.className = "ingredient-mini-fill";
+        fill.style.display = "block";
+        fill.style.width = percent + "%";
+        fill.style.background = remaining === 0 ? "#e8b86d" : progressColor(percent);
+        track.append(fill);
+        const remainingText = document.createElement("span");
+        remainingText.className = "ingredient-remaining";
+        remainingText.textContent = remaining === 0 ? "Completed ✓" : remaining + " remaining";
+        tile.append(frame,name,count,track,remainingText);
+        tile.addEventListener("click", () => {
+          selectedIngredientId = selectedIngredientId === item.item_id ? null : item.item_id;
+          renderIngredients();
+          renderIngredientDetail(selectedIngredientId === null ? null : item);
+        });
+        grid.append(tile);
+      }
+      if (!rows.length) {
+        const empty = document.createElement("p");
+        empty.className = "small-note";
+        empty.textContent = "No matching Discovery ingredients.";
+        grid.append(empty);
+      }
+      if (selectedIngredientId !== null) {
+        const selected = ingredients.find(item => item.item_id === selectedIngredientId);
+        if (selected) renderIngredientDetail(selected);
+        else renderIngredientDetail(null);
+      } else renderIngredientDetail(null);
+    }
+
+    // Automatically load the two JSON databases from the sibling data folder.
+    async function loadChefData() {
+      const feedback = $("loadFeedback");
+      feedback.textContent = "Loading Chef recipes…";
+      try {
+        const [recipeResponse, categoryResponse, ingredientResponse] = await Promise.all([
+          fetch("../data/chef-recipes-complete.json"),
+          fetch("../data/chef-discovery.json"),
+          fetch("../data/chef-ingredients.json")
+        ]);
+        if (!recipeResponse.ok || !categoryResponse.ok || !ingredientResponse.ok) {
+          throw new Error("One or more database files could not be found (HTTP " +
+            recipeResponse.status + "/" + categoryResponse.status + "/" + ingredientResponse.status + ").");
+        }
+        const [r, c, i] = await Promise.all([
+          recipeResponse.json(), categoryResponse.json(), ingredientResponse.json()
+        ]);
+        if (!Array.isArray(r) || !c || !Array.isArray(c.recipes) || !Array.isArray(i)) {
+          throw new Error("Unexpected JSON format.");
+        }
+        const map = new Map(c.recipes.map(entry => [entry.recipe_id, entry.unlock_category]));
+        const validTypes = new Set(CRAFT_CATEGORIES.flatMap(c => c[1]));
+        if (!r.length || r.some(x =>
+          !Number.isInteger(x.id) ||
+          typeof x.output_item_name !== "string" ||
+          !map.has(x.id) ||
+          !validTypes.has(x.type)
+        )) {
+          throw new Error("Recipe data and classifications do not match.");
+        }
+        recipes = r;
+        categories = map;
+        ingredients = i;
+        feedback.textContent = "✓ " + recipes.length + " recipes and " + ingredients.length + " ingredient records ready.";
+        refresh();
+        renderIngredients();
+      } catch (error) {
+        feedback.textContent = "Could not load Chef data: " + error.message +
+          " Open the tracker through a local web server, not by double-clicking the HTML file.";
+        refresh();
+      }
+    }
+    $("recipeForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const feedback = $("recipeFeedback");
+      feedback.classList.remove("unlock-success");
+      if (!recipes.length) { feedback.textContent = "Load the databases first."; return; }
+      const entered = normalize($("recipeInput").value);
+      if (!entered) { $("recipeFeedback").textContent = "Enter a recipe name first."; return; }
+      const matches = recipes.filter(r => normalize(r.output_item_name) === entered && kind(r) !== "automatic");
+      if (!matches.length) { $("recipeFeedback").textContent = "No matching manually learned recipe found."; return; }
+      const fresh = matches.filter(r => !unlocked.has(r.id));
+      if (!fresh.length) { $("recipeFeedback").textContent = "This recipe is already marked as learned."; return; }
+      for (const recipe of fresh) unlocked.add(recipe.id);
+      saveUnlocks();
+      $("recipeInput").value = "";
+      feedback.replaceChildren();
+      const heading = document.createElement("strong");
+      heading.textContent = "✓ RECIPE UNLOCKED! ✨";
+      const detail = document.createElement("span");
+      detail.textContent = fresh.length === 1
+        ? fresh[0].output_item_name + " — Added to your Chef Collection ♥"
+        : fresh.length + " recipes added to your Chef Collection ♥";
+      feedback.append(heading, detail);
+      feedback.classList.add("unlock-success");
+      refresh();
+    });
+    $("recipeSearch").addEventListener("input", refresh);
+    $("recipeFilter").addEventListener("change", refresh);
+    $("recipeCategory").addEventListener("change", refresh);
+    $("ingredientSearch").addEventListener("input", renderIngredients);
+    $("ingredientSort").addEventListener("change", renderIngredients);
+    let savedLevel = 0;
+    try { savedLevel = Number(localStorage.getItem("chairmode-chef-level-v1")) || 0; } catch(e) {}
+    updateLevel(savedLevel);
+    refresh();
+    loadChefData();
+  </script>
+</body>
+</html>

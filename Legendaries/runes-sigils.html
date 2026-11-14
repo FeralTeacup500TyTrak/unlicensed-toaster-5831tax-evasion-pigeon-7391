@@ -1,0 +1,538 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Legendary Runes & Sigils | Mrs.Chairmode</title><style>
+    :root {
+      --bg: #101827;
+      --card: #1f2937;
+      --border: #344052;
+      --gold: #e8b86d;
+      --text: #f9fafb;
+      --muted: #a5adbb;
+      --track: #374151;
+      --lavender: #b69cff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .container {
+      max-width: 1500px;
+      margin: auto;
+      padding: 45px 24px;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 35px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .back:hover { color: var(--gold); }
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 38px;
+      margin: 12px 0;
+    }
+    .description {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px;
+      margin-bottom: 20px;
+      transition:
+        background 0.35s,
+        border-color 0.35s,
+        box-shadow 0.35s;
+    }
+    .card-title {
+      font-size: 19px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .card-description {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 0 20px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 18px;
+    }
+    .value {
+      color: var(--gold);
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .progress-track {
+      height: 11px;
+      background: var(--track);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 99px;
+      transition:
+        width 0.25s ease,
+        background-color 0.25s ease;
+    }
+    .small-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 12px 0 0;
+    }
+    /* Cooking Level */
+    .level-controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    input[type="range"] {
+      flex: 1;
+      min-width: 0;
+      cursor: pointer;
+      accent-color: var(--lavender);
+    }
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    select {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px;
+      font: inherit;
+    }
+    input[type="number"] { width: 90px; }
+    input:focus,
+    select:focus {
+      outline: 2px solid var(--lavender);
+      outline-offset: 2px;
+    }
+    /* Royal Mastery */
+    .card.mastered {
+      background: #29243e;
+      border: 2px solid var(--lavender);
+      box-shadow:
+        0 0 18px rgba(182,156,255,0.20),
+        inset 0 0 22px rgba(182,156,255,0.05);
+    }
+    .card.just-mastered {
+      animation: royalReveal 0.85s ease-out;
+    }
+    @keyframes royalReveal {
+      0% {
+        transform: scale(0.99);
+        box-shadow: 0 0 0 rgba(182,156,255,0);
+      }
+      45% {
+        transform: scale(1.012);
+        box-shadow: 0 0 35px rgba(182,156,255,0.65);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .royal-badge {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 14px;
+      background: #3b3153;
+      text-align: center;
+    }
+    .mastered .royal-badge {
+      display: block;
+    }
+    .royal-crown {
+      font-size: 29px;
+      margin-bottom: 6px;
+    }
+    .royal-title {
+      color: var(--gold);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .royal-subtitle {
+      color: #c4b5fd;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    /* Discovery */
+    details.card {
+      padding: 0;
+      overflow: hidden;
+    }
+    details summary {
+      padding: 26px;
+      cursor: pointer;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details summary::marker {
+      content: "";
+    }
+    .discovery-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .chevron {
+      color: var(--lavender);
+      font-size: 24px;
+      transition: transform 0.2s;
+    }
+    details[open] .chevron {
+      transform: rotate(180deg);
+    }
+    .discovery-content {
+      border-top: 1px solid var(--border);
+      padding: 26px;
+    }
+    .discovery-content h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .discovery-form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .discovery-form input { flex: 1; min-width: 0; }
+    button {
+      background: var(--lavender);
+      color: #171326;
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { background: #cbbaff; }
+    .feedback {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .feedback.unlock-success {
+      margin: 12px 0 20px;
+      padding: 16px 18px;
+      background: #29243e;
+      border: 2px solid var(--lavender);
+      border-radius: 14px;
+      color: #c4b5fd;
+      box-shadow: 0 0 22px rgba(182,156,255,.24);
+      animation: unlockReveal .55s ease-out;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .unlock-success strong {
+      color: #b69cff;
+      display: block;
+      font-size: 16px;
+      letter-spacing: .6px;
+    }
+    @keyframes unlockReveal {
+      0% { opacity: 0; transform: translateY(8px) scale(.98); box-shadow: 0 0 0 rgba(182,156,255,0); }
+      65% { opacity: 1; transform: translateY(0) scale(1.01); box-shadow: 0 0 32px rgba(182,156,255,.45); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin: 22px 0 16px;
+    }
+    .toolbar input { flex: 1; min-width: 0; }
+    .recipe-list {
+      display: grid;
+      gap: 10px;
+    }
+    .recipe {
+      background: #252f3d;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .recipe.unlocked {
+      background: #302944;
+      border-color: var(--lavender);
+    }
+    .recipe-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .recipe-state {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .recipe.unlocked .recipe-state {
+      color: var(--lavender);
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 55px;
+    }
+    @media (max-width: 650px) {
+      .container { padding: 25px 16px; }
+      h1 { font-size: 30px; }
+      .card { padding: 20px; }
+      details summary,
+      .discovery-content { padding: 20px; }
+      .discovery-form,
+      .toolbar { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    .category-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:16px 0; }
+    .category-box { background:#252f3d; border:1px solid var(--border); border-radius:12px; padding:15px; }
+    .category-box strong { color:var(--gold); font-size:19px; display:block; margin-top:7px; }
+    .data-row { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0; align-items:center; }
+    .data-row label { font-size:12px; color:var(--muted); }
+    .data-row input[type=file] { max-width:240px; font-size:12px; }
+    .item-icon { width:36px; height:36px; object-fit:contain; flex-shrink:0; }
+    .recipe-left { display:flex; gap:10px; align-items:center; min-width:0; }
+    .recipe-name { overflow-wrap:anywhere; }
+    .recipe-meta { color:var(--muted); font-size:11px; margin-top:4px; }
+    .recipe-state { text-align:right; }
+    .recipe-actions { display:flex; align-items:center; gap:10px; }
+    .small-action { padding:7px 10px; font-size:12px; }
+    .recipe-list { max-height:570px; overflow-y:auto; padding-right:4px; }
+    @media(max-width:650px){.category-grid{grid-template-columns:1fr}.recipe{align-items:flex-start}.recipe-actions{flex-direction:column}}
+
+    .craft-heading { margin: 28px 0 12px; font-size: 18px; }
+    .craft-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; margin-bottom: 18px; }
+    .craft-category { text-align: left; background: #252f3d; color: var(--text); border: 1px solid var(--border); border-radius: 14px; padding: 16px; font: inherit; }
+    .craft-category:hover, .craft-category.selected { border-color: var(--gold); background: #303746; }
+    .craft-category.mastered { border: 2px solid var(--lavender); background: #29243e; box-shadow: 0 0 16px rgba(182,156,255,.22); }
+    .craft-category-head { display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:12px; }
+    .craft-category-name { font-size:14px; font-weight:650; }
+    .craft-category-count { color:var(--gold); white-space:nowrap; font-weight:700; font-size:14px; }
+    .craft-category.mastered .craft-category-count { color:var(--lavender); }
+    .craft-category .progress-track { height: 8px; }
+    .category-context { margin: 18px 0 10px; color:var(--gold); font-weight:650; }
+    @media (max-width: 1150px) { .craft-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+    @media (max-width: 850px) { .craft-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+    @media (max-width: 650px) { .craft-grid { grid-template-columns: 1fr; } }
+
+    /* Golden Legendary Chef — only when the full Chef tracker reaches 100% */
+    body { transition: background 0.7s ease; }
+    body.golden-mastered {
+      background: radial-gradient(ellipse at 50% 0%, #382b1c 0%, #201b16 42%, #101827 100%);
+    }
+    body.golden-mastered .eyebrow { color: #f3d77a; }
+    body.golden-mastered .card:not(.mastered),
+    body.golden-mastered details.card {
+      border-color: #806238;
+      box-shadow: 0 0 16px rgba(232,184,109,.10);
+    }
+    body.golden-mastered #chefCard {
+      background: linear-gradient(135deg, #38291c, #272018);
+      border: 2px solid #f3d77a;
+      box-shadow: 0 0 28px rgba(243,215,122,.26), inset 0 0 24px rgba(243,215,122,.06);
+    }
+    body.golden-mastered #chefPercent { color: #f3d77a !important; }
+    body.golden-mastered #chefBar { background-color: #f3d77a !important; }
+    body.golden-mastered .craft-category.mastered {
+      border-color: #d5a44e;
+      background: #35291d;
+      box-shadow: 0 0 12px rgba(243,215,122,.16);
+    }
+    body.golden-mastered .craft-category.mastered .craft-category-count { color: #f3d77a; }
+    #legendaryBanner {
+      display: none;
+      margin: 18px 0 0;
+      padding: 23px 18px;
+      border-radius: 15px;
+      border: 1px solid #b88d43;
+      background: linear-gradient(120deg, #392b1e, #4a3520, #392b1e);
+      text-align: center;
+      box-shadow: inset 0 0 22px rgba(243,215,122,.08);
+    }
+    body.golden-mastered #legendaryBanner { display: block; }
+    .legendary-crown { font-size: 38px; }
+    .legendary-title { color: #f3d77a; font-size: 23px; font-weight: 800; letter-spacing: 2px; }
+    .legendary-subtitle { color: #e8c88d; font-size: 12px; margin-top: 7px; letter-spacing: 1px; }
+    body.golden-mastered #chefCard .royal-badge { display: none; }
+    body.golden-mastered.golden-reveal #legendaryBanner { animation: goldenReveal 1.2s ease-out; }
+    @keyframes goldenReveal {
+      0% { opacity: 0; transform: translateY(12px) scale(.96); box-shadow: 0 0 0 rgba(243,215,122,0); }
+      55% { opacity: 1; transform: translateY(0) scale(1.025); box-shadow: 0 0 40px rgba(243,215,122,.6); }
+      100% { transform: none; box-shadow: inset 0 0 22px rgba(243,215,122,.08); }
+    }
+    .golden-confetti-layer { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 9999; }
+    .golden-confetti-piece { position: absolute; top: -20px; width: 8px; height: 13px; border-radius: 2px; animation: goldenFall 2.6s linear forwards; }
+    @keyframes goldenFall { to { transform: translate3d(var(--drift), 105vh, 0) rotate(700deg); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .golden-confetti-layer { display: none; }
+      body.golden-mastered.golden-reveal #legendaryBanner { animation: none; }
+    }
+
+    /* Discovery Ingredients */
+    .ingredient-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .ingredient-tile {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:9px;
+      min-width:0;
+      text-align:center;
+      background:#252f3d;
+      color:var(--text);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px 10px;
+      cursor:pointer;
+      font:inherit;
+    }
+    .ingredient-tile:hover,.ingredient-tile.selected {
+      border-color:var(--lavender);
+      background:#303044;
+    }
+    .ingredient-tile.completed {
+      border:2px solid #e8b86d;
+      box-shadow:0 0 14px rgba(232,184,109,.20), inset 0 0 12px rgba(232,184,109,.05);
+    }
+    .ingredient-icon-frame {
+      width:76px;height:76px;padding:5px;
+      border:2px solid var(--border);
+      border-radius:12px;
+      background:#111827;
+      display:grid;place-items:center;
+    }
+    .ingredient-tile.completed .ingredient-icon-frame {
+      border:3px solid #e8b86d;
+      box-shadow:0 0 12px rgba(232,184,109,.35);
+    }
+    .ingredient-icon {width:100%;height:100%;object-fit:contain;}
+    .ingredient-name {font-size:14px;font-weight:650;overflow-wrap:anywhere;}
+    .ingredient-count {font-size:17px;font-weight:750;color:var(--gold);}
+    .ingredient-tile.completed .ingredient-count {color:#e8b86d;}
+    .ingredient-mini-track {width:100%;height:7px;background:var(--track);border-radius:99px;overflow:hidden;}
+    .ingredient-mini-fill {height:100%;border-radius:99px;}
+    .ingredient-remaining {font-size:11px;color:var(--muted);}
+    .ingredient-detail {
+      margin-top:18px;padding:20px;background:#1a2433;
+      border:1px solid var(--border);border-radius:14px;
+    }
+    .ingredient-detail-head {display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+    .ingredient-detail-head img {width:56px;height:56px;object-fit:contain;}
+    .ingredient-recipe-list {display:grid;gap:8px;margin-top:12px;}
+    .ingredient-recipe-row {
+      display:flex;justify-content:space-between;gap:12px;align-items:center;
+      padding:10px 12px;background:#252f3d;border:1px solid var(--border);border-radius:10px;
+      font-size:13px;
+    }
+    .ingredient-recipe-row.known {border-color:var(--lavender);background:#302944;}
+    .ingredient-recipe-row .state {font-size:11px;color:var(--muted);white-space:nowrap;}
+    .ingredient-recipe-row.known .state {color:var(--lavender);}
+    @media(max-width:850px){.ingredient-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:520px){.ingredient-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ingredient-tile{padding:11px 7px}.ingredient-icon-frame{width:64px;height:64px}}
+
+  
+  .legend-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0 24px}
+  .legend-category{width:100%;display:block;text-align:left;background:#252f3d;color:var(--text);border:1px solid var(--border);border-radius:14px;padding:18px;font:inherit;transition:background .2s,border-color .2s}
+  
+  .legend-category .craft-category-head{margin-bottom:12px}
+  .legend-category .progress-track{height:8px}
+  .legend-category{display:block;text-decoration:none;color:var(--text);cursor:pointer}
+  .legend-category:hover{border-color:var(--gold);background:#303746}
+  .legend-category .category-hint{font-size:12px;color:var(--muted);margin-top:11px}
+  .section-subtitle{font-size:18px;margin:24px 0 14px}
+  .legend-summary{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+  .legend-category .discovery-complete{color:#f3d77a}
+  .legend-category.mastered{border-color:var(--lavender);background:#29243e;box-shadow:0 0 16px rgba(182,156,255,.22)}
+  .legend-category.mastered .craft-category-count{color:var(--lavender)}
+  .feedback:empty{min-height:0}
+  @media(max-width:1050px){.legend-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:650px){.legend-grid{grid-template-columns:1fr}}
+
+
+/* Compact weapon collection rows */
+.weapon-stack{display:grid;gap:12px;margin-top:22px}
+.weapon-row{display:grid;grid-template-columns:60px minmax(0,1fr) minmax(160px,30%);align-items:center;gap:18px;background:#1f2937;border:1px solid #344052;border-radius:15px;padding:15px 20px;min-height:94px;transition:border-color .3s,box-shadow .3s,background .3s}
+.weapon-icon{width:58px;height:58px;object-fit:contain;border-radius:10px;background:#111827;border:1px solid #344052;padding:4px}
+.weapon-info{min-width:0}.weapon-name{font-family:Georgia,'Palatino Linotype',serif;font-size:21px;letter-spacing:.25px;color:#f9fafb;font-weight:600;line-height:1.2}
+.weapon-meta{font-size:13px;color:#c6bfd2;font-style:italic;margin-top:7px;line-height:1.3}
+.weapon-progress{min-width:0}.weapon-percent{display:block;text-align:right;font-size:15px;color:var(--gold);font-weight:700;margin-bottom:9px;font-variant-numeric:tabular-nums}
+.weapon-row .progress-track{height:9px}.weapon-row.complete{border:2px solid #e8b86d;background:linear-gradient(110deg,#302719,#3c2e1e 55%,#29251f);box-shadow:0 0 18px rgba(232,184,109,.20),inset 0 0 15px rgba(243,215,122,.05)}
+.weapon-row.complete .weapon-name,.weapon-row.complete .weapon-percent{color:#f3d77a}.weapon-row.complete .weapon-icon{border-color:#d5a44e;box-shadow:0 0 12px rgba(232,184,109,.22)}
+.empty-note{color:var(--muted);font-size:14px;padding:22px 0}
+@media(max-width:650px){.weapon-row{grid-template-columns:52px minmax(0,1fr);gap:12px;padding:13px}.weapon-icon{width:50px;height:50px}.weapon-name{font-size:18px}.weapon-progress{grid-column:1/-1}.weapon-percent{margin-bottom:6px}.weapon-meta{font-size:12px}}
+
+
+.collection-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:24px 0 12px}.collection-head h2{font-size:19px;margin:0}.collection-count{color:var(--gold);font-weight:700}.collection-bar{height:10px;background:var(--track);border-radius:99px;overflow:hidden;margin-bottom:24px}.collection-fill{height:100%;background:var(--lavender);transition:width .25s}
+.group-title{font-size:17px;color:var(--gold);margin:27px 0 12px}.filter-controls{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}.filter-controls input{flex:1;min-width:180px}.filter-controls select{min-width:150px}.weapon-meta{overflow-wrap:anywhere}.weapon-progress .copy-count{display:block;text-align:right;color:var(--muted);font-size:11px;margin-top:5px}.weapon-row:focus-visible{outline:2px solid var(--lavender);outline-offset:3px}
+</style></head><body><main class="container"><a class="back" id="backToLegendaries" href="index.html">← Back to Legendaries</a><div class="eyebrow">MRS.CHAIRMODE ♥ COMPLETION TRACKER</div><h1 id="title"></h1><p class="description" id="description"></p><div class="collection-head"><h2>Crafting Progress</h2><span class="collection-count" id="count">0 / –</span></div><div class="collection-bar"><div class="collection-fill" id="overallFill"></div></div><div class="filter-controls"><input id="search" type="search" placeholder="Filter discovered legendaries..."></div><div class="weapon-stack" id="weaponList"></div><footer>Made with ♥ for Mrs.Chairmode</footer></main><script src="../data/legendary-database.js"></script><script>window.CATEGORY="Runes & Sigils";
+const ITEMS=window.GW2_LEGENDARY_DATABASE.items;
+const DATAKEY='chairmode-legendary-api-v2';
+const norm=s=>String(s||'').normalize('NFKC').toLocaleLowerCase('en').replace(/[’‘]/g,"'").replace(/\s+/g,' ').trim();
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let state={discovered:[],counts:{}};let twilight=null;
+try{let s=JSON.parse(localStorage.getItem(DATAKEY)||'null');if(s&&Array.isArray(s.discovered))state=s}catch(e){}
+function migrateLegacy(v){if(!v)return;for(const name of v.discovered||[]){const matches=ITEMS.filter(i=>norm(i.name)===norm(name)||norm(i.originalName)===norm(name));if(matches.length===1&&!state.discovered.includes(matches[0].id))state.discovered.push(matches[0].id)}for(const name of v.owned||[]){const matches=ITEMS.filter(i=>norm(i.name)===norm(name)||norm(i.originalName)===norm(name));if(matches.length===1)state.counts[matches[0].id]=Math.max(1,Number(state.counts[matches[0].id])||0)}}
+try{migrateLegacy(JSON.parse(localStorage.getItem('chairmode-legendary-fresh-v1')||'null'))}catch(e){}
+try{const h=new URLSearchParams(location.hash.slice(1));if(h.get('apiState')){let s=JSON.parse(h.get('apiState'));if(Array.isArray(s.discovered)&&s.counts)state=s}if(h.get('collection'))migrateLegacy(JSON.parse(h.get('collection')));if(h.get('twilight'))twilight=JSON.parse(h.get('twilight'))}catch(e){}
+state.discovered=[...new Set(state.discovered.map(Number).filter(id=>ITEMS.some(i=>i.id===id)))];if(!state.counts||typeof state.counts!=='object')state.counts={};
+try{if(!twilight)twilight=JSON.parse(localStorage.getItem('chairmode-twilight-v1')||'null')}catch(e){}
+const tw=ITEMS.find(i=>i.name==='Twilight');if(tw&&twilight&&state.discovered.includes(tw.id))state.counts[tw.id]=twilight.crafted?1:0;
+try{localStorage.setItem(DATAKEY,JSON.stringify(state))}catch(e){}
+function encoded(){return '#apiState='+encodeURIComponent(JSON.stringify(state))+(twilight?'&twilight='+encodeURIComponent(JSON.stringify(twilight)):'')}
+const back=document.getElementById('backToLegendaries');back.href='index.html'+encoded();back.addEventListener('click',e=>{e.preventDefault();location.href='index.html'+encoded()});
+const CAT=window.CATEGORY;
+const categories={Weapons:'⚔ Legendary Weapons',Armor:'🛡 Legendary Armor',Trinkets:'💎 Legendary Trinkets','Back Items':'🎒 Legendary Back Items',Relics:'✨ Legendary Relics','Runes & Sigils':'🔮 Legendary Runes & Sigils'};
+document.title=categories[CAT].replace(/^[^ ]+ /,'')+' | Mrs.Chairmode';document.getElementById('title').textContent=categories[CAT];
+document.getElementById('description').textContent='Your discovered legendary '+CAT.toLowerCase()+' and their crafting progress.';
+const progressColor=p=>p>=100?'#f3d77a':p<=20?'#e56b85':p<=40?'#f5a66b':p<=60?'#f3d77a':p<=80?'#86ddb0':'#65dad9';
+function count(i){return Math.max(0,Math.min(i.max,Number(state.counts[i.id])||0))}
+function percent(i){if(i.name==='Twilight'&&twilight)return twilight.crafted?100:Math.round((twilight.parts||[]).filter(Boolean).length/4*100);return Math.round(count(i)/i.max*100)}
+function group(i){return CAT==='Armor'?(i.family||'Other Armor')+' · '+(i.weight||'Other'):''}
+function meta(i){if(CAT==='Weapons')return i.expansion||('Legendary Weapon · '+(i.subtype||i.slot||''));if(CAT==='Armor')return [i.weight,i.slot].filter(Boolean).join(' · ');if(CAT==='Runes & Sigils')return 'Legendary Armory · Up to '+i.max+' copies';return [i.slot,i.originalName!==i.name?i.originalName:''].filter(Boolean).join(' · ')||'Legendary Armory'}
+function openTwilight(){const h=new URLSearchParams();h.set('collection',JSON.stringify({discovered:state.discovered.map(id=>norm(ITEMS.find(i=>i.id===id)?.name)).filter(Boolean),owned:state.discovered.filter(id=>count(ITEMS.find(i=>i.id===id))>0).map(id=>norm(ITEMS.find(i=>i.id===id).name))}));if(twilight)h.set('twilight',JSON.stringify(twilight));h.set('apiState',JSON.stringify(state));location.href='twilight.html#'+h.toString()}
+function render(){const q=norm(document.getElementById('search').value),weight=document.getElementById('weight')?.value||'';const all=ITEMS.filter(i=>i.category===CAT&&state.discovered.includes(i.id));const total=all.reduce((s,i)=>s+i.max,0),done=all.reduce((s,i)=>s+count(i),0),overall=total?Math.round(done/total*100):0;document.getElementById('count').textContent=done+' / '+(total||'–');document.getElementById('overallFill').style.width=overall+'%';document.getElementById('overallFill').style.backgroundColor=progressColor(overall);
+const shown=all.filter(i=>(!weight||i.weight===weight)&&(!q||norm([i.name,i.originalName,i.family,i.weight,i.slot,i.expansion].join(' ')).includes(q))).sort((a,b)=>group(a).localeCompare(group(b))||a.name.localeCompare(b.name)||a.id-b.id);
+const list=document.getElementById('weaponList');list.replaceChildren();if(!shown.length){const p=document.createElement('p');p.className='empty-note';p.textContent=all.length?'No matching legendary items.':'No legendary items discovered yet. Return to Legendaries to discover your first item.';list.append(p);return}
+let last='';for(const i of shown){const g=group(i);if(g&&g!==last){const h=document.createElement('h2');h.className='group-title';h.textContent=g;list.append(h);last=g}
+const p=percent(i),row=document.createElement('article');row.className='weapon-row'+(p===100?' complete':'');const icon=document.createElement('img');icon.className='weapon-icon';icon.src=i.icon;icon.alt='';icon.loading='lazy';const info=document.createElement('div');info.className='weapon-info';const name=document.createElement('div');name.className='weapon-name';name.textContent=i.name;const sub=document.createElement('div');sub.className='weapon-meta';sub.textContent=meta(i);info.append(name,sub);const progress=document.createElement('div');progress.className='weapon-progress';const pct=document.createElement('span');pct.className='weapon-percent';pct.textContent=p+'%';const track=document.createElement('div');track.className='progress-track';const fill=document.createElement('div');fill.className='progress-fill';fill.style.width=p+'%';fill.style.backgroundColor=progressColor(p);track.append(fill);progress.append(pct,track);if(i.max>1){const c=document.createElement('span');c.className='copy-count';c.textContent=count(i)+' / '+i.max+' crafted';progress.append(c)}row.append(icon,info,progress);if(i.name==='Twilight'){row.classList.add('clickable');row.tabIndex=0;row.setAttribute('role','link');row.setAttribute('aria-label','Open Twilight crafting details');row.addEventListener('click',openTwilight);row.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTwilight()}})}list.append(row)}}
+document.getElementById('search').addEventListener('input',render);if(document.getElementById('weight'))document.getElementById('weight').addEventListener('change',render);render();
+</script></body></html>
