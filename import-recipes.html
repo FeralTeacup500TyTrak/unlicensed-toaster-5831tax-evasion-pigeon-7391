@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GW2 Item Icon Importer</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #101827;
+      color: #f9fafb;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 60px auto;
+      padding: 24px;
+    }
+
+    .eyebrow {
+      color: #e8b86d;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    h1 { margin: 14px 0; }
+
+    p {
+      color: #a5adbb;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: #1f2937;
+      border: 1px solid #344052;
+      border-radius: 20px;
+      padding: 28px;
+      margin-top: 28px;
+    }
+
+    button {
+      background: #b69cff;
+      color: #171326;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: wait;
+    }
+
+    input[type="file"] {
+      display: block;
+      width: 100%;
+      margin: 15px 0 22px;
+      color: #f9fafb;
+    }
+
+    .progress {
+      height: 12px;
+      background: #374151;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 25px 0 12px;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0%;
+      background: #b69cff;
+      transition: width 0.2s;
+    }
+
+    .status {
+      font-size: 14px;
+      white-space: pre-line;
+    }
+
+    .result {
+      display: none;
+      margin-top: 24px;
+      padding: 20px;
+      background: #29243e;
+      border: 1px solid #b69cff;
+      border-radius: 14px;
+    }
+
+    .result h2 {
+      margin-top: 0;
+      color: #e8b86d;
+    }
+
+    .download {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .note {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="eyebrow">
+      MRS.CHAIRMODE ♥ COMPLETION TRACKER
+    </div>
+
+    <h1>🖼️ GW2 Item Icon Importer</h1>
+
+    <p>
+      Add original Guild Wars 2 item icons
+      to our existing Chef recipe database.
+    </p>
+
+    <section class="card">
+      <h2>1. Select your named recipe database</h2>
+
+      <p>
+        Choose data/chef-recipes-named.json
+        from your project.
+      </p>
+
+      <input
+        type="file"
+        id="recipeFile"
+        accept=".json,application/json"
+      >
+
+      <button id="importButton">
+        Import GW2 Icons ✨
+      </button>
+
+      <div class="progress">
+        <div class="fill" id="progressFill"></div>
+      </div>
+
+      <p class="status" id="status">
+        Waiting for recipe file.
+      </p>
+
+      <div class="result" id="result">
+        <h2>👑 Icon Import Complete!</h2>
+
+        <p id="resultText"></p>
+
+        <button
+          class="download"
+          id="downloadButton"
+        >
+          Download chef-recipes-complete.json
+        </button>
+      </div>
+
+      <p class="note">
+        Your original files remain unchanged.
+        The importer creates a new JSON file.
+        Icons are stored as URLs, not image files.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const API = "https://api.guildwars2.com/v2";
+
+    const fileInput =
+      document.getElementById("recipeFile");
+
+    const importButton =
+      document.getElementById("importButton");
+
+    const downloadButton =
+      document.getElementById("downloadButton");
+
+    const statusText =
+      document.getElementById("status");
+
+    const progressFill =
+      document.getElementById("progressFill");
+
+    const result =
+      document.getElementById("result");
+
+    const resultText =
+      document.getElementById("resultText");
+
+    let completeRecipes = [];
+
+    function setProgress(percent, message) {
+      progressFill.style.width = percent + "%";
+      statusText.textContent = message;
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve =>
+        setTimeout(resolve, ms)
+      );
+    }
+
+    async function getJSON(url) {
+      for (let attempt = 0; attempt < 4; attempt++) {
+        try {
+          const response = await fetch(url);
+
+          if (!response.ok) {
+            if (
+              (response.status === 429 ||
+               response.status >= 500) &&
+              attempt < 3
+            ) {
+              await sleep(1000 * (attempt + 1));
+              continue;
+            }
+
+            throw new Error(
+              "GW2 API returned HTTP " +
+              response.status
+            );
+          }
+
+          return await response.json();
+
+        } catch (error) {
+          if (
+            error instanceof TypeError &&
+            attempt < 3
+          ) {
+            await sleep(1000 * (attempt + 1));
+            continue;
+          }
+
+          throw error;
+        }
+      }
+    }
+
+    function downloadJSON(filename, data) {
+      const blob = new Blob(
+        [JSON.stringify(data, null, 2)],
+        { type: "application/json" }
+      );
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.download = filename;
+
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      setTimeout(
+        () => URL.revokeObjectURL(url),
+        1000
+      );
+    }
+
+    async function importIcons() {
+      if (!fileInput.files.length) {
+        alert(
+          "Please select chef-recipes-named.json first."
+        );
+        return;
+      }
+
+      importButton.disabled = true;
+      downloadButton.style.display = "none";
+      result.style.display = "none";
+      completeRecipes = [];
+
+      try {
+        setProgress(
+          0,
+          "Reading named recipe database..."
+        );
+
+        const fileText =
+          await fileInput.files[0].text();
+
+        const recipes = JSON.parse(fileText);
+
+        if (
+          !Array.isArray(recipes) ||
+          recipes.length === 0
+        ) {
+          throw new Error(
+            "The selected JSON file is empty or invalid."
+          );
+        }
+
+        const itemIDs = new Set();
+
+        for (const recipe of recipes) {
+          if (!Number.isInteger(recipe.output_item_id)) {
+            throw new Error(
+              "A recipe has an invalid output item ID."
+            );
+          }
+
+          itemIDs.add(recipe.output_item_id);
+
+          for (const ingredient of recipe.ingredients || []) {
+            if (!Number.isInteger(ingredient.item_id)) {
+              throw new Error(
+                "A recipe has an invalid ingredient ID."
+              );
+            }
+
+            itemIDs.add(ingredient.item_id);
+          }
+        }
+
+        const ids = [...itemIDs];
+        const itemIcons = new Map();
+        const unavailableIDs = new Set();
+        const batchSize = 100;
+
+        async function loadBatch(batchIDs) {
+          try {
+            const url =
+              API + "/items?ids=" +
+              batchIDs.join(",") +
+              "&lang=en";
+
+            const items = await getJSON(url);
+
+            for (const item of items) {
+              itemIcons.set(
+                item.id,
+                item.icon || null
+              );
+            }
+
+          } catch (error) {
+            if (batchIDs.length === 1) {
+              unavailableIDs.add(batchIDs[0]);
+              return;
+            }
+
+            const middle =
+              Math.floor(batchIDs.length / 2);
+
+            await loadBatch(
+              batchIDs.slice(0, middle)
+            );
+
+            await loadBatch(
+              batchIDs.slice(middle)
+            );
+          }
+        }
+
+        for (
+          let start = 0;
+          start < ids.length;
+          start += batchSize
+        ) {
+          const batch =
+            ids.slice(start, start + batchSize);
+
+          await loadBatch(batch);
+
+          const completed = Math.min(
+            start + batchSize,
+            ids.length
+          );
+
+          setProgress(
+            completed / ids.length * 100,
+            "Items processed: " +
+            completed + " / " + ids.length +
+            "\nItems checked: " + itemIcons.size
+          );
+
+          await sleep(200);
+        }
+
+        // Stop if item data could not be retrieved.
+        // Missing icons themselves are allowed.
+        if (unavailableIDs.size > 0) {
+          throw new Error(
+            "Could not retrieve " +
+            unavailableIDs.size +
+            " item records. Please retry."
+          );
+        }
+
+        let iconsFound = 0;
+
+        for (const icon of itemIcons.values()) {
+          if (icon) iconsFound++;
+        }
+
+        completeRecipes = recipes.map(recipe => ({
+          ...recipe,
+
+          output_item_icon:
+            itemIcons.get(recipe.output_item_id)
+            ?? null,
+
+          ingredients:
+            (recipe.ingredients || []).map(
+              ingredient => ({
+                ...ingredient,
+                item_icon:
+                  itemIcons.get(ingredient.item_id)
+                  ?? null
+              })
+            )
+        }));
+
+        setProgress(
+          100,
+          "Finished importing GW2 item icons."
+        );
+
+        resultText.textContent =
+          "Chef recipes: " + completeRecipes.length +
+          " | Unique items: " + ids.length +
+          " | Icons found: " + iconsFound +
+          " | Items without icons: " +
+          (ids.length - iconsFound);
+
+        result.style.display = "block";
+        downloadButton.style.display = "inline-block";
+
+      } catch (error) {
+        setProgress(
+          0,
+          "Import failed: " + error.message
+        );
+
+        console.error(error);
+
+      } finally {
+        importButton.disabled = false;
+      }
+    }
+
+    importButton.addEventListener(
+      "click",
+      importIcons
+    );
+
+    downloadButton.addEventListener(
+      "click",
+      () => downloadJSON(
+        "chef-recipes-complete.json",
+        completeRecipes
+      )
+    );
+  </script>
+</body>
+</html>

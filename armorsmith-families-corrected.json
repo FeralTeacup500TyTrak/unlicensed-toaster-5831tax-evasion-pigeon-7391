@@ -1,0 +1,6483 @@
+[
+  {
+    "id": "boots-chain-boots",
+    "name": "Chain Boots",
+    "description": "Boots · 0+",
+    "icon": "https://render.guildwars2.com/file/C80D5A9E0D3432DBE44A0BCAEF5A411DCF240A6F/63231.png",
+    "recipe_ids": [
+      363,
+      364,
+      365,
+      6798,
+      366,
+      367,
+      368,
+      370,
+      369,
+      371,
+      372,
+      373,
+      374
+    ],
+    "recipe_count": 13,
+    "variants": [
+      {
+        "recipe_id": 363,
+        "name": "Malign Chain Boots",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 364,
+        "name": "Mighty Chain Boots",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 365,
+        "name": "Vital Chain Boots",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6798,
+        "name": "Giver's Chain Boots",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 366,
+        "name": "Healing Chain Boots",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 367,
+        "name": "Precise Chain Boots",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 368,
+        "name": "Resilient Chain Boots",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 370,
+        "name": "Healing Chain Boots",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 369,
+        "name": "Malign Chain Boots",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 371,
+        "name": "Mighty Chain Boots",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 372,
+        "name": "Precise Chain Boots",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 373,
+        "name": "Resilient Chain Boots",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 374,
+        "name": "Vital Chain Boots",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "coat-chain-coat",
+    "name": "Chain Coat",
+    "description": "Coat · 0+",
+    "icon": "https://render.guildwars2.com/file/0503060B421E6790A24A7409171F0A0D5A2067F3/63230.png",
+    "recipe_ids": [
+      327,
+      328,
+      329,
+      6797,
+      330,
+      331,
+      332,
+      334,
+      333,
+      335,
+      336,
+      337,
+      338
+    ],
+    "recipe_count": 13,
+    "variants": [
+      {
+        "recipe_id": 327,
+        "name": "Malign Chain Coat",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 328,
+        "name": "Mighty Chain Coat",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 329,
+        "name": "Vital Chain Coat",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6797,
+        "name": "Giver's Chain Coat",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 330,
+        "name": "Healing Chain Coat",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 331,
+        "name": "Precise Chain Coat",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 332,
+        "name": "Resilient Chain Coat",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 334,
+        "name": "Healing Chain Coat",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 333,
+        "name": "Malign Chain Coat",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 335,
+        "name": "Mighty Chain Coat",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 336,
+        "name": "Precise Chain Coat",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 337,
+        "name": "Resilient Chain Coat",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 338,
+        "name": "Vital Chain Coat",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "gloves-chain-gauntlets",
+    "name": "Chain Gauntlets",
+    "description": "Gloves · 0+",
+    "icon": "https://render.guildwars2.com/file/ACC096F39F7E74E5BB00280608FC139E1A09FF26/63232.png",
+    "recipe_ids": [
+      291,
+      292,
+      293,
+      6796,
+      294,
+      295,
+      296,
+      298,
+      297,
+      299,
+      300,
+      301,
+      302
+    ],
+    "recipe_count": 13,
+    "variants": [
+      {
+        "recipe_id": 291,
+        "name": "Malign Chain Gauntlets",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 292,
+        "name": "Mighty Chain Gauntlets",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 293,
+        "name": "Vital Chain Gauntlets",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6796,
+        "name": "Giver's Chain Gauntlets",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 294,
+        "name": "Healing Chain Gauntlets",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 295,
+        "name": "Precise Chain Gauntlets",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 296,
+        "name": "Resilient Chain Gauntlets",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 298,
+        "name": "Healing Chain Gauntlets",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 297,
+        "name": "Malign Chain Gauntlets",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 299,
+        "name": "Mighty Chain Gauntlets",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 300,
+        "name": "Precise Chain Gauntlets",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 301,
+        "name": "Resilient Chain Gauntlets",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 302,
+        "name": "Vital Chain Gauntlets",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "leggings-chain-legs",
+    "name": "Chain Legs",
+    "description": "Leggings · 0+",
+    "icon": "https://render.guildwars2.com/file/EFB916FBEF03AE7C4F6BF9A0B76115AC5D5A8029/63233.png",
+    "recipe_ids": [
+      423,
+      424,
+      425,
+      6794,
+      426,
+      427,
+      428,
+      430,
+      429,
+      431,
+      432,
+      433,
+      434
+    ],
+    "recipe_count": 13,
+    "variants": [
+      {
+        "recipe_id": 423,
+        "name": "Malign Chain Legs",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 424,
+        "name": "Mighty Chain Legs",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 425,
+        "name": "Vital Chain Legs",
+        "min_rating": 0,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6794,
+        "name": "Giver's Chain Legs",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 426,
+        "name": "Healing Chain Legs",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 427,
+        "name": "Precise Chain Legs",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 428,
+        "name": "Resilient Chain Legs",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 430,
+        "name": "Healing Chain Legs",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 429,
+        "name": "Malign Chain Legs",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 431,
+        "name": "Mighty Chain Legs",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 432,
+        "name": "Precise Chain Legs",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 433,
+        "name": "Resilient Chain Legs",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 434,
+        "name": "Vital Chain Legs",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "helm-chain-helm",
+    "name": "Chain Helm",
+    "description": "Helm · 25+",
+    "icon": "https://render.guildwars2.com/file/4571AFDB3F60093B93C03105CB05DD95E1082908/63237.png",
+    "recipe_ids": [
+      6795,
+      519,
+      517,
+      522,
+      518,
+      520,
+      521,
+      524,
+      523,
+      525,
+      526,
+      527,
+      528
+    ],
+    "recipe_count": 13,
+    "variants": [
+      {
+        "recipe_id": 6795,
+        "name": "Giver's Chain Helm",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 519,
+        "name": "Healing Chain Helm",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 517,
+        "name": "Malign Chain Helm",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 522,
+        "name": "Mighty Chain Helm",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 518,
+        "name": "Precise Chain Helm",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 520,
+        "name": "Resilient Chain Helm",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 521,
+        "name": "Vital Chain Helm",
+        "min_rating": 25,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 524,
+        "name": "Healing Chain Helm",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 523,
+        "name": "Malign Chain Helm",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 525,
+        "name": "Mighty Chain Helm",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 526,
+        "name": "Precise Chain Helm",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 527,
+        "name": "Resilient Chain Helm",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 528,
+        "name": "Vital Chain Helm",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "shoulders-chain-pauldrons",
+    "name": "Chain Pauldrons",
+    "description": "Shoulders · 50+",
+    "icon": "https://render.guildwars2.com/file/11BB7CFB6AE726E8EA77F006C7C24EFDCBCFBFF3/61383.png",
+    "recipe_ids": [
+      6793,
+      533,
+      529,
+      534,
+      536,
+      538,
+      540,
+      531,
+      539,
+      535,
+      537,
+      530,
+      532
+    ],
+    "recipe_count": 13,
+    "variants": [
+      {
+        "recipe_id": 6793,
+        "name": "Giver's Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 533,
+        "name": "Healing Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 529,
+        "name": "Malign Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 534,
+        "name": "Mighty Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 536,
+        "name": "Precise Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 538,
+        "name": "Resilient Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 540,
+        "name": "Vital Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 531,
+        "name": "Healing Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 539,
+        "name": "Malign Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 535,
+        "name": "Mighty Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 537,
+        "name": "Precise Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 530,
+        "name": "Resilient Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 532,
+        "name": "Vital Chain Pauldrons",
+        "min_rating": 50,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "boots-scale-boots",
+    "name": "Scale Boots",
+    "description": "Boots · 75+",
+    "icon": "https://render.guildwars2.com/file/CCC20FCEAA5110094309B72ADF090BBF242C0F23/63234.png",
+    "recipe_ids": [
+      6792,
+      376,
+      375,
+      377,
+      380,
+      379,
+      854,
+      378,
+      386,
+      385,
+      382,
+      381,
+      855,
+      384,
+      383
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 6792,
+        "name": "Giver's Scale Boots",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 376,
+        "name": "Hunter's Scale Boots",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 375,
+        "name": "Ravaging Scale Boots",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 377,
+        "name": "Vigorous Scale Boots",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 380,
+        "name": "Hearty Scale Boots",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 379,
+        "name": "Honed Scale Boots",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 854,
+        "name": "Rejuvenating Scale Boots",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 378,
+        "name": "Strong Scale Boots",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 386,
+        "name": "Hearty Scale Boots",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 385,
+        "name": "Honed Scale Boots",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 382,
+        "name": "Hunter's Scale Boots",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 381,
+        "name": "Ravaging Scale Boots",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 855,
+        "name": "Rejuvenating Scale Boots",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 384,
+        "name": "Strong Scale Boots",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 383,
+        "name": "Vigorous Scale Boots",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "coat-scale-coat",
+    "name": "Scale Coat",
+    "description": "Coat · 75+",
+    "icon": "https://render.guildwars2.com/file/CB05A3BAE659640995CA934C62726D39CC980DA4/63235.png",
+    "recipe_ids": [
+      6787,
+      340,
+      339,
+      341,
+      344,
+      343,
+      853,
+      342,
+      350,
+      349,
+      346,
+      345,
+      850,
+      348,
+      347
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 6787,
+        "name": "Giver's Scale Coat",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 340,
+        "name": "Hunter's Scale Coat",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 339,
+        "name": "Ravaging Scale Coat",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 341,
+        "name": "Vigorous Scale Coat",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 344,
+        "name": "Hearty Scale Coat",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 343,
+        "name": "Honed Scale Coat",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 853,
+        "name": "Rejuvenating Scale Coat",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 342,
+        "name": "Strong Scale Coat",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 350,
+        "name": "Hearty Scale Coat",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 349,
+        "name": "Honed Scale Coat",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 346,
+        "name": "Hunter's Scale Coat",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 345,
+        "name": "Ravaging Scale Coat",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 850,
+        "name": "Rejuvenating Scale Coat",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 348,
+        "name": "Strong Scale Coat",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 347,
+        "name": "Vigorous Scale Coat",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "gloves-scale-gauntlets",
+    "name": "Scale Gauntlets",
+    "description": "Gloves · 75+",
+    "icon": "https://render.guildwars2.com/file/160771D67E2320C267E2C944A92B980C38163A38/63236.png",
+    "recipe_ids": [
+      6782,
+      304,
+      303,
+      305,
+      308,
+      307,
+      846,
+      306,
+      314,
+      313,
+      310,
+      309,
+      847,
+      312,
+      311
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 6782,
+        "name": "Giver's Scale Gauntlets",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 304,
+        "name": "Hunter's Scale Gauntlets",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 303,
+        "name": "Ravaging Scale Gauntlets",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 305,
+        "name": "Vigorous Scale Gauntlets",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 308,
+        "name": "Hearty Scale Gauntlets",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 307,
+        "name": "Honed Scale Gauntlets",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 846,
+        "name": "Rejuvenating Scale Gauntlets",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 306,
+        "name": "Strong Scale Gauntlets",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 314,
+        "name": "Hearty Scale Gauntlets",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 313,
+        "name": "Honed Scale Gauntlets",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 310,
+        "name": "Hunter's Scale Gauntlets",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 309,
+        "name": "Ravaging Scale Gauntlets",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 847,
+        "name": "Rejuvenating Scale Gauntlets",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 312,
+        "name": "Strong Scale Gauntlets",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 311,
+        "name": "Vigorous Scale Gauntlets",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "helm-scale-helm",
+    "name": "Scale Helm",
+    "description": "Helm · 75+",
+    "icon": "https://render.guildwars2.com/file/624CAAAC0D91F114D6CD6C02096EB9B02B40C23D/63238.png",
+    "recipe_ids": [
+      6777,
+      400,
+      399,
+      401,
+      404,
+      403,
+      858,
+      402,
+      410,
+      409,
+      406,
+      405,
+      859,
+      408,
+      407
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 6777,
+        "name": "Giver's Scale Helm",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 400,
+        "name": "Hunter's Scale Helm",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 399,
+        "name": "Ravaging Scale Helm",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 401,
+        "name": "Vigorous Scale Helm",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 404,
+        "name": "Hearty Scale Helm",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 403,
+        "name": "Honed Scale Helm",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 858,
+        "name": "Rejuvenating Scale Helm",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 402,
+        "name": "Strong Scale Helm",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 410,
+        "name": "Hearty Scale Helm",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 409,
+        "name": "Honed Scale Helm",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 406,
+        "name": "Hunter's Scale Helm",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 405,
+        "name": "Ravaging Scale Helm",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 859,
+        "name": "Rejuvenating Scale Helm",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 408,
+        "name": "Strong Scale Helm",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 407,
+        "name": "Vigorous Scale Helm",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "leggings-scale-legs",
+    "name": "Scale Legs",
+    "description": "Leggings · 75+",
+    "icon": "https://render.guildwars2.com/file/569E5C57B2A179C9F6B0760ED87EE0B4F75D537A/61388.png",
+    "recipe_ids": [
+      6772,
+      436,
+      435,
+      437,
+      440,
+      439,
+      869,
+      438,
+      446,
+      445,
+      442,
+      441,
+      868,
+      444,
+      443
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 6772,
+        "name": "Giver's Scale Legs",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 436,
+        "name": "Hunter's Scale Legs",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 435,
+        "name": "Ravaging Scale Legs",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 437,
+        "name": "Vigorous Scale Legs",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 440,
+        "name": "Hearty Scale Legs",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 439,
+        "name": "Honed Scale Legs",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 869,
+        "name": "Rejuvenating Scale Legs",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 438,
+        "name": "Strong Scale Legs",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 446,
+        "name": "Hearty Scale Legs",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 445,
+        "name": "Honed Scale Legs",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 442,
+        "name": "Hunter's Scale Legs",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 441,
+        "name": "Ravaging Scale Legs",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 868,
+        "name": "Rejuvenating Scale Legs",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 444,
+        "name": "Strong Scale Legs",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 443,
+        "name": "Vigorous Scale Legs",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "shoulders-scale-pauldrons",
+    "name": "Scale Pauldrons",
+    "description": "Shoulders · 75+",
+    "icon": "https://render.guildwars2.com/file/1DAB2F089B95C809E9B042EA6F63ABCF7D32CC4F/61389.png",
+    "recipe_ids": [
+      6767,
+      460,
+      459,
+      461,
+      464,
+      463,
+      865,
+      462,
+      470,
+      469,
+      466,
+      465,
+      864,
+      468,
+      467
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 6767,
+        "name": "Giver's Scale Pauldrons",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 460,
+        "name": "Hunter's Scale Pauldrons",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 459,
+        "name": "Ravaging Scale Pauldrons",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 461,
+        "name": "Vigorous Scale Pauldrons",
+        "min_rating": 75,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 464,
+        "name": "Hearty Scale Pauldrons",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 463,
+        "name": "Honed Scale Pauldrons",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 865,
+        "name": "Rejuvenating Scale Pauldrons",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 462,
+        "name": "Strong Scale Pauldrons",
+        "min_rating": 100,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 470,
+        "name": "Hearty Scale Pauldrons",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 469,
+        "name": "Honed Scale Pauldrons",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 466,
+        "name": "Hunter's Scale Pauldrons",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 465,
+        "name": "Ravaging Scale Pauldrons",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 864,
+        "name": "Rejuvenating Scale Pauldrons",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 468,
+        "name": "Strong Scale Pauldrons",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 467,
+        "name": "Vigorous Scale Pauldrons",
+        "min_rating": 125,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "boots-gladiator-boots",
+    "name": "Gladiator Boots",
+    "description": "Boots · 125+",
+    "icon": "https://render.guildwars2.com/file/E203A0B67642F814299FD622DF2F522A13B321B3/61526.png",
+    "recipe_ids": [
+      876,
+      872,
+      873,
+      870,
+      871,
+      874,
+      875,
+      918,
+      914,
+      915,
+      912,
+      913,
+      916,
+      917,
+      956,
+      957,
+      954,
+      955,
+      6790,
+      960,
+      959,
+      958,
+      6541,
+      608,
+      609,
+      606,
+      607,
+      6789,
+      611,
+      610,
+      7212,
+      612
+    ],
+    "recipe_count": 32,
+    "variants": [
+      {
+        "recipe_id": 876,
+        "name": "Hearty Gladiator Boots",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 872,
+        "name": "Honed Gladiator Boots",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 873,
+        "name": "Hunter's Gladiator Boots",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 870,
+        "name": "Ravaging Gladiator Boots",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 871,
+        "name": "Rejuvenating Gladiator Boots",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 874,
+        "name": "Strong Gladiator Boots",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 875,
+        "name": "Vigorous Gladiator Boots",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 918,
+        "name": "Hearty Gladiator Boots",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 914,
+        "name": "Honed Gladiator Boots",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 915,
+        "name": "Hunter's Gladiator Boots",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 912,
+        "name": "Ravaging Gladiator Boots",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 913,
+        "name": "Rejuvenating Gladiator Boots",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 916,
+        "name": "Strong Gladiator Boots",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 917,
+        "name": "Vigorous Gladiator Boots",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 956,
+        "name": "Assassin's Gladiator Boots",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 957,
+        "name": "Berserker's Gladiator Boots",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 954,
+        "name": "Carrion Gladiator Boots",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 955,
+        "name": "Cleric's Gladiator Boots",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6790,
+        "name": "Giver's Gladiator Boots",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 960,
+        "name": "Knight's Gladiator Boots",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 959,
+        "name": "Rampager's Gladiator Boots",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 958,
+        "name": "Valkyrie Gladiator Boots",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6541,
+        "name": "Apothecary's Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 608,
+        "name": "Assassin's Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 609,
+        "name": "Berserker's Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 606,
+        "name": "Carrion Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 607,
+        "name": "Cleric's Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6789,
+        "name": "Giver's Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 611,
+        "name": "Knight's Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 610,
+        "name": "Rampager's Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 7212,
+        "name": "Sentinel's Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 612,
+        "name": "Valkyrie Gladiator Boots",
+        "min_rating": 375,
+        "rarity": "Rare"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "coat-gladiator-chestplate",
+    "name": "Gladiator Chestplate",
+    "description": "Coat · 125+",
+    "icon": "https://render.guildwars2.com/file/773CFA0FB70CF76D7624740C45C59807CE05563C/61527.png",
+    "recipe_ids": [
+      883,
+      879,
+      880,
+      877,
+      878,
+      881,
+      882,
+      925,
+      921,
+      922,
+      919,
+      920,
+      923,
+      924,
+      963,
+      964,
+      961,
+      962,
+      6785,
+      967,
+      966,
+      965,
+      6542,
+      692,
+      693,
+      690,
+      691,
+      6784,
+      695,
+      694,
+      7213,
+      696
+    ],
+    "recipe_count": 32,
+    "variants": [
+      {
+        "recipe_id": 883,
+        "name": "Hearty Gladiator Chestplate",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 879,
+        "name": "Honed Gladiator Chestplate",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 880,
+        "name": "Hunter's Gladiator Chestplate",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 877,
+        "name": "Ravaging Gladiator Chestplate",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 878,
+        "name": "Rejuvenating Gladiator Chestplate",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 881,
+        "name": "Strong Gladiator Chestplate",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 882,
+        "name": "Vigorous Gladiator Chestplate",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 925,
+        "name": "Hearty Gladiator Chestplate",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 921,
+        "name": "Honed Gladiator Chestplate",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 922,
+        "name": "Hunter's Gladiator Chestplate",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 919,
+        "name": "Ravaging Gladiator Chestplate",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 920,
+        "name": "Rejuvenating Gladiator Chestplate",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 923,
+        "name": "Strong Gladiator Chestplate",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 924,
+        "name": "Vigorous Gladiator Chestplate",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 963,
+        "name": "Assassin's Gladiator Chestplate",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 964,
+        "name": "Berserker's Gladiator Chestplate",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 961,
+        "name": "Carrion Gladiator Chestplate",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 962,
+        "name": "Cleric's Gladiator Chestplate",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6785,
+        "name": "Giver's Gladiator Chestplate",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 967,
+        "name": "Knight's Gladiator Chestplate",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 966,
+        "name": "Rampager's Gladiator Chestplate",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 965,
+        "name": "Valkyrie Gladiator Chestplate",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6542,
+        "name": "Apothecary's Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 692,
+        "name": "Assassin's Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 693,
+        "name": "Berserker's Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 690,
+        "name": "Carrion Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 691,
+        "name": "Cleric's Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6784,
+        "name": "Giver's Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 695,
+        "name": "Knight's Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 694,
+        "name": "Rampager's Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 7213,
+        "name": "Sentinel's Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 696,
+        "name": "Valkyrie Gladiator Chestplate",
+        "min_rating": 375,
+        "rarity": "Rare"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "gloves-gladiator-gauntlets",
+    "name": "Gladiator Gauntlets",
+    "description": "Gloves · 125+",
+    "icon": "https://render.guildwars2.com/file/A6CBBB9E28EFB4134A0306C232CFD278144CC623/61528.png",
+    "recipe_ids": [
+      890,
+      886,
+      887,
+      884,
+      885,
+      888,
+      889,
+      932,
+      928,
+      929,
+      926,
+      927,
+      930,
+      931,
+      970,
+      971,
+      968,
+      969,
+      6780,
+      974,
+      973,
+      972,
+      6543,
+      650,
+      651,
+      648,
+      649,
+      6779,
+      653,
+      652,
+      7214,
+      654
+    ],
+    "recipe_count": 32,
+    "variants": [
+      {
+        "recipe_id": 890,
+        "name": "Hearty Gladiator Gauntlets",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 886,
+        "name": "Honed Gladiator Gauntlets",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 887,
+        "name": "Hunter's Gladiator Gauntlets",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 884,
+        "name": "Ravaging Gladiator Gauntlets",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 885,
+        "name": "Rejuvenating Gladiator Gauntlets",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 888,
+        "name": "Strong Gladiator Gauntlets",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 889,
+        "name": "Vigorous Gladiator Gauntlets",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 932,
+        "name": "Hearty Gladiator Gauntlets",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 928,
+        "name": "Honed Gladiator Gauntlets",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 929,
+        "name": "Hunter's Gladiator Gauntlets",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 926,
+        "name": "Ravaging Gladiator Gauntlets",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 927,
+        "name": "Rejuvenating Gladiator Gauntlets",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 930,
+        "name": "Strong Gladiator Gauntlets",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 931,
+        "name": "Vigorous Gladiator Gauntlets",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 970,
+        "name": "Assassin's Gladiator Gauntlets",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 971,
+        "name": "Berserker's Gladiator Gauntlets",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 968,
+        "name": "Carrion Gladiator Gauntlets",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 969,
+        "name": "Cleric's Gladiator Gauntlets",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6780,
+        "name": "Giver's Gladiator Gauntlets",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 974,
+        "name": "Knight's Gladiator Gauntlets",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 973,
+        "name": "Rampager's Gladiator Gauntlets",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 972,
+        "name": "Valkyrie Gladiator Gauntlets",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6543,
+        "name": "Apothecary's Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 650,
+        "name": "Assassin's Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 651,
+        "name": "Berserker's Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 648,
+        "name": "Carrion Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 649,
+        "name": "Cleric's Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6779,
+        "name": "Giver's Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 653,
+        "name": "Knight's Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 652,
+        "name": "Rampager's Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 7214,
+        "name": "Sentinel's Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 654,
+        "name": "Valkyrie Gladiator Gauntlets",
+        "min_rating": 375,
+        "rarity": "Rare"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "helm-gladiator-helm",
+    "name": "Gladiator Helm",
+    "description": "Helm · 125+",
+    "icon": "https://render.guildwars2.com/file/3B50937F62A523EEA40BD876F51BEEFA4811E46A/61529.png",
+    "recipe_ids": [
+      897,
+      893,
+      894,
+      891,
+      892,
+      895,
+      896,
+      939,
+      935,
+      936,
+      933,
+      934,
+      937,
+      938,
+      977,
+      978,
+      975,
+      976,
+      6775,
+      981,
+      980,
+      979,
+      6544,
+      734,
+      735,
+      732,
+      733,
+      6774,
+      737,
+      736,
+      7215,
+      738
+    ],
+    "recipe_count": 32,
+    "variants": [
+      {
+        "recipe_id": 897,
+        "name": "Hearty Gladiator Helm",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 893,
+        "name": "Honed Gladiator Helm",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 894,
+        "name": "Hunter's Gladiator Helm",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 891,
+        "name": "Ravaging Gladiator Helm",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 892,
+        "name": "Rejuvenating Gladiator Helm",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 895,
+        "name": "Strong Gladiator Helm",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 896,
+        "name": "Vigorous Gladiator Helm",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 939,
+        "name": "Hearty Gladiator Helm",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 935,
+        "name": "Honed Gladiator Helm",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 936,
+        "name": "Hunter's Gladiator Helm",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 933,
+        "name": "Ravaging Gladiator Helm",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 934,
+        "name": "Rejuvenating Gladiator Helm",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 937,
+        "name": "Strong Gladiator Helm",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 938,
+        "name": "Vigorous Gladiator Helm",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 977,
+        "name": "Assassin's Gladiator Helm",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 978,
+        "name": "Berserker's Gladiator Helm",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 975,
+        "name": "Carrion Gladiator Helm",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 976,
+        "name": "Cleric's Gladiator Helm",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6775,
+        "name": "Giver's Gladiator Helm",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 981,
+        "name": "Knight's Gladiator Helm",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 980,
+        "name": "Rampager's Gladiator Helm",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 979,
+        "name": "Valkyrie Gladiator Helm",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6544,
+        "name": "Apothecary's Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 734,
+        "name": "Assassin's Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 735,
+        "name": "Berserker's Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 732,
+        "name": "Carrion Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 733,
+        "name": "Cleric's Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6774,
+        "name": "Giver's Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 737,
+        "name": "Knight's Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 736,
+        "name": "Rampager's Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 7215,
+        "name": "Sentinel's Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 738,
+        "name": "Valkyrie Gladiator Helm",
+        "min_rating": 375,
+        "rarity": "Rare"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "leggings-gladiator-legplates",
+    "name": "Gladiator Legplates",
+    "description": "Leggings · 125+",
+    "icon": "https://render.guildwars2.com/file/7773801D47E0CAA34B5BBB6C9178235392304DB1/61530.png",
+    "recipe_ids": [
+      904,
+      900,
+      901,
+      898,
+      899,
+      902,
+      903,
+      946,
+      942,
+      943,
+      940,
+      941,
+      944,
+      945,
+      984,
+      985,
+      982,
+      983,
+      6770,
+      988,
+      987,
+      986,
+      6545,
+      818,
+      819,
+      816,
+      817,
+      6769,
+      821,
+      820,
+      7216,
+      822
+    ],
+    "recipe_count": 32,
+    "variants": [
+      {
+        "recipe_id": 904,
+        "name": "Hearty Gladiator Legplates",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 900,
+        "name": "Honed Gladiator Legplates",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 901,
+        "name": "Hunter's Gladiator Legplates",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 898,
+        "name": "Ravaging Gladiator Legplates",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 899,
+        "name": "Rejuvenating Gladiator Legplates",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 902,
+        "name": "Strong Gladiator Legplates",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 903,
+        "name": "Vigorous Gladiator Legplates",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 946,
+        "name": "Hearty Gladiator Legplates",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 942,
+        "name": "Honed Gladiator Legplates",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 943,
+        "name": "Hunter's Gladiator Legplates",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 940,
+        "name": "Ravaging Gladiator Legplates",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 941,
+        "name": "Rejuvenating Gladiator Legplates",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 944,
+        "name": "Strong Gladiator Legplates",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 945,
+        "name": "Vigorous Gladiator Legplates",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 984,
+        "name": "Assassin's Gladiator Legplates",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 985,
+        "name": "Berserker's Gladiator Legplates",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 982,
+        "name": "Carrion Gladiator Legplates",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 983,
+        "name": "Cleric's Gladiator Legplates",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6770,
+        "name": "Giver's Gladiator Legplates",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 988,
+        "name": "Knight's Gladiator Legplates",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 987,
+        "name": "Rampager's Gladiator Legplates",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 986,
+        "name": "Valkyrie Gladiator Legplates",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6545,
+        "name": "Apothecary's Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 818,
+        "name": "Assassin's Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 819,
+        "name": "Berserker's Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 816,
+        "name": "Carrion Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 817,
+        "name": "Cleric's Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6769,
+        "name": "Giver's Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 821,
+        "name": "Knight's Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 820,
+        "name": "Rampager's Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 7216,
+        "name": "Sentinel's Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 822,
+        "name": "Valkyrie Gladiator Legplates",
+        "min_rating": 375,
+        "rarity": "Rare"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "shoulders-gladiator-pauldrons",
+    "name": "Gladiator Pauldrons",
+    "description": "Shoulders · 125+",
+    "icon": "https://render.guildwars2.com/file/912EF0F9D5B31F95ED30500AA559EB6AD9783778/61531.png",
+    "recipe_ids": [
+      911,
+      907,
+      908,
+      905,
+      906,
+      909,
+      910,
+      953,
+      949,
+      950,
+      947,
+      948,
+      951,
+      952,
+      991,
+      992,
+      989,
+      990,
+      6765,
+      995,
+      994,
+      993,
+      6546,
+      776,
+      777,
+      774,
+      775,
+      6764,
+      779,
+      778,
+      7217,
+      780
+    ],
+    "recipe_count": 32,
+    "variants": [
+      {
+        "recipe_id": 911,
+        "name": "Hearty Gladiator Pauldrons",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 907,
+        "name": "Honed Gladiator Pauldrons",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 908,
+        "name": "Hunter's Gladiator Pauldrons",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 905,
+        "name": "Ravaging Gladiator Pauldrons",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 906,
+        "name": "Rejuvenating Gladiator Pauldrons",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 909,
+        "name": "Strong Gladiator Pauldrons",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 910,
+        "name": "Vigorous Gladiator Pauldrons",
+        "min_rating": 125,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 953,
+        "name": "Hearty Gladiator Pauldrons",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 949,
+        "name": "Honed Gladiator Pauldrons",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 950,
+        "name": "Hunter's Gladiator Pauldrons",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 947,
+        "name": "Ravaging Gladiator Pauldrons",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 948,
+        "name": "Rejuvenating Gladiator Pauldrons",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 951,
+        "name": "Strong Gladiator Pauldrons",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 952,
+        "name": "Vigorous Gladiator Pauldrons",
+        "min_rating": 200,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 991,
+        "name": "Assassin's Gladiator Pauldrons",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 992,
+        "name": "Berserker's Gladiator Pauldrons",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 989,
+        "name": "Carrion Gladiator Pauldrons",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 990,
+        "name": "Cleric's Gladiator Pauldrons",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6765,
+        "name": "Giver's Gladiator Pauldrons",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 995,
+        "name": "Knight's Gladiator Pauldrons",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 994,
+        "name": "Rampager's Gladiator Pauldrons",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 993,
+        "name": "Valkyrie Gladiator Pauldrons",
+        "min_rating": 275,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6546,
+        "name": "Apothecary's Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 776,
+        "name": "Assassin's Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 777,
+        "name": "Berserker's Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 774,
+        "name": "Carrion Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 775,
+        "name": "Cleric's Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 6764,
+        "name": "Giver's Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 779,
+        "name": "Knight's Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 778,
+        "name": "Rampager's Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 7217,
+        "name": "Sentinel's Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      },
+      {
+        "recipe_id": 780,
+        "name": "Valkyrie Gladiator Pauldrons",
+        "min_rating": 375,
+        "rarity": "Rare"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "boots-splint-greaves",
+    "name": "Splint Greaves",
+    "description": "Boots · 150+",
+    "icon": "https://render.guildwars2.com/file/D742AC43FCCC6C98EBB0560909694E2CFCDC2EBE/61390.png",
+    "recipe_ids": [
+      389,
+      387,
+      388,
+      392,
+      391,
+      856,
+      390,
+      6791,
+      398,
+      397,
+      396,
+      393,
+      857,
+      394,
+      395
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 389,
+        "name": "Hunter's Splint Greaves",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 387,
+        "name": "Ravaging Splint Greaves",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 388,
+        "name": "Vigorous Splint Greaves",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 392,
+        "name": "Hearty Splint Greaves",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 391,
+        "name": "Honed Splint Greaves",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 856,
+        "name": "Rejuvenating Splint Greaves",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 390,
+        "name": "Strong Splint Greaves",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6791,
+        "name": "Giver's Splint Greaves",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 398,
+        "name": "Hearty Splint Greaves",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 397,
+        "name": "Honed Splint Greaves",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 396,
+        "name": "Hunter's Splint Greaves",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 393,
+        "name": "Ravaging Splint Greaves",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 857,
+        "name": "Rejuvenating Splint Greaves",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 394,
+        "name": "Strong Splint Greaves",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 395,
+        "name": "Vigorous Splint Greaves",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "coat-splint-coat",
+    "name": "Splint Coat",
+    "description": "Coat · 150+",
+    "icon": "https://render.guildwars2.com/file/D7260FB9E8342701BFFCD4482AAE3F06142F28A6/61391.png",
+    "recipe_ids": [
+      353,
+      351,
+      352,
+      356,
+      355,
+      851,
+      354,
+      6786,
+      362,
+      361,
+      360,
+      357,
+      852,
+      358,
+      359
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 353,
+        "name": "Hunter's Splint Coat",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 351,
+        "name": "Ravaging Splint Coat",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 352,
+        "name": "Vigorous Splint Coat",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 356,
+        "name": "Hearty Splint Coat",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 355,
+        "name": "Honed Splint Coat",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 851,
+        "name": "Rejuvenating Splint Coat",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 354,
+        "name": "Strong Splint Coat",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6786,
+        "name": "Giver's Splint Coat",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 362,
+        "name": "Hearty Splint Coat",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 361,
+        "name": "Honed Splint Coat",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 360,
+        "name": "Hunter's Splint Coat",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 357,
+        "name": "Ravaging Splint Coat",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 852,
+        "name": "Rejuvenating Splint Coat",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 358,
+        "name": "Strong Splint Coat",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 359,
+        "name": "Vigorous Splint Coat",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "gloves-splint-gauntlets",
+    "name": "Splint Gauntlets",
+    "description": "Gloves · 150+",
+    "icon": "https://render.guildwars2.com/file/A34B24AF54ADD84C08D54CBD02FFBFCDFCF81E33/61392.png",
+    "recipe_ids": [
+      317,
+      315,
+      316,
+      320,
+      319,
+      848,
+      318,
+      6781,
+      326,
+      325,
+      324,
+      321,
+      849,
+      322,
+      323
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 317,
+        "name": "Hunter's Splint Gauntlets",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 315,
+        "name": "Ravaging Splint Gauntlets",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 316,
+        "name": "Vigorous Splint Gauntlets",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 320,
+        "name": "Hearty Splint Gauntlets",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 319,
+        "name": "Honed Splint Gauntlets",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 848,
+        "name": "Rejuvenating Splint Gauntlets",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 318,
+        "name": "Strong Splint Gauntlets",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6781,
+        "name": "Giver's Splint Gauntlets",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 326,
+        "name": "Hearty Splint Gauntlets",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 325,
+        "name": "Honed Splint Gauntlets",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 324,
+        "name": "Hunter's Splint Gauntlets",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 321,
+        "name": "Ravaging Splint Gauntlets",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 849,
+        "name": "Rejuvenating Splint Gauntlets",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 322,
+        "name": "Strong Splint Gauntlets",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 323,
+        "name": "Vigorous Splint Gauntlets",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "helm-splint-helm",
+    "name": "Splint Helm",
+    "description": "Helm · 150+",
+    "icon": "https://render.guildwars2.com/file/32F81C797D4D1D09A2BF3069B0E11702DC1CAA22/61393.png",
+    "recipe_ids": [
+      413,
+      411,
+      412,
+      416,
+      415,
+      860,
+      414,
+      6776,
+      422,
+      421,
+      420,
+      417,
+      861,
+      418,
+      419
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 413,
+        "name": "Hunter's Splint Helm",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 411,
+        "name": "Ravaging Splint Helm",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 412,
+        "name": "Vigorous Splint Helm",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 416,
+        "name": "Hearty Splint Helm",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 415,
+        "name": "Honed Splint Helm",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 860,
+        "name": "Rejuvenating Splint Helm",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 414,
+        "name": "Strong Splint Helm",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6776,
+        "name": "Giver's Splint Helm",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 422,
+        "name": "Hearty Splint Helm",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 421,
+        "name": "Honed Splint Helm",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 420,
+        "name": "Hunter's Splint Helm",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 417,
+        "name": "Ravaging Splint Helm",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 861,
+        "name": "Rejuvenating Splint Helm",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 418,
+        "name": "Strong Splint Helm",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 419,
+        "name": "Vigorous Splint Helm",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "leggings-splint-legs",
+    "name": "Splint Legs",
+    "description": "Leggings · 150+",
+    "icon": "https://render.guildwars2.com/file/C9EC4503B0C064A303AEBCDDE031A027601BB9D2/61394.png",
+    "recipe_ids": [
+      449,
+      447,
+      448,
+      452,
+      451,
+      867,
+      450,
+      6771,
+      458,
+      457,
+      456,
+      453,
+      866,
+      454,
+      455
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 449,
+        "name": "Hunter's Splint Legs",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 447,
+        "name": "Ravaging Splint Legs",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 448,
+        "name": "Vigorous Splint Legs",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 452,
+        "name": "Hearty Splint Legs",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 451,
+        "name": "Honed Splint Legs",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 867,
+        "name": "Rejuvenating Splint Legs",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 450,
+        "name": "Strong Splint Legs",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6771,
+        "name": "Giver's Splint Legs",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 458,
+        "name": "Hearty Splint Legs",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 457,
+        "name": "Honed Splint Legs",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 456,
+        "name": "Hunter's Splint Legs",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 453,
+        "name": "Ravaging Splint Legs",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 866,
+        "name": "Rejuvenating Splint Legs",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 454,
+        "name": "Strong Splint Legs",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 455,
+        "name": "Vigorous Splint Legs",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "shoulders-splint-pauldrons",
+    "name": "Splint Pauldrons",
+    "description": "Shoulders · 150+",
+    "icon": "https://render.guildwars2.com/file/9CF1C1B3E37D02C8FD942365B4944F45ACA6C77D/61395.png",
+    "recipe_ids": [
+      473,
+      471,
+      472,
+      476,
+      475,
+      863,
+      474,
+      6766,
+      482,
+      481,
+      480,
+      477,
+      862,
+      478,
+      479
+    ],
+    "recipe_count": 15,
+    "variants": [
+      {
+        "recipe_id": 473,
+        "name": "Hunter's Splint Pauldrons",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 471,
+        "name": "Ravaging Splint Pauldrons",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 472,
+        "name": "Vigorous Splint Pauldrons",
+        "min_rating": 150,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 476,
+        "name": "Hearty Splint Pauldrons",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 475,
+        "name": "Honed Splint Pauldrons",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 863,
+        "name": "Rejuvenating Splint Pauldrons",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 474,
+        "name": "Strong Splint Pauldrons",
+        "min_rating": 175,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6766,
+        "name": "Giver's Splint Pauldrons",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 482,
+        "name": "Hearty Splint Pauldrons",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 481,
+        "name": "Honed Splint Pauldrons",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 480,
+        "name": "Hunter's Splint Pauldrons",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 477,
+        "name": "Ravaging Splint Pauldrons",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 862,
+        "name": "Rejuvenating Splint Pauldrons",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 478,
+        "name": "Strong Splint Pauldrons",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 479,
+        "name": "Vigorous Splint Pauldrons",
+        "min_rating": 200,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "boots-tempered-scale-greaves",
+    "name": "Tempered Scale Greaves",
+    "description": "Boots · 225+",
+    "icon": "https://render.guildwars2.com/file/39AD0FFC116EB9190E07E73446484DE8279151E7/61544.png",
+    "recipe_ids": [
+      579,
+      580,
+      578,
+      584,
+      581,
+      582,
+      583,
+      589,
+      590,
+      585,
+      588,
+      586,
+      591,
+      587
+    ],
+    "recipe_count": 14,
+    "variants": [
+      {
+        "recipe_id": 579,
+        "name": "Carrion Tempered Scale Greaves",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 580,
+        "name": "Knight's Tempered Scale Greaves",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 578,
+        "name": "Valkyrie Tempered Scale Greaves",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 584,
+        "name": "Assassin's Tempered Scale Greaves",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 581,
+        "name": "Berserker's Tempered Scale Greaves",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 582,
+        "name": "Cleric's Tempered Scale Greaves",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 583,
+        "name": "Rampager's Tempered Scale Greaves",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 589,
+        "name": "Assassin's Tempered Scale Greaves",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 590,
+        "name": "Berserker's Tempered Scale Greaves",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 585,
+        "name": "Carrion Tempered Scale Greaves",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 588,
+        "name": "Cleric's Tempered Scale Greaves",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 586,
+        "name": "Knight's Tempered Scale Greaves",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 591,
+        "name": "Rampager's Tempered Scale Greaves",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 587,
+        "name": "Valkyrie Tempered Scale Greaves",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "coat-tempered-scale-chestplate",
+    "name": "Tempered Scale Chestplate",
+    "description": "Coat · 225+",
+    "icon": "https://render.guildwars2.com/file/931252B1EA070F7B627338905D780D6918B5B056/61545.png",
+    "recipe_ids": [
+      662,
+      663,
+      664,
+      666,
+      667,
+      665,
+      668,
+      671,
+      672,
+      669,
+      670,
+      674,
+      673,
+      675
+    ],
+    "recipe_count": 14,
+    "variants": [
+      {
+        "recipe_id": 662,
+        "name": "Carrion Tempered Scale Chestplate",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 663,
+        "name": "Knight's Tempered Scale Chestplate",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 664,
+        "name": "Valkyrie Tempered Scale Chestplate",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 666,
+        "name": "Assassin's Tempered Scale Chestplate",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 667,
+        "name": "Berserker's Tempered Scale Chestplate",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 665,
+        "name": "Cleric's Tempered Scale Chestplate",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 668,
+        "name": "Rampager's Tempered Scale Chestplate",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 671,
+        "name": "Assassin's Tempered Scale Chestplate",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 672,
+        "name": "Berserker's Tempered Scale Chestplate",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 669,
+        "name": "Carrion Tempered Scale Chestplate",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 670,
+        "name": "Cleric's Tempered Scale Chestplate",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 674,
+        "name": "Knight's Tempered Scale Chestplate",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 673,
+        "name": "Rampager's Tempered Scale Chestplate",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 675,
+        "name": "Valkyrie Tempered Scale Chestplate",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "gloves-tempered-scale-gauntlets",
+    "name": "Tempered Scale Gauntlets",
+    "description": "Gloves · 225+",
+    "icon": "https://render.guildwars2.com/file/2995BC049673C7B2A9F41C111154FC77F31F4F02/61546.png",
+    "recipe_ids": [
+      620,
+      621,
+      622,
+      624,
+      625,
+      623,
+      626,
+      629,
+      630,
+      627,
+      628,
+      632,
+      631,
+      633
+    ],
+    "recipe_count": 14,
+    "variants": [
+      {
+        "recipe_id": 620,
+        "name": "Carrion Tempered Scale Gauntlets",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 621,
+        "name": "Knight's Tempered Scale Gauntlets",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 622,
+        "name": "Valkyrie Tempered Scale Gauntlets",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 624,
+        "name": "Assassin's Tempered Scale Gauntlets",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 625,
+        "name": "Berserker's Tempered Scale Gauntlets",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 623,
+        "name": "Cleric's Tempered Scale Gauntlets",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 626,
+        "name": "Rampager's Tempered Scale Gauntlets",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 629,
+        "name": "Assassin's Tempered Scale Gauntlets",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 630,
+        "name": "Berserker's Tempered Scale Gauntlets",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 627,
+        "name": "Carrion Tempered Scale Gauntlets",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 628,
+        "name": "Cleric's Tempered Scale Gauntlets",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 632,
+        "name": "Knight's Tempered Scale Gauntlets",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 631,
+        "name": "Rampager's Tempered Scale Gauntlets",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 633,
+        "name": "Valkyrie Tempered Scale Gauntlets",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "helm-tempered-scale-helm",
+    "name": "Tempered Scale Helm",
+    "description": "Helm · 225+",
+    "icon": "https://render.guildwars2.com/file/D6EC020C0C5B41E0D041C9EBC10EF5FF4101E803/61547.png",
+    "recipe_ids": [
+      704,
+      705,
+      706,
+      708,
+      709,
+      707,
+      710,
+      713,
+      714,
+      711,
+      712,
+      716,
+      715,
+      717
+    ],
+    "recipe_count": 14,
+    "variants": [
+      {
+        "recipe_id": 704,
+        "name": "Carrion Tempered Scale Helm",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 705,
+        "name": "Knight's Tempered Scale Helm",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 706,
+        "name": "Valkyrie Tempered Scale Helm",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 708,
+        "name": "Assassin's Tempered Scale Helm",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 709,
+        "name": "Berserker's Tempered Scale Helm",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 707,
+        "name": "Cleric's Tempered Scale Helm",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 710,
+        "name": "Rampager's Tempered Scale Helm",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 713,
+        "name": "Assassin's Tempered Scale Helm",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 714,
+        "name": "Berserker's Tempered Scale Helm",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 711,
+        "name": "Carrion Tempered Scale Helm",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 712,
+        "name": "Cleric's Tempered Scale Helm",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 716,
+        "name": "Knight's Tempered Scale Helm",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 715,
+        "name": "Rampager's Tempered Scale Helm",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 717,
+        "name": "Valkyrie Tempered Scale Helm",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "leggings-tempered-scale-legs",
+    "name": "Tempered Scale Legs",
+    "description": "Leggings · 225+",
+    "icon": "https://render.guildwars2.com/file/B5379D04CEA26367C097F402B3406B6B51ADA65D/61548.png",
+    "recipe_ids": [
+      788,
+      789,
+      790,
+      792,
+      793,
+      791,
+      794,
+      797,
+      798,
+      795,
+      796,
+      800,
+      799,
+      801
+    ],
+    "recipe_count": 14,
+    "variants": [
+      {
+        "recipe_id": 788,
+        "name": "Carrion Tempered Scale Legs",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 789,
+        "name": "Knight's Tempered Scale Legs",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 790,
+        "name": "Valkyrie Tempered Scale Legs",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 792,
+        "name": "Assassin's Tempered Scale Legs",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 793,
+        "name": "Berserker's Tempered Scale Legs",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 791,
+        "name": "Cleric's Tempered Scale Legs",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 794,
+        "name": "Rampager's Tempered Scale Legs",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 797,
+        "name": "Assassin's Tempered Scale Legs",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 798,
+        "name": "Berserker's Tempered Scale Legs",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 795,
+        "name": "Carrion Tempered Scale Legs",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 796,
+        "name": "Cleric's Tempered Scale Legs",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 800,
+        "name": "Knight's Tempered Scale Legs",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 799,
+        "name": "Rampager's Tempered Scale Legs",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 801,
+        "name": "Valkyrie Tempered Scale Legs",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "shoulders-tempered-scale-pauldrons",
+    "name": "Tempered Scale Pauldrons",
+    "description": "Shoulders · 225+",
+    "icon": "https://render.guildwars2.com/file/04D2317D7B75E20C95223E72CF6B1A2FE2E55237/61549.png",
+    "recipe_ids": [
+      746,
+      747,
+      748,
+      750,
+      751,
+      749,
+      752,
+      755,
+      756,
+      753,
+      754,
+      758,
+      757,
+      759
+    ],
+    "recipe_count": 14,
+    "variants": [
+      {
+        "recipe_id": 746,
+        "name": "Carrion Tempered Scale Pauldrons",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 747,
+        "name": "Knight's Tempered Scale Pauldrons",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 748,
+        "name": "Valkyrie Tempered Scale Pauldrons",
+        "min_rating": 225,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 750,
+        "name": "Assassin's Tempered Scale Pauldrons",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 751,
+        "name": "Berserker's Tempered Scale Pauldrons",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 749,
+        "name": "Cleric's Tempered Scale Pauldrons",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 752,
+        "name": "Rampager's Tempered Scale Pauldrons",
+        "min_rating": 250,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 755,
+        "name": "Assassin's Tempered Scale Pauldrons",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 756,
+        "name": "Berserker's Tempered Scale Pauldrons",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 753,
+        "name": "Carrion Tempered Scale Pauldrons",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 754,
+        "name": "Cleric's Tempered Scale Pauldrons",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 758,
+        "name": "Knight's Tempered Scale Pauldrons",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 757,
+        "name": "Rampager's Tempered Scale Pauldrons",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 759,
+        "name": "Valkyrie Tempered Scale Pauldrons",
+        "min_rating": 275,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "boots-barbaric-boots",
+    "name": "Barbaric Boots",
+    "description": "Boots · 300+",
+    "icon": "https://render.guildwars2.com/file/BEEA9D153C3323AC243E0BA66B37CBCE9BBCCEBF/61360.png",
+    "recipe_ids": [
+      592,
+      593,
+      594,
+      6529,
+      598,
+      595,
+      596,
+      597,
+      7200,
+      6535,
+      603,
+      604,
+      599,
+      602,
+      600,
+      605,
+      7206,
+      601
+    ],
+    "recipe_count": 18,
+    "variants": [
+      {
+        "recipe_id": 592,
+        "name": "Carrion Barbaric Boots",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 593,
+        "name": "Knight's Barbaric Boots",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 594,
+        "name": "Valkyrie Barbaric Boots",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6529,
+        "name": "Apothecary's Barbaric Boots",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 598,
+        "name": "Assassin's Barbaric Boots",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 595,
+        "name": "Berserker's Barbaric Boots",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 596,
+        "name": "Cleric's Barbaric Boots",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 597,
+        "name": "Rampager's Barbaric Boots",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 7200,
+        "name": "Sentinel's Barbaric Boots",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6535,
+        "name": "Apothecary's Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 603,
+        "name": "Assassin's Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 604,
+        "name": "Berserker's Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 599,
+        "name": "Carrion Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 602,
+        "name": "Cleric's Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 600,
+        "name": "Knight's Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 605,
+        "name": "Rampager's Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 7206,
+        "name": "Sentinel's Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 601,
+        "name": "Valkyrie Barbaric Boots",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "coat-barbaric-coat",
+    "name": "Barbaric Coat",
+    "description": "Coat · 300+",
+    "icon": "https://render.guildwars2.com/file/AB0863D2A3ABCF103539EA6756E3A15CE97B7457/61361.png",
+    "recipe_ids": [
+      676,
+      677,
+      678,
+      6530,
+      680,
+      681,
+      679,
+      682,
+      7201,
+      6536,
+      685,
+      686,
+      683,
+      684,
+      688,
+      687,
+      7207,
+      689
+    ],
+    "recipe_count": 18,
+    "variants": [
+      {
+        "recipe_id": 676,
+        "name": "Carrion Barbaric Coat",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 677,
+        "name": "Knight's Barbaric Coat",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 678,
+        "name": "Valkyrie Barbaric Coat",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6530,
+        "name": "Apothecary's Barbaric Coat",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 680,
+        "name": "Assassin's Barbaric Coat",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 681,
+        "name": "Berserker's Barbaric Coat",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 679,
+        "name": "Cleric's Barbaric Coat",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 682,
+        "name": "Rampager's Barbaric Coat",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 7201,
+        "name": "Sentinel's Barbaric Coat",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6536,
+        "name": "Apothecary's Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 685,
+        "name": "Assassin's Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 686,
+        "name": "Berserker's Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 683,
+        "name": "Carrion Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 684,
+        "name": "Cleric's Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 688,
+        "name": "Knight's Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 687,
+        "name": "Rampager's Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 7207,
+        "name": "Sentinel's Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 689,
+        "name": "Valkyrie Barbaric Coat",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "gloves-barbaric-gloves",
+    "name": "Barbaric Gloves",
+    "description": "Gloves · 300+",
+    "icon": "https://render.guildwars2.com/file/01CB564B1D3D9AB10578F8FD78C39A7637BBF2BB/61362.png",
+    "recipe_ids": [
+      634,
+      635,
+      636,
+      6531,
+      638,
+      639,
+      637,
+      640,
+      7202,
+      6537,
+      643,
+      644,
+      641,
+      642,
+      646,
+      645,
+      7208,
+      647
+    ],
+    "recipe_count": 18,
+    "variants": [
+      {
+        "recipe_id": 634,
+        "name": "Carrion Barbaric Gloves",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 635,
+        "name": "Knight's Barbaric Gloves",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 636,
+        "name": "Valkyrie Barbaric Gloves",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6531,
+        "name": "Apothecary's Barbaric Gloves",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 638,
+        "name": "Assassin's Barbaric Gloves",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 639,
+        "name": "Berserker's Barbaric Gloves",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 637,
+        "name": "Cleric's Barbaric Gloves",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 640,
+        "name": "Rampager's Barbaric Gloves",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 7202,
+        "name": "Sentinel's Barbaric Gloves",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6537,
+        "name": "Apothecary's Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 643,
+        "name": "Assassin's Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 644,
+        "name": "Berserker's Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 641,
+        "name": "Carrion Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 642,
+        "name": "Cleric's Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 646,
+        "name": "Knight's Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 645,
+        "name": "Rampager's Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 7208,
+        "name": "Sentinel's Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 647,
+        "name": "Valkyrie Barbaric Gloves",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "helm-barbaric-helm",
+    "name": "Barbaric Helm",
+    "description": "Helm · 300+",
+    "icon": "https://render.guildwars2.com/file/7894C34F10DD50750A0BDD58E29077CA6525C59D/61363.png",
+    "recipe_ids": [
+      718,
+      719,
+      720,
+      6532,
+      722,
+      723,
+      721,
+      724,
+      7203,
+      6538,
+      727,
+      728,
+      725,
+      726,
+      730,
+      729,
+      7209,
+      731
+    ],
+    "recipe_count": 18,
+    "variants": [
+      {
+        "recipe_id": 718,
+        "name": "Carrion Barbaric Helm",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 719,
+        "name": "Knight's Barbaric Helm",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 720,
+        "name": "Valkyrie Barbaric Helm",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6532,
+        "name": "Apothecary's Barbaric Helm",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 722,
+        "name": "Assassin's Barbaric Helm",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 723,
+        "name": "Berserker's Barbaric Helm",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 721,
+        "name": "Cleric's Barbaric Helm",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 724,
+        "name": "Rampager's Barbaric Helm",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 7203,
+        "name": "Sentinel's Barbaric Helm",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6538,
+        "name": "Apothecary's Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 727,
+        "name": "Assassin's Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 728,
+        "name": "Berserker's Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 725,
+        "name": "Carrion Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 726,
+        "name": "Cleric's Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 730,
+        "name": "Knight's Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 729,
+        "name": "Rampager's Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 7209,
+        "name": "Sentinel's Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 731,
+        "name": "Valkyrie Barbaric Helm",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "leggings-barbaric-legplates",
+    "name": "Barbaric Legplates",
+    "description": "Leggings · 300+",
+    "icon": "https://render.guildwars2.com/file/969B0DDA122E53341858AE6806CDFC02EF236628/61364.png",
+    "recipe_ids": [
+      802,
+      803,
+      804,
+      6533,
+      806,
+      807,
+      805,
+      808,
+      7204,
+      6539,
+      811,
+      812,
+      809,
+      810,
+      814,
+      813,
+      7210,
+      815
+    ],
+    "recipe_count": 18,
+    "variants": [
+      {
+        "recipe_id": 802,
+        "name": "Carrion Barbaric Legplates",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 803,
+        "name": "Knight's Barbaric Legplates",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 804,
+        "name": "Valkyrie Barbaric Legplates",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6533,
+        "name": "Apothecary's Barbaric Legplates",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 806,
+        "name": "Assassin's Barbaric Legplates",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 807,
+        "name": "Berserker's Barbaric Legplates",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 805,
+        "name": "Cleric's Barbaric Legplates",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 808,
+        "name": "Rampager's Barbaric Legplates",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 7204,
+        "name": "Sentinel's Barbaric Legplates",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6539,
+        "name": "Apothecary's Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 811,
+        "name": "Assassin's Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 812,
+        "name": "Berserker's Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 809,
+        "name": "Carrion Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 810,
+        "name": "Cleric's Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 814,
+        "name": "Knight's Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 813,
+        "name": "Rampager's Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 7210,
+        "name": "Sentinel's Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 815,
+        "name": "Valkyrie Barbaric Legplates",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "shoulders-barbaric-pauldrons",
+    "name": "Barbaric Pauldrons",
+    "description": "Shoulders · 300+",
+    "icon": "https://render.guildwars2.com/file/742B082701940B4AE9F9696A60455B68150546EB/61365.png",
+    "recipe_ids": [
+      760,
+      761,
+      762,
+      6534,
+      764,
+      765,
+      763,
+      766,
+      7205,
+      6540,
+      769,
+      770,
+      767,
+      768,
+      772,
+      771,
+      7211,
+      773
+    ],
+    "recipe_count": 18,
+    "variants": [
+      {
+        "recipe_id": 760,
+        "name": "Carrion Barbaric Pauldrons",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 761,
+        "name": "Knight's Barbaric Pauldrons",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 762,
+        "name": "Valkyrie Barbaric Pauldrons",
+        "min_rating": 300,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6534,
+        "name": "Apothecary's Barbaric Pauldrons",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 764,
+        "name": "Assassin's Barbaric Pauldrons",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 765,
+        "name": "Berserker's Barbaric Pauldrons",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 763,
+        "name": "Cleric's Barbaric Pauldrons",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 766,
+        "name": "Rampager's Barbaric Pauldrons",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 7205,
+        "name": "Sentinel's Barbaric Pauldrons",
+        "min_rating": 325,
+        "rarity": "Fine"
+      },
+      {
+        "recipe_id": 6540,
+        "name": "Apothecary's Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 769,
+        "name": "Assassin's Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 770,
+        "name": "Berserker's Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 767,
+        "name": "Carrion Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 768,
+        "name": "Cleric's Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 772,
+        "name": "Knight's Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 771,
+        "name": "Rampager's Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 7211,
+        "name": "Sentinel's Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      },
+      {
+        "recipe_id": 773,
+        "name": "Valkyrie Barbaric Pauldrons",
+        "min_rating": 350,
+        "rarity": "Masterwork"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "boots-duty-bound-duffers",
+    "name": "Duty-Bound Duffers",
+    "description": "Boots · 350+",
+    "icon": "https://render.guildwars2.com/file/DF2D9A0706490510BFA61691E0DE2902E712345A/61238.png",
+    "recipe_ids": [
+      8733
+    ],
+    "recipe_count": 1,
+    "variants": [
+      {
+        "recipe_id": 8733,
+        "name": "Duty-Bound Duffers",
+        "min_rating": 350,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "coat-duty-bound-brigandine",
+    "name": "Duty-Bound Brigandine",
+    "description": "Coat · 350+",
+    "icon": "https://render.guildwars2.com/file/CCCD69DAF43C71D30E77255C3C530601CFD247FE/61239.png",
+    "recipe_ids": [
+      8737
+    ],
+    "recipe_count": 1,
+    "variants": [
+      {
+        "recipe_id": 8737,
+        "name": "Duty-Bound Brigandine",
+        "min_rating": 350,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "gloves-duty-bound-bracers",
+    "name": "Duty-Bound Bracers",
+    "description": "Gloves · 350+",
+    "icon": "https://render.guildwars2.com/file/F192FC9EF771A87F7EB743686F0B7BDABA59BB19/61240.png",
+    "recipe_ids": [
+      8734
+    ],
+    "recipe_count": 1,
+    "variants": [
+      {
+        "recipe_id": 8734,
+        "name": "Duty-Bound Bracers",
+        "min_rating": 350,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "helm-duty-bound-domeplate",
+    "name": "Duty-Bound Domeplate",
+    "description": "Helm · 350+",
+    "icon": "https://render.guildwars2.com/file/0B476306B2C800456645D324E4EBF19AC2AA4EBE/61241.png",
+    "recipe_ids": [
+      8735
+    ],
+    "recipe_count": 1,
+    "variants": [
+      {
+        "recipe_id": 8735,
+        "name": "Duty-Bound Domeplate",
+        "min_rating": 350,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "leggings-duty-bound-thigh-guards",
+    "name": "Duty-Bound Thigh Guards",
+    "description": "Leggings · 350+",
+    "icon": "https://render.guildwars2.com/file/1BE0D496A9C75AC89DD4275CFCBE2F08DB7B2F4D/61242.png",
+    "recipe_ids": [
+      8736
+    ],
+    "recipe_count": 1,
+    "variants": [
+      {
+        "recipe_id": 8736,
+        "name": "Duty-Bound Thigh Guards",
+        "min_rating": 350,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "shoulders-duty-bound-platepads",
+    "name": "Duty-Bound Platepads",
+    "description": "Shoulders · 350+",
+    "icon": "https://render.guildwars2.com/file/6E60FB219D0308B954EAF4FFC85B2ED0BF6E6B00/61243.png",
+    "recipe_ids": [
+      8738
+    ],
+    "recipe_count": 1,
+    "variants": [
+      {
+        "recipe_id": 8738,
+        "name": "Duty-Bound Platepads",
+        "min_rating": 350,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "boots-boots-of-barca",
+    "name": "Boots of Barca",
+    "description": "Boots · 375+",
+    "icon": "https://render.guildwars2.com/file/D466065466F3EDE0020C9B5A0B68F5551B1837AE/61256.png",
+    "recipe_ids": [
+      8757,
+      8761
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8757,
+        "name": "Boots of Barca",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8761,
+        "name": "Boots of Barca",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "coat-barca-s-gambit",
+    "name": "Barca's Gambit",
+    "description": "Coat · 375+",
+    "icon": "https://render.guildwars2.com/file/D0E60BC603B7B9C00E44D94F00BC6901BAC8C904/61257.png",
+    "recipe_ids": [
+      8740,
+      8762
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8740,
+        "name": "Barca's Gambit",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8762,
+        "name": "Barca's Gambit",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "gloves-barca-s-studs",
+    "name": "Barca's Studs",
+    "description": "Gloves · 375+",
+    "icon": "https://render.guildwars2.com/file/072193AD5A74191DB5586EF1C9DC17D5F9729634/61258.png",
+    "recipe_ids": [
+      8739,
+      8741
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8739,
+        "name": "Barca's Studs",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8741,
+        "name": "Barca's Studs",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "helm-barca-s-crest",
+    "name": "Barca's Crest",
+    "description": "Helm · 375+",
+    "icon": "https://render.guildwars2.com/file/0ABC6BB856952944E212107A019FA948B325F3D2/61266.png",
+    "recipe_ids": [
+      8742,
+      8758
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8742,
+        "name": "Barca's Crest",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8758,
+        "name": "Barca's Crest",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "leggings-barca-s-baldric",
+    "name": "Barca's Baldric",
+    "description": "Leggings · 375+",
+    "icon": "https://render.guildwars2.com/file/F60B4A0B17A40DCC0797E8241B6DA0061B2D777E/61259.png",
+    "recipe_ids": [
+      8743,
+      8759
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8743,
+        "name": "Barca's Baldric",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8759,
+        "name": "Barca's Baldric",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "shoulders-barca-s-sleeve",
+    "name": "Barca's Sleeve",
+    "description": "Shoulders · 375+",
+    "icon": "https://render.guildwars2.com/file/E2910F0838E7171E0FADE1971407FD66525917A3/61260.png",
+    "recipe_ids": [
+      8744,
+      8760
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8744,
+        "name": "Barca's Sleeve",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8760,
+        "name": "Barca's Sleeve",
+        "min_rating": 375,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "boots-draconic-boots",
+    "name": "Draconic Boots",
+    "description": "Boots · 400+",
+    "icon": "https://render.guildwars2.com/file/ABA5149ABEFE50D5F460E5CF6D50A81D09435091/61562.png",
+    "recipe_ids": [
+      6547,
+      615,
+      616,
+      12611,
+      613,
+      7954,
+      614,
+      11333,
+      7950,
+      6788,
+      618,
+      7951,
+      10277,
+      7949,
+      617,
+      7194,
+      7953,
+      7955,
+      7952,
+      619
+    ],
+    "recipe_count": 20,
+    "variants": [
+      {
+        "recipe_id": 6547,
+        "name": "Apothecary's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 615,
+        "name": "Assassin's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 616,
+        "name": "Berserker's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 12611,
+        "name": "Bringer's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 613,
+        "name": "Carrion Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7954,
+        "name": "Cavalier's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 614,
+        "name": "Cleric's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 11333,
+        "name": "Crusader Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7950,
+        "name": "Dire Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 6788,
+        "name": "Giver's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 618,
+        "name": "Knight's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7951,
+        "name": "Magi's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 10277,
+        "name": "Marauder Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7949,
+        "name": "Rabid Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 617,
+        "name": "Rampager's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7194,
+        "name": "Sentinel's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7953,
+        "name": "Settler's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7955,
+        "name": "Shaman's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7952,
+        "name": "Soldier's Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 619,
+        "name": "Valkyrie Draconic Boots",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "boots-swelter-s-gait",
+    "name": "Swelter's Gait",
+    "description": "Boots · 400+",
+    "icon": "https://render.guildwars2.com/file/CA33A318F0EB66D8E03CD978AC2A5CCE0A6BAE17/61223.png",
+    "recipe_ids": [
+      8775,
+      8776,
+      8777
+    ],
+    "recipe_count": 3,
+    "variants": [
+      {
+        "recipe_id": 8775,
+        "name": "Swelter's Gait",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8776,
+        "name": "Swelter's Gait",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8777,
+        "name": "Swelter's Gait",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "coat-brightcarved-breastplate",
+    "name": "Brightcarved Breastplate",
+    "description": "Coat · 400+",
+    "icon": "https://render.guildwars2.com/file/B1631025954E439A0B2F4925F3E2AA5DC5A73902/61224.png",
+    "recipe_ids": [
+      8778,
+      8779,
+      8780
+    ],
+    "recipe_count": 3,
+    "variants": [
+      {
+        "recipe_id": 8778,
+        "name": "Brightcarved Breastplate",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8779,
+        "name": "Brightcarved Breastplate",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8780,
+        "name": "Brightcarved Breastplate",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "coat-draconic-coat",
+    "name": "Draconic Coat",
+    "description": "Coat · 400+",
+    "icon": "https://render.guildwars2.com/file/E7FC2F5D02DBA0EE089BC615A5D2F1DFCFE6185F/61563.png",
+    "recipe_ids": [
+      6548,
+      699,
+      700,
+      12595,
+      697,
+      7930,
+      698,
+      10095,
+      7926,
+      6783,
+      702,
+      7927,
+      11109,
+      7925,
+      701,
+      7195,
+      7929,
+      7931,
+      7928,
+      703
+    ],
+    "recipe_count": 20,
+    "variants": [
+      {
+        "recipe_id": 6548,
+        "name": "Apothecary's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 699,
+        "name": "Assassin's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 700,
+        "name": "Berserker's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 12595,
+        "name": "Bringer's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 697,
+        "name": "Carrion Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7930,
+        "name": "Cavalier's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 698,
+        "name": "Cleric's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 10095,
+        "name": "Crusader Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7926,
+        "name": "Dire Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 6783,
+        "name": "Giver's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 702,
+        "name": "Knight's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7927,
+        "name": "Magi's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 11109,
+        "name": "Marauder Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7925,
+        "name": "Rabid Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 701,
+        "name": "Rampager's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7195,
+        "name": "Sentinel's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7929,
+        "name": "Settler's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7931,
+        "name": "Shaman's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7928,
+        "name": "Soldier's Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 703,
+        "name": "Valkyrie Draconic Coat",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "gloves-draconic-gauntlets",
+    "name": "Draconic Gauntlets",
+    "description": "Gloves · 400+",
+    "icon": "https://render.guildwars2.com/file/0AAAED031F08DDAF665339E8DC060D2BFDE60C7B/61564.png",
+    "recipe_ids": [
+      6549,
+      657,
+      658,
+      12640,
+      655,
+      7906,
+      656,
+      11138,
+      7902,
+      6778,
+      660,
+      7903,
+      11387,
+      7901,
+      659,
+      7196,
+      7905,
+      7907,
+      7904,
+      661
+    ],
+    "recipe_count": 20,
+    "variants": [
+      {
+        "recipe_id": 6549,
+        "name": "Apothecary's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 657,
+        "name": "Assassin's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 658,
+        "name": "Berserker's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 12640,
+        "name": "Bringer's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 655,
+        "name": "Carrion Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7906,
+        "name": "Cavalier's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 656,
+        "name": "Cleric's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 11138,
+        "name": "Crusader Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7902,
+        "name": "Dire Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 6778,
+        "name": "Giver's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 660,
+        "name": "Knight's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7903,
+        "name": "Magi's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 11387,
+        "name": "Marauder Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7901,
+        "name": "Rabid Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 659,
+        "name": "Rampager's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7196,
+        "name": "Sentinel's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7905,
+        "name": "Settler's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7907,
+        "name": "Shaman's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7904,
+        "name": "Soldier's Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 661,
+        "name": "Valkyrie Draconic Gauntlets",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "gloves-groaning-gloves",
+    "name": "Groaning Gloves",
+    "description": "Gloves · 400+",
+    "icon": "https://render.guildwars2.com/file/69C5D5B52BF7370C134E3171411BD4C6695AA469/61225.png",
+    "recipe_ids": [
+      8781,
+      8782,
+      8783
+    ],
+    "recipe_count": 3,
+    "variants": [
+      {
+        "recipe_id": 8781,
+        "name": "Groaning Gloves",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8782,
+        "name": "Groaning Gloves",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8783,
+        "name": "Groaning Gloves",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "helm-adventurer-s-mantle",
+    "name": "Adventurer's Mantle",
+    "description": "Helm · 400+",
+    "icon": "https://render.guildwars2.com/file/0FA3F4540E0C61A6EB684FD2FE561E799FDF1F0A/831465.png",
+    "recipe_ids": [
+      9726
+    ],
+    "recipe_count": 1,
+    "variants": [
+      {
+        "recipe_id": 9726,
+        "name": "Adventurer's Mantle",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "helm-draconic-helm",
+    "name": "Draconic Helm",
+    "description": "Helm · 400+",
+    "icon": "https://render.guildwars2.com/file/0CDB4F0534D023449B6202B3566E23F4B8C10CE6/61565.png",
+    "recipe_ids": [
+      6550,
+      741,
+      742,
+      12580,
+      739,
+      7978,
+      740,
+      11187,
+      7974,
+      6773,
+      744,
+      7975,
+      10904,
+      7973,
+      743,
+      7197,
+      7977,
+      7979,
+      7976,
+      745
+    ],
+    "recipe_count": 20,
+    "variants": [
+      {
+        "recipe_id": 6550,
+        "name": "Apothecary's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 741,
+        "name": "Assassin's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 742,
+        "name": "Berserker's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 12580,
+        "name": "Bringer's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 739,
+        "name": "Carrion Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7978,
+        "name": "Cavalier's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 740,
+        "name": "Cleric's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 11187,
+        "name": "Crusader Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7974,
+        "name": "Dire Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 6773,
+        "name": "Giver's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 744,
+        "name": "Knight's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7975,
+        "name": "Magi's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 10904,
+        "name": "Marauder Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7973,
+        "name": "Rabid Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 743,
+        "name": "Rampager's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7197,
+        "name": "Sentinel's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7977,
+        "name": "Settler's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7979,
+        "name": "Shaman's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7976,
+        "name": "Soldier's Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 745,
+        "name": "Valkyrie Draconic Helm",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "helm-pike-s-ambition",
+    "name": "Pike's Ambition",
+    "description": "Helm · 400+",
+    "icon": "https://render.guildwars2.com/file/FE3C7565CA1194E0DF3A0154AD5F23AAF6B6264C/61226.png",
+    "recipe_ids": [
+      8784,
+      8785,
+      8786
+    ],
+    "recipe_count": 3,
+    "variants": [
+      {
+        "recipe_id": 8784,
+        "name": "Pike's Ambition",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8785,
+        "name": "Pike's Ambition",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8786,
+        "name": "Pike's Ambition",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "leggings-draconic-legs",
+    "name": "Draconic Legs",
+    "description": "Leggings · 400+",
+    "icon": "https://render.guildwars2.com/file/5B4F503619F5F5C659E961E76E290BAB6F234816/61566.png",
+    "recipe_ids": [
+      6551,
+      825,
+      826,
+      12626,
+      823,
+      8026,
+      824,
+      10573,
+      8022,
+      6768,
+      828,
+      8023,
+      10529,
+      8021,
+      827,
+      7198,
+      8025,
+      8027,
+      8024,
+      829
+    ],
+    "recipe_count": 20,
+    "variants": [
+      {
+        "recipe_id": 6551,
+        "name": "Apothecary's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 825,
+        "name": "Assassin's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 826,
+        "name": "Berserker's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 12626,
+        "name": "Bringer's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 823,
+        "name": "Carrion Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8026,
+        "name": "Cavalier's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 824,
+        "name": "Cleric's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 10573,
+        "name": "Crusader Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8022,
+        "name": "Dire Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 6768,
+        "name": "Giver's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 828,
+        "name": "Knight's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8023,
+        "name": "Magi's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 10529,
+        "name": "Marauder Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8021,
+        "name": "Rabid Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 827,
+        "name": "Rampager's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7198,
+        "name": "Sentinel's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8025,
+        "name": "Settler's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8027,
+        "name": "Shaman's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8024,
+        "name": "Soldier's Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 829,
+        "name": "Valkyrie Draconic Legs",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "leggings-sepulchre-greaves",
+    "name": "Sepulchre Greaves",
+    "description": "Leggings · 400+",
+    "icon": "https://render.guildwars2.com/file/064C1DC5E0DE7C2101F57818EC0BD63E112A0577/61227.png",
+    "recipe_ids": [
+      8787,
+      8788,
+      8789
+    ],
+    "recipe_count": 3,
+    "variants": [
+      {
+        "recipe_id": 8787,
+        "name": "Sepulchre Greaves",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8788,
+        "name": "Sepulchre Greaves",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8789,
+        "name": "Sepulchre Greaves",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "shoulders-draconic-pauldrons",
+    "name": "Draconic Pauldrons",
+    "description": "Shoulders · 400+",
+    "icon": "https://render.guildwars2.com/file/9A1A03AA6818EACB1E63B43F06150925484B200D/61567.png",
+    "recipe_ids": [
+      6552,
+      783,
+      784,
+      12552,
+      781,
+      8002,
+      782,
+      11726,
+      7998,
+      6763,
+      786,
+      7999,
+      11579,
+      7997,
+      785,
+      7199,
+      8001,
+      8003,
+      8000,
+      787
+    ],
+    "recipe_count": 20,
+    "variants": [
+      {
+        "recipe_id": 6552,
+        "name": "Apothecary's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 783,
+        "name": "Assassin's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 784,
+        "name": "Berserker's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 12552,
+        "name": "Bringer's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 781,
+        "name": "Carrion Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8002,
+        "name": "Cavalier's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 782,
+        "name": "Cleric's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 11726,
+        "name": "Crusader Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7998,
+        "name": "Dire Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 6763,
+        "name": "Giver's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 786,
+        "name": "Knight's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7999,
+        "name": "Magi's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 11579,
+        "name": "Marauder Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7997,
+        "name": "Rabid Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 785,
+        "name": "Rampager's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 7199,
+        "name": "Sentinel's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8001,
+        "name": "Settler's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8003,
+        "name": "Shaman's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8000,
+        "name": "Soldier's Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 787,
+        "name": "Valkyrie Draconic Pauldrons",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "grouped_by_explicit_armor_set"
+  },
+  {
+    "id": "shoulders-dual-peaks",
+    "name": "Dual Peaks",
+    "description": "Shoulders · 400+",
+    "icon": "https://render.guildwars2.com/file/02B2D00544D23E06F032052DAE4F19ED5B5ED0DA/61228.png",
+    "recipe_ids": [
+      8790,
+      8791,
+      8792
+    ],
+    "recipe_count": 3,
+    "variants": [
+      {
+        "recipe_id": 8790,
+        "name": "Dual Peaks",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8791,
+        "name": "Dual Peaks",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8792,
+        "name": "Dual Peaks",
+        "min_rating": 400,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "boots-clark-s-chukkas",
+    "name": "Clark's Chukkas",
+    "description": "Boots · 425+",
+    "icon": "https://render.guildwars2.com/file/A9ABC29D5DFBD1FA4E0E2401AFB50DD930099806/61268.png",
+    "recipe_ids": [
+      8708,
+      8709
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8708,
+        "name": "Clark's Chukkas",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8709,
+        "name": "Clark's Chukkas",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "coat-gieve-s-plate",
+    "name": "Gieve's Plate",
+    "description": "Coat · 425+",
+    "icon": "https://render.guildwars2.com/file/50AB9C3C09B21DACA93D205007C666C3BB0D982B/61269.png",
+    "recipe_ids": [
+      8685,
+      8696
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8685,
+        "name": "Gieve's Plate",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8696,
+        "name": "Gieve's Plate",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "gloves-massey-s-gauntlet",
+    "name": "Massey's Gauntlet",
+    "description": "Gloves · 425+",
+    "icon": "https://render.guildwars2.com/file/0B32EF80050D29BDA30B0ABD04010B9CF5CC2403/61270.png",
+    "recipe_ids": [
+      8694,
+      8695
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8694,
+        "name": "Massey's Gauntlet",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8695,
+        "name": "Massey's Gauntlet",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "helm-bella-s-crown",
+    "name": "Bella's Crown",
+    "description": "Helm · 425+",
+    "icon": "https://render.guildwars2.com/file/4AEE36464FD5E6C0FDB50AB22D59994B665836D5/61283.png",
+    "recipe_ids": [
+      8692,
+      8693
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8692,
+        "name": "Bella's Crown",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8693,
+        "name": "Bella's Crown",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "leggings-mail-of-mac-quen",
+    "name": "Mail of Mac Quen",
+    "description": "Leggings · 425+",
+    "icon": "https://render.guildwars2.com/file/225CD443035579CCA125BE5F7FED0701BD2FD739/61271.png",
+    "recipe_ids": [
+      8690,
+      8691
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8690,
+        "name": "Mail of Mac Quen",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8691,
+        "name": "Mail of Mac Quen",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  },
+  {
+    "id": "shoulders-miucha-s-mantle",
+    "name": "Miucha's Mantle",
+    "description": "Shoulders · 425+",
+    "icon": "https://render.guildwars2.com/file/28F97A1A446918DA29AF051C59D0F4D293DDA9B1/61272.png",
+    "recipe_ids": [
+      8688,
+      8689
+    ],
+    "recipe_count": 2,
+    "variants": [
+      {
+        "recipe_id": 8688,
+        "name": "Miucha's Mantle",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      },
+      {
+        "recipe_id": 8689,
+        "name": "Miucha's Mantle",
+        "min_rating": 425,
+        "rarity": "Exotic"
+      }
+    ],
+    "verification_status": "special_item_needs_review"
+  }
+]

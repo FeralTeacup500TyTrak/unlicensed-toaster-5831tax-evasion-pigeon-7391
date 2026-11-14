@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GW2 Ingredient Database Builder</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #101827;
+      color: #f9fafb;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 60px auto;
+      padding: 24px;
+    }
+
+    .eyebrow {
+      color: #e8b86d;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    h1 { margin: 14px 0; }
+
+    p {
+      color: #a5adbb;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: #1f2937;
+      border: 1px solid #344052;
+      border-radius: 20px;
+      padding: 28px;
+      margin-top: 28px;
+    }
+
+    input[type="file"] {
+      display: block;
+      width: 100%;
+      margin: 16px 0 22px;
+      color: #f9fafb;
+    }
+
+    button {
+      background: #b69cff;
+      color: #171326;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .progress {
+      height: 12px;
+      background: #374151;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 24px 0 12px;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0%;
+      background: #b69cff;
+      transition: width 0.2s;
+    }
+
+    .status {
+      font-size: 14px;
+      white-space: pre-line;
+    }
+
+    .result {
+      display: none;
+      margin-top: 24px;
+      padding: 20px;
+      background: #29243e;
+      border: 1px solid #b69cff;
+      border-radius: 14px;
+    }
+
+    .result h2 {
+      color: #e8b86d;
+      margin-top: 0;
+    }
+
+    .note {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="eyebrow">
+      MRS.CHAIRMODE ♥ COMPLETION TRACKER
+    </div>
+
+    <h1>🧺 GW2 Ingredient Database Builder</h1>
+
+    <p>
+      Build an ingredient index from the Chef
+      recipe database, including recipe references
+      and original Guild Wars 2 item icons.
+    </p>
+
+    <section class="card">
+      <h2>1. Select your recipe database</h2>
+
+      <p>
+        Choose data/chef-recipes-complete.json
+        from your project.
+      </p>
+
+      <input
+        type="file"
+        id="recipeFile"
+        accept=".json,application/json"
+      >
+
+      <button id="buildButton">
+        Build Ingredient Database ✨
+      </button>
+
+      <div class="progress">
+        <div class="fill" id="progressFill"></div>
+      </div>
+
+      <p class="status" id="status">
+        Waiting for recipe file.
+      </p>
+
+      <div class="result" id="result">
+        <h2>👑 Ingredient Database Complete!</h2>
+        <p id="resultText"></p>
+
+        <button id="downloadButton">
+          Download chef-ingredients.json
+        </button>
+      </div>
+
+      <p class="note">
+        Recipe usage counts include all imported Chef
+        recipes. Discovery eligibility will be
+        determined separately.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const fileInput =
+      document.getElementById("recipeFile");
+
+    const buildButton =
+      document.getElementById("buildButton");
+
+    const downloadButton =
+      document.getElementById("downloadButton");
+
+    const progressFill =
+      document.getElementById("progressFill");
+
+    const statusText =
+      document.getElementById("status");
+
+    const result =
+      document.getElementById("result");
+
+    const resultText =
+      document.getElementById("resultText");
+
+    let ingredientDatabase = [];
+
+    function updateProgress(percent, message) {
+      progressFill.style.width = percent + "%";
+      statusText.textContent = message;
+    }
+
+    function downloadJSON(filename, data) {
+      const blob = new Blob(
+        [JSON.stringify(data, null, 2)],
+        { type: "application/json" }
+      );
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.download = filename;
+
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      setTimeout(
+        () => URL.revokeObjectURL(url),
+        1000
+      );
+    }
+
+    async function buildIngredients() {
+      if (!fileInput.files.length) {
+        alert(
+          "Please select chef-recipes-complete.json."
+        );
+        return;
+      }
+
+      buildButton.disabled = true;
+      result.style.display = "none";
+      ingredientDatabase = [];
+
+      try {
+        updateProgress(
+          0,
+          "Reading recipe database..."
+        );
+
+        const fileText =
+          await fileInput.files[0].text();
+
+        const recipes = JSON.parse(fileText);
+
+        if (
+          !Array.isArray(recipes) ||
+          recipes.length === 0
+        ) {
+          throw new Error(
+            "Recipe database is empty or invalid."
+          );
+        }
+
+        const ingredientMap = new Map();
+
+        for (
+          let index = 0;
+          index < recipes.length;
+          index++
+        ) {
+          const recipe = recipes[index];
+
+          if (!Number.isInteger(recipe.id)) {
+            throw new Error(
+              "A recipe has an invalid recipe ID."
+            );
+          }
+
+          if (!Array.isArray(recipe.ingredients)) {
+            throw new Error(
+              "Recipe " + recipe.id +
+              " has no valid ingredients array."
+            );
+          }
+
+          for (const ingredient of recipe.ingredients) {
+            const itemID = ingredient.item_id;
+
+            if (!Number.isInteger(itemID)) {
+              throw new Error(
+                "Invalid ingredient ID in recipe " +
+                recipe.id
+              );
+            }
+
+            if (!ingredientMap.has(itemID)) {
+              ingredientMap.set(itemID, {
+                item_id: itemID,
+                item_name: ingredient.item_name ?? null,
+                item_icon: ingredient.item_icon ?? null,
+                recipe_ids: new Set()
+              });
+            }
+
+            const entry = ingredientMap.get(itemID);
+
+            // Count each recipe only once per ingredient.
+            entry.recipe_ids.add(recipe.id);
+
+            if (!entry.item_name && ingredient.item_name) {
+              entry.item_name = ingredient.item_name;
+            }
+
+            if (!entry.item_icon && ingredient.item_icon) {
+              entry.item_icon = ingredient.item_icon;
+            }
+          }
+
+          if (
+            index % 25 === 0 ||
+            index === recipes.length - 1
+          ) {
+            const processed = index + 1;
+
+            updateProgress(
+              processed / recipes.length * 100,
+              "Recipes processed: " +
+              processed + " / " + recipes.length +
+              "\nUnique ingredients: " +
+              ingredientMap.size
+            );
+
+            // Let the browser update the progress bar.
+            await new Promise(resolve =>
+              setTimeout(resolve, 0)
+            );
+          }
+        }
+
+        ingredientDatabase = [
+          ...ingredientMap.values()
+        ].map(entry => {
+          const recipeIDs =
+            [...entry.recipe_ids].sort(
+              (a, b) => a - b
+            );
+
+          return {
+            item_id: entry.item_id,
+            item_name: entry.item_name,
+            item_icon: entry.item_icon,
+            recipe_count: recipeIDs.length,
+            recipe_ids: recipeIDs
+          };
+        });
+
+        ingredientDatabase.sort((a, b) =>
+          (a.item_name || "").localeCompare(
+            b.item_name || ""
+          ) || a.item_id - b.item_id
+        );
+
+        const missingNames =
+          ingredientDatabase.filter(
+            item => !item.item_name
+          ).length;
+
+        const missingIcons =
+          ingredientDatabase.filter(
+            item => !item.item_icon
+          ).length;
+
+        updateProgress(
+          100,
+          "Ingredient database successfully built."
+        );
+
+        resultText.textContent =
+          "Chef recipes: " + recipes.length +
+          " | Unique ingredients: " +
+          ingredientDatabase.length +
+          " | Missing names: " + missingNames +
+          " | Missing icons: " + missingIcons;
+
+        result.style.display = "block";
+
+      } catch (error) {
+        updateProgress(
+          0,
+          "Build failed: " + error.message
+        );
+
+        console.error(error);
+
+      } finally {
+        buildButton.disabled = false;
+      }
+    }
+
+    buildButton.addEventListener(
+      "click",
+      buildIngredients
+    );
+
+    downloadButton.addEventListener(
+      "click",
+      () => downloadJSON(
+        "chef-ingredients.json",
+        ingredientDatabase
+      )
+    );
+  </script>
+</body>
+</html>
