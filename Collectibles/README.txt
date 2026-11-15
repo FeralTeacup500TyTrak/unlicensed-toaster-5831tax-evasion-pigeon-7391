@@ -1,0 +1,1 @@
+Copy the CONTENTS of this Collectibles folder into your existing GitHub Collectibles folder, replacing index.html and adding the 13 category subfolders, css, js, and fishing.json. Keep other existing files. All 13 JSON catalogs are included. Progress key preserved: mrschairmode.collectibles.manual.v1. Back up your progress using Export progress before changing files.
