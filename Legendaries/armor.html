@@ -503,8 +503,11 @@
 
 .collection-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:24px 0 12px}.collection-head h2{font-size:19px;margin:0}.collection-count{color:var(--gold);font-weight:700}.collection-bar{height:10px;background:var(--track);border-radius:99px;overflow:hidden;margin-bottom:24px}.collection-fill{height:100%;background:var(--lavender);transition:width .25s}
 .group-title{font-size:17px;color:var(--gold);margin:27px 0 12px}.filter-controls{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}.filter-controls input{flex:1;min-width:180px}.filter-controls select{min-width:150px}.weapon-meta{overflow-wrap:anywhere}.weapon-progress .copy-count{display:block;text-align:right;color:var(--muted);font-size:11px;margin-top:5px}.weapon-row:focus-visible{outline:2px solid var(--lavender);outline-offset:3px}
+.weapon-row:focus-visible{outline:2px solid var(--lavender);outline-offset:3px}.weapon-row.clickable{cursor:pointer}.weapon-row.clickable:hover{border-color:var(--gold);transform:translateY(-1px)}
 </style></head><body><main class="container"><a class="back" id="backToLegendaries" href="index.html">← Back to Legendaries</a><div class="eyebrow">MRS.CHAIRMODE ♥ COMPLETION TRACKER</div><h1 id="title"></h1><p class="description" id="description"></p><div class="collection-head"><h2>Crafting Progress</h2><span class="collection-count" id="count">0 / –</span></div><div class="collection-bar"><div class="collection-fill" id="overallFill"></div></div><div class="filter-controls"><input id="search" type="search" placeholder="Filter discovered legendaries..."><select id="weight"><option value="">All armor weights</option><option>Light</option><option>Medium</option><option>Heavy</option></select></div><div class="weapon-stack" id="weaponList"></div><footer>Made with ♥ for Mrs.Chairmode</footer></main><script src="../data/legendary-database.js"></script><script>window.CATEGORY="Armor";
 const ITEMS=window.GW2_LEGENDARY_DATABASE.items;
+const ENGLISH_ARMOR_DISPLAY_NAMES={"105317":"Eikasia, Mists-Grasper","105171":"Eikasia, Mists-Grasper","105293":"Eikasia, Mists-Grasper","83162":"Ardent Glorious Gloves (Light)","106658":"Selachimorpha","80111":"Perfected Envoy Gloves","83036":"Triumphant Hero's Raiment","89094":"Mistforged Glorious Hero's Leggings (Medium)","84546":"Ardent Glorious Leggings (Light)","80384":"Perfected Envoy Helmet","101570":"Obsidian Medium Gloves","83921":"Ardent Glorious Head (Heavy)","82670":"Ardent Glorious Chest (Medium)","80254":"Perfected Envoy Breastplate","84748":"Glorious Hero's Leggings (Heavy)","82180":"Mistforged Triumphant Hero's Head (Medium)","80252":"Perfected Envoy Leggings","82994":"Triumphant Hero's Shoulderguards","83482":"Mistforged Triumphant Hero's Boots (Light)","89101":"Mistforged Glorious Hero's Leggings (Light)","101536":"Obsidian Light Gloves","83497":"Triumphant Hero's Leggings","83595":"Ardent Glorious Shoulders (Light)","82268":"Glorious Hero's Shoulders (Medium)","89158":"Mistforged Glorious Hero's Shoulders (Light)","82903":"Triumphant Hero's Legguards","83087":"Mistforged Triumphant Hero's Shoulders (Medium)","82410":"Glorious Hero's Gloves (Heavy)","101535":"Obsidian Light Shoes","84643":"Ardent Glorious Head (Medium)","89134":"Mistforged Glorious Hero's Gloves (Medium)","83729":"Glorious Hero's Chest (Light)","82401":"Glorious Hero's Head (Medium)","80161":"Perfected Envoy Vambraces","89245":"Mistforged Glorious Hero's Boots (Light)","83308":"Mistforged Triumphant Hero's Shoulders (Light)","83113":"Ardent Glorious Chest (Light)","84181":"Mistforged Triumphant Hero's Shoulders (Heavy)","84561":"Glorious Hero's Shoulders (Heavy)","80248":"Perfected Envoy Cowl","101609":"Obsidian Heavy Gauntlets","89167":"Mistforged Glorious Hero's Gloves (Light)","82437":"Triumphant Hero's Faceguard","83862":"Mistforged Triumphant Hero's Leggings (Medium)","83394":"Triumphant Hero's Breastplate","82552":"Mistforged Triumphant Hero's Gloves (Medium)","83323":"Ardent Glorious Leggings (Heavy)","84341":"Glorious Hero's Leggings (Light)","84176":"Triumphant Hero's Warhelm","84110":"Triumphant Hero's Wristplates","89234":"Mistforged Glorious Hero's Shoulders (Medium)","83676":"Glorious Hero's Gloves (Medium)","83094":"Mistforged Triumphant Hero's Boots (Heavy)","82272":"Glorious Hero's Boots (Medium)","84427":"Glorious Hero's Boots (Light)","89266":"Mistforged Glorious Hero's Leggings (Heavy)","83702":"Mistforged Triumphant Hero's Leggings (Heavy)","89126":"Mistforged Glorious Hero's Head (Medium)","82465":"Ardent Glorious Gloves (Heavy)","80557":"Perfected Envoy Greaves","82902":"Triumphant Hero's Masque","82456":"Triumphant Hero's Gauntlets","84629":"Triumphant Hero's Armguards","83957":"Glorious Hero's Boots (Heavy)","89209":"Mistforged Glorious Hero's Shoulders (Heavy)","84578":"Triumphant Hero's Brigandine","101568":"Obsidian Heavy Cuisses","80131":"Perfected Envoy Mantle","83348":"Ardent Glorious Chest (Heavy)","80281":"Perfected Envoy Boots","82093":"Triumphant Hero's Shinplates","83289":"Triumphant Hero's Footgear","80435":"Perfected Envoy Pauldrons","89093":"Mistforged Glorious Hero's Gloves (Heavy)","89260":"Mistforged Glorious Hero's Head (Light)","101602":"Obsidian Medium Boots","84508":"Sublime Mistforged Triumphant Hero's Chest (Light)","82925":"Mistforged Triumphant Hero's Head (Light)","80145":"Perfected Envoy Shoulderpads","82963":"Triumphant Hero's Pauldrons","80296":"Perfected Envoy Mask","82245":"Ardent Glorious Gloves (Medium)","89235":"Mistforged Glorious Hero's Boots (Medium)","82173":"Triumphant Hero's Epaulets","84461":"Glorious Hero's Gloves (Light)","82348":"Mistforged Triumphant Hero's Gloves (Heavy)","89174":"Mistforged Glorious Hero's Chest (Light)","84633":"Ardent Glorious Head (Light)","84301":"Mistforged Triumphant Hero's Head (Heavy)","101516":"Obsidian Light Crown","84481":"Sublime Mistforged Triumphant Hero's Chest (Heavy)","82109":"Mistforged Triumphant Hero's Gloves (Light)","82423":"Glorious Hero's Head (Light)","89183":"Mistforged Glorious Hero's Chest (Medium)","101462":"Obsidian Light Mantle","82102":"Sublime Mistforged Triumphant Hero's Chest (Medium)","83929":"Ardent Glorious Shoulders (Medium)","101556":"Obsidian Medium Jacket","83240":"Glorious Hero's Leggings (Medium)","82801":"Triumphant Hero's Wargreaves","80190":"Perfected Envoy Vestments","84723":"Glorious Hero's Shoulders (Light)","89252":"Mistforged Glorious Hero's Boots (Heavy)","101544":"Obsidian Heavy Helmet","101521":"Obsidian Heavy Breastplate","83127":"Ardent Glorious Shoulders (Heavy)","82334":"Glorious Hero's Chest (Heavy)","82214":"Ardent Glorious Boots (Medium)","84655":"Ardent Glorious Boots (Heavy)","82519":"Ardent Glorious Boots (Light)","101551":"Obsidian Heavy Pauldrons","83699":"Mistforged Triumphant Hero's Boots (Medium)","82698":"Glorious Hero's Head (Heavy)","101579":"Obsidian Medium Leggings","89117":"Mistforged Glorious Hero's Head (Heavy)","82098":"Glorious Hero's Chest (Medium)","80277":"Perfected Envoy Tassets","82512":"Ardent Glorious Leggings (Medium)","101645":"Obsidian Medium Shoulders","105921":"Selachimorpha","80205":"Perfected Envoy Gauntlets","80578":"Perfected Envoy Jerkin","82196":"Triumphant Hero's Legplates","80356":"Perfected Envoy Pants","89152":"Mistforged Glorious Hero's Chest (Heavy)","106178":"Selachimorpha","101501":"Obsidian Light Pants","101614":"Obsidian Medium Mask","101499":"Obsidian Light Regalia","80399":"Perfected Envoy Shoes","101460":"Obsidian Heavy Greaves","82502":"Mistforged Triumphant Hero's Leggings (Light)"};
+const displayName=i=>ENGLISH_ARMOR_DISPLAY_NAMES[i.id]||i.name;
 const DATAKEY='chairmode-legendary-api-v2';
 const norm=s=>String(s||'').normalize('NFKC').toLocaleLowerCase('en').replace(/[’‘]/g,"'").replace(/\s+/g,' ').trim();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -524,15 +527,117 @@ const categories={Weapons:'⚔ Legendary Weapons',Armor:'🛡 Legendary Armor',T
 document.title=categories[CAT].replace(/^[^ ]+ /,'')+' | Mrs.Chairmode';document.getElementById('title').textContent=categories[CAT];
 document.getElementById('description').textContent='Your discovered legendary '+CAT.toLowerCase()+' and their crafting progress.';
 const progressColor=p=>p>=100?'#f3d77a':p<=20?'#e56b85':p<=40?'#f5a66b':p<=60?'#f3d77a':p<=80?'#86ddb0':'#65dad9';
+
+// Completion synchronization: preserve existing discovery and manual counts.
+const COMPLETION_DETAIL_KEYS={"30699":"chairmode-bolt-v1","30684":"chairmode-frostfang-v1","30687":"chairmode-incinerator-v1","30692":"chairmode-the-moot-v1","30693":"chairmode-quip-v1","30695":"chairmode-meteorlogicus-v1","30688":"chairmode-the-minstrel-v1","30696":"chairmode-the-flameseeker-prophecies-v1","30700":"chairmode-rodgort-v1","30702":"chairmode-howler-v1","30703":"chairmode-sunrise-v1","30704":"chairmode-twilight-v1","30689":"chairmode-eternity-v1","30690":"chairmode-the-juggernaut-v1","30685":"chairmode-kudzu-v1","30694":"chairmode-the-predator-v1","30686":"chairmode-the-dreamer-v1","30698":"chairmode-the-bifrost-v1","30697":"chairmode-frenzy-v1","30691":"chairmode-kamohoali-i-kotaki-v1","30701":"chairmode-kraitkin-v1","76158":"chairmode-astralaria-v1","78556":"chairmode-chuka-and-champawat-v1","87109":"chairmode-claw-of-the-khan-ur-v1","79562":"chairmode-eureka-v1","90551":"chairmode-exordium-v1","81206":"chairmode-flames-of-war-v1","72713":"chairmode-hope-v1","71383":"chairmode-nevermore-v1","89854":"chairmode-pharus-v1","81839":"chairmode-sharur-v1","79802":"chairmode-shooshadoo-v1","86098":"chairmode-the-binding-of-ipos-v1","80488":"chairmode-the-hms-divinity-v1","81957":"chairmode-the-shining-blade-v1","87687":"chairmode-verdarach-v1","88576":"chairmode-xiuquatl-v1","95808":"chairmode-aurenes-argument-v1","96356":"chairmode-aurenes-bite-v1","97099":"chairmode-aurenes-breath-v1","96203":"chairmode-aurenes-claw-v1","95675":"chairmode-aurenes-fang-v1","97590":"chairmode-aurenes-flight-v1","97165":"chairmode-aurenes-gaze-v1","96652":"chairmode-aurenes-insight-v1","97377":"chairmode-aurenes-persuasion-v1","96937":"chairmode-aurenes-rending-v1","96028":"chairmode-aurenes-scale-v1","95612":"chairmode-aurenes-tail-v1","97783":"chairmode-aurenes-voice-v1","95684":"chairmode-aurenes-weight-v1","97077":"chairmode-aurenes-wing-v1","96221":"chairmode-aurenes-wisdom-v1","106273":"chairmode-ancora-bellum-v1","105653":"chairmode-ancora-pax-v1","103815":"chairmode-klobjarne-geirr-v1","110020":"chairmode-wages-of-stars-v1","101570":"chairmode-obsidian-medium-gloves-v1","101536":"chairmode-obsidian-light-gloves-v1","101535":"chairmode-obsidian-light-shoes-v1","101609":"chairmode-obsidian-heavy-gauntlets-v1","101568":"chairmode-obsidian-heavy-cuisses-v1","101602":"chairmode-obsidian-medium-boots-v1","101516":"chairmode-obsidian-light-crown-v1","101462":"chairmode-obsidian-light-mantle-v1","101556":"chairmode-obsidian-medium-jacket-v1","101544":"chairmode-obsidian-heavy-helmet-v1","101521":"chairmode-obsidian-heavy-breastplate-v1","101551":"chairmode-obsidian-heavy-pauldrons-v1","101579":"chairmode-obsidian-medium-leggings-v1","101645":"chairmode-obsidian-medium-shoulders-v1","101501":"chairmode-obsidian-light-pants-v1","101614":"chairmode-obsidian-medium-mask-v1","101499":"chairmode-obsidian-light-regalia-v1","101460":"chairmode-obsidian-heavy-greaves-v1","83036":"chairmode-triumphant-hero-light-raiment-v1","82994":"chairmode-triumphant-hero-medium-shoulderguards-v1","83497":"chairmode-triumphant-hero-light-leggings-v1","82903":"chairmode-triumphant-hero-medium-legguards-v1","82437":"chairmode-triumphant-hero-medium-faceguard-v1","83394":"chairmode-triumphant-hero-heavy-breastplate-v1","84176":"chairmode-triumphant-hero-heavy-warhelm-v1","84110":"chairmode-triumphant-hero-medium-wristplates-v1","82902":"chairmode-triumphant-hero-light-masque-v1","82456":"chairmode-triumphant-hero-heavy-gauntlets-v1","84629":"chairmode-triumphant-hero-light-armguards-v1","84578":"chairmode-triumphant-hero-medium-brigandine-v1","82093":"chairmode-triumphant-hero-medium-shinplates-v1","83289":"chairmode-triumphant-hero-light-footgear-v1","82963":"chairmode-triumphant-hero-heavy-pauldrons-v1","82173":"chairmode-triumphant-hero-light-epaulets-v1","82801":"chairmode-triumphant-hero-heavy-wargreaves-v1","82196":"chairmode-triumphant-hero-heavy-legplates-v1","80248":"chairmode-perfected-envoy-cowl-v1","80131":"chairmode-perfected-envoy-mantle-v1","80190":"chairmode-perfected-envoy-vestments-v1","80111":"chairmode-perfected-envoy-gloves-v1","80356":"chairmode-perfected-envoy-pants-v1","80399":"chairmode-perfected-envoy-shoes-v1","105317":"chairmode-eikasia-mists-grasper-light-v1","105293":"chairmode-eikasia-mists-grasper-medium-v1","105171":"chairmode-eikasia-mists-grasper-heavy-v1","105921":"chairmode-selachimorpha-light-v1","106658":"chairmode-selachimorpha-medium-v1","106178":"chairmode-selachimorpha-heavy-v1","80384":"chairmode-perfected-envoy-helmet-v1","80254":"chairmode-perfected-envoy-breastplate-v1","80252":"chairmode-perfected-envoy-leggings-v1","80161":"chairmode-perfected-envoy-vambraces-v1","80557":"chairmode-perfected-envoy-greaves-v1","80281":"chairmode-perfected-envoy-boots-v1","80435":"chairmode-perfected-envoy-pauldrons-v1","80145":"chairmode-perfected-envoy-shoulderpads-v1","80296":"chairmode-perfected-envoy-mask-v1","80277":"chairmode-perfected-envoy-tassets-v1","80205":"chairmode-perfected-envoy-gauntlets-v1","80578":"chairmode-perfected-envoy-jerkin-v1","74155":"chairmode-back-ad-infinitum-v1","77474":"chairmode-back-the-ascension-v1","81462":"chairmode-back-warbringer-v1","104857":"chairmode-back-orrax-manifested-v1","101582":"chairmode-relic-legendary-v1","91536":"chairmode-upgrade-rune-v1","91505":"chairmode-upgrade-sigil-v1"};
+function syncDetailCompletion(){
+  if(!state||!state.counts||!Array.isArray(state.discovered))return;
+  let changed=false;
+  for(const [id,key] of Object.entries(COMPLETION_DETAIL_KEYS)){
+    let detail=null;
+    try{detail=JSON.parse(localStorage.getItem(key)||'null')}catch(e){}
+    if(!detail||typeof detail!=='object')continue;
+    let completed=null;
+    if(Array.isArray(detail.copies))completed=detail.copies.filter(c=>c&&c.crafted===true).length;
+    else if(Array.isArray(detail.parts)&&typeof detail.crafted==='boolean')completed=detail.crafted?1:0;
+    if(completed===null)continue;
+    const item=ITEMS.find(i=>String(i.id)===id);
+    if(!item)continue;
+    completed=Math.max(0,Math.min(item.max,completed));
+    if(Number(state.counts[id]||0)!==completed){state.counts[id]=completed;changed=true}
+  }
+  if(changed){try{localStorage.setItem(DATAKEY,JSON.stringify(state))}catch(e){}}
+}
+function refreshCompletionFromStorage(){
+  try{
+    const latest=JSON.parse(localStorage.getItem(DATAKEY)||'null');
+    if(latest&&Array.isArray(latest.discovered)){
+      // Retain any unsaved in-memory discoveries while using the latest stored counts.
+      const discovered=new Set([...(latest.discovered||[]),...(state.discovered||[])]);
+      state={...state,...latest,discovered:[...discovered],counts:{...(state.counts||{}),...(latest.counts||{})}};
+    }
+  }catch(e){}
+  syncDetailCompletion();
+}
+
 function count(i){return Math.max(0,Math.min(i.max,Number(state.counts[i.id])||0))}
 function percent(i){if(i.name==='Twilight'&&twilight)return twilight.crafted?100:Math.round((twilight.parts||[]).filter(Boolean).length/4*100);return Math.round(count(i)/i.max*100)}
 function group(i){return CAT==='Armor'?(i.family||'Other Armor')+' · '+(i.weight||'Other'):''}
 function meta(i){if(CAT==='Weapons')return i.expansion||('Legendary Weapon · '+(i.subtype||i.slot||''));if(CAT==='Armor')return [i.weight,i.slot].filter(Boolean).join(' · ');if(CAT==='Runes & Sigils')return 'Legendary Armory · Up to '+i.max+' copies';return [i.slot,i.originalName!==i.name?i.originalName:''].filter(Boolean).join(' · ')||'Legendary Armory'}
 function openTwilight(){const h=new URLSearchParams();h.set('collection',JSON.stringify({discovered:state.discovered.map(id=>norm(ITEMS.find(i=>i.id===id)?.name)).filter(Boolean),owned:state.discovered.filter(id=>count(ITEMS.find(i=>i.id===id))>0).map(id=>norm(ITEMS.find(i=>i.id===id).name))}));if(twilight)h.set('twilight',JSON.stringify(twilight));h.set('apiState',JSON.stringify(state));location.href='twilight.html#'+h.toString()}
+const ARMOR_DETAIL_PAGES_BY_ID={
+  101570:"obsidian-medium-gloves.html",
+  101536:"obsidian-light-gloves.html",
+  101535:"obsidian-light-shoes.html",
+  101609:"obsidian-heavy-gauntlets.html",
+  101568:"obsidian-heavy-cuisses.html",
+  101602:"obsidian-medium-boots.html",
+  101516:"obsidian-light-crown.html",
+  101462:"obsidian-light-mantle.html",
+  101556:"obsidian-medium-jacket.html",
+  101544:"obsidian-heavy-helmet.html",
+  101521:"obsidian-heavy-breastplate.html",
+  101551:"obsidian-heavy-pauldrons.html",
+  101579:"obsidian-medium-leggings.html",
+  101645:"obsidian-medium-shoulders.html",
+  101501:"obsidian-light-pants.html",
+  101614:"obsidian-medium-mask.html",
+  101499:"obsidian-light-regalia.html",
+  101460:"obsidian-heavy-greaves.html",
+
+  83036:"triumphant-hero-light-raiment.html",
+  82994:"triumphant-hero-medium-shoulderguards.html",
+  83497:"triumphant-hero-light-leggings.html",
+  82903:"triumphant-hero-medium-legguards.html",
+  82437:"triumphant-hero-medium-faceguard.html",
+  83394:"triumphant-hero-heavy-breastplate.html",
+  84176:"triumphant-hero-heavy-warhelm.html",
+  84110:"triumphant-hero-medium-wristplates.html",
+  82902:"triumphant-hero-light-masque.html",
+  82456:"triumphant-hero-heavy-gauntlets.html",
+  84629:"triumphant-hero-light-armguards.html",
+  84578:"triumphant-hero-medium-brigandine.html",
+  82093:"triumphant-hero-medium-shinplates.html",
+  83289:"triumphant-hero-light-footgear.html",
+  82963:"triumphant-hero-heavy-pauldrons.html",
+  82173:"triumphant-hero-light-epaulets.html",
+  82801:"triumphant-hero-heavy-wargreaves.html",
+  82196:"triumphant-hero-heavy-legplates.html",
+
+  80248:'perfected-envoy-cowl.html',
+  80131:'perfected-envoy-mantle.html',
+  80190:'perfected-envoy-vestments.html',
+  80111:'perfected-envoy-gloves.html',
+  80356:'perfected-envoy-pants.html',
+  80399:'perfected-envoy-shoes.html',
+
+  105317:'eikasia-mists-grasper-light.html',
+  105293:'eikasia-mists-grasper-medium.html',
+  105171:'eikasia-mists-grasper-heavy.html',
+  105921:'selachimorpha-light.html',
+  106658:'selachimorpha-medium.html',
+  106178:'selachimorpha-heavy.html',
+  80384:'perfected-envoy-helmet.html',
+  80254:'perfected-envoy-breastplate.html',
+  80252:'perfected-envoy-leggings.html',
+  80161:'perfected-envoy-vambraces.html',
+  80557:'perfected-envoy-greaves.html',
+  80281:'perfected-envoy-boots.html',
+  80435:'perfected-envoy-pauldrons.html',
+  80145:'perfected-envoy-shoulderpads.html',
+  80296:'perfected-envoy-mask.html',
+  80277:'perfected-envoy-tassets.html',
+  80205:'perfected-envoy-gauntlets.html',
+  80578:'perfected-envoy-jerkin.html',
+};
+function openArmorDetail(i){const page=ARMOR_DETAIL_PAGES_BY_ID[i.id];if(page)window.location.assign(page)}
 function render(){const q=norm(document.getElementById('search').value),weight=document.getElementById('weight')?.value||'';const all=ITEMS.filter(i=>i.category===CAT&&state.discovered.includes(i.id));const total=all.reduce((s,i)=>s+i.max,0),done=all.reduce((s,i)=>s+count(i),0),overall=total?Math.round(done/total*100):0;document.getElementById('count').textContent=done+' / '+(total||'–');document.getElementById('overallFill').style.width=overall+'%';document.getElementById('overallFill').style.backgroundColor=progressColor(overall);
-const shown=all.filter(i=>(!weight||i.weight===weight)&&(!q||norm([i.name,i.originalName,i.family,i.weight,i.slot,i.expansion].join(' ')).includes(q))).sort((a,b)=>group(a).localeCompare(group(b))||a.name.localeCompare(b.name)||a.id-b.id);
+const shown=all.filter(i=>(!weight||i.weight===weight)&&(!q||norm([displayName(i),i.name,i.originalName,i.family,i.weight,i.slot,i.expansion].join(' ')).includes(q))).sort((a,b)=>displayName(a).localeCompare(displayName(b))||a.weight.localeCompare(b.weight)||a.id-b.id);
 const list=document.getElementById('weaponList');list.replaceChildren();if(!shown.length){const p=document.createElement('p');p.className='empty-note';p.textContent=all.length?'No matching legendary items.':'No legendary items discovered yet. Return to Legendaries to discover your first item.';list.append(p);return}
-let last='';for(const i of shown){const g=group(i);if(g&&g!==last){const h=document.createElement('h2');h.className='group-title';h.textContent=g;list.append(h);last=g}
-const p=percent(i),row=document.createElement('article');row.className='weapon-row'+(p===100?' complete':'');const icon=document.createElement('img');icon.className='weapon-icon';icon.src=i.icon;icon.alt='';icon.loading='lazy';const info=document.createElement('div');info.className='weapon-info';const name=document.createElement('div');name.className='weapon-name';name.textContent=i.name;const sub=document.createElement('div');sub.className='weapon-meta';sub.textContent=meta(i);info.append(name,sub);const progress=document.createElement('div');progress.className='weapon-progress';const pct=document.createElement('span');pct.className='weapon-percent';pct.textContent=p+'%';const track=document.createElement('div');track.className='progress-track';const fill=document.createElement('div');fill.className='progress-fill';fill.style.width=p+'%';fill.style.backgroundColor=progressColor(p);track.append(fill);progress.append(pct,track);if(i.max>1){const c=document.createElement('span');c.className='copy-count';c.textContent=count(i)+' / '+i.max+' crafted';progress.append(c)}row.append(icon,info,progress);if(i.name==='Twilight'){row.classList.add('clickable');row.tabIndex=0;row.setAttribute('role','link');row.setAttribute('aria-label','Open Twilight crafting details');row.addEventListener('click',openTwilight);row.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTwilight()}})}list.append(row)}}
+for(const i of shown){
+const p=percent(i),row=document.createElement('article');row.className='weapon-row'+(p===100?' complete':'');const icon=document.createElement('img');icon.className='weapon-icon';icon.src=i.icon;icon.alt='';icon.loading='lazy';const info=document.createElement('div');info.className='weapon-info';const name=document.createElement('div');name.className='weapon-name';name.textContent=displayName(i);const sub=document.createElement('div');sub.className='weapon-meta';sub.textContent=meta(i);info.append(name,sub);const progress=document.createElement('div');progress.className='weapon-progress';const pct=document.createElement('span');pct.className='weapon-percent';pct.textContent=p+'%';const track=document.createElement('div');track.className='progress-track';const fill=document.createElement('div');fill.className='progress-fill';fill.style.width=p+'%';fill.style.backgroundColor=progressColor(p);track.append(fill);progress.append(pct,track);if(i.max>1){const c=document.createElement('span');c.className='copy-count';c.textContent=count(i)+' / '+i.max+' crafted';progress.append(c)}row.append(icon,info,progress);if(ARMOR_DETAIL_PAGES_BY_ID[i.id]){row.classList.add('clickable');row.tabIndex=0;row.setAttribute('role','link');row.setAttribute('aria-label','Open '+i.name+' '+i.weight+' details');row.addEventListener('click',()=>openArmorDetail(i));row.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openArmorDetail(i)}})}if(i.name==='Twilight'){row.classList.add('clickable');row.tabIndex=0;row.setAttribute('role','link');row.setAttribute('aria-label','Open Twilight crafting details');row.addEventListener('click',openTwilight);row.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTwilight()}})}list.append(row)}}
 document.getElementById('search').addEventListener('input',render);if(document.getElementById('weight'))document.getElementById('weight').addEventListener('change',render);render();
+
+refreshCompletionFromStorage();
+window.addEventListener('pageshow',()=>{refreshCompletionFromStorage();render()});
 </script></body></html>
