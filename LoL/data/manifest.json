@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-11-19T02:22:53.046Z",
+  "source": "CommunityDragon latest/default",
+  "counts": {
+    "champions": 261,
+    "skins": 2181,
+    "chromas": 7205,
+    "eternals": 1590,
+    "emotes": 2452,
+    "icons": 5215,
+    "titles": 360,
+    "skinlines": 230
+  },
+  "unmatchedSkinIds": [],
+  "missingChromaNames": [],
+  "missingSplashUrls": [],
+  "eternalSeriesCounts": {
+    "Series 1": 173,
+    "Series 2": 173,
+    "Starter Series": 173
+  },
+  "retiredEternals": 33,
+  "tftMarked": {
+    "emotes": 498,
+    "icons": 58
+  },
+  "notes": [
+    "TFT null means unclassified, not confirmed non-TFT. Jade variants retained without assuming TFT affiliation.",
+    "Eternals entries are a derived flat index; original source structure retained.",
+    "No live image or catalog completeness verification.",
+    "Original generatedAt retained; counts revised."
+  ]
+}
