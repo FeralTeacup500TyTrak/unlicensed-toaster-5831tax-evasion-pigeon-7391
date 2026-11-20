@@ -65,3 +65,12 @@ details.challenge-champion.challenge-done > summary {color:#ffe0a0;}
 
 /* Champion profile: collection sections and combat sidebar. */
 .profile-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,260px);gap:16px;align-items:start;margin-top:16px}.profile-main{min-width:0}.profile-main>.profile-fold:first-child{margin-top:0}.profile-side{border:1px solid var(--line);border-radius:10px;background:#151c2a;padding:16px;min-width:0}.profile-side h3{margin:0 0 4px}.profile-side p{margin:0 0 12px;font-size:12px}.profile-side-stat{display:flex;flex-direction:column;gap:5px;padding:13px 0;border-top:1px solid var(--line)}.profile-side-stat small{color:var(--muted)}.profile-side-stat strong{font-size:24px;color:var(--mint);font-variant-numeric:tabular-nums}.profile-side-stat:last-child{padding-bottom:0}@media(max-width:720px){.profile-columns{grid-template-columns:1fr}.profile-side{grid-row:1}.profile-main{grid-row:2}}
+
+/* Manual champion ownership and chroma-row bulk selection */
+.champion-ownership{margin:12px 0;padding:12px 16px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
+.champion-ownership label{display:inline-flex;align-items:center;gap:10px;cursor:pointer;color:var(--mint);font-weight:600}
+.champion-ownership input{width:18px;height:18px;accent-color:var(--mint)}
+.chroma-group-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 10px}
+.chroma-group-heading h3{margin:0}
+.chroma-bulk{font-size:12px;padding:7px 11px;border:1px solid var(--mint);border-radius:7px;color:var(--mint);background:#1a3034;cursor:pointer}
+.chroma-bulk:hover{background:#284649}
