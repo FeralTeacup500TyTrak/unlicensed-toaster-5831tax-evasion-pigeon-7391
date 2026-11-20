@@ -52,7 +52,6 @@ button,input,select,textarea{border-radius:8px;padding:9px 12px;min-height:38px}
 /* Hide obsolete overview captions in cached layouts. */
 .co-streak .co-track ~ small,.co-streak .co-track ~ .co-caption,.co-streak .co-track ~ .co-progress-label,.co-streak .co-track ~ .muted{display:none!important}
 
-.demo-tools{align-items:center;margin:12px 0}.demo-tools button[aria-pressed="true"]{border-color:#c5afff;color:#c5afff}.demo-tools span{color:#c5afff;font-size:.85rem}.demo-tools span[hidden]{display:none}
 
 /* High-contrast progress tracks */
 progress{appearance:none;-webkit-appearance:none;height:10px;border:0;border-radius:8px;background:#0b1220;overflow:hidden}progress::-webkit-progress-bar{background:#0b1220;border-radius:8px}progress::-webkit-progress-value{background:#43e9b4;border-radius:8px}progress::-moz-progress-bar{background:#43e9b4;border-radius:8px}.co-track{height:8px;background:#0b1220;box-shadow:inset 0 0 0 1px #46516b}.co-track i{background:#43e9b4;box-shadow:0 0 7px #43e9b466}.co-done .co-track i{background:#ffd477}.co-round-done{background:#175b48;color:#c1ffe7}
@@ -81,3 +80,19 @@ details.challenge-champion.challenge-done > summary {color:#ffe0a0;}
 .champion-owned-toggle:hover{background:#304e4a}
 .chroma-group-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 10px}
 .chroma-group-heading h3{margin:0}
+
+
+/* Subtle match outcome borders, without glow or a redundant result badge. */
+.compact-match.match-win{border:3px solid rgba(91,151,121,.70);box-shadow:none}
+.compact-match.match-loss{border:3px solid rgba(174,104,117,.70);box-shadow:none}
+.compact-match.match-win[open]{border-color:rgba(91,151,121,.72);box-shadow:none}
+.compact-match.match-loss[open]{border-color:rgba(174,104,117,.72);box-shadow:none}
+.match-challenge-label{display:block;min-width:0;max-width:min(38%,340px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#cbbce9;font-size:12px;font-weight:600;background:rgba(148,118,190,.10);border:1px solid rgba(148,118,190,.22);border-radius:7px;padding:5px 9px}
+@media(max-width:650px){.match-challenge-label{max-width:36%;font-size:11px;padding:4px 6px}}
+
+/* Stable challenge-label column in every match summary. */
+.compact-match>summary>.match-caption{flex:0 1 240px;min-width:120px}
+.match-challenge-slot{display:flex;align-items:center;justify-content:flex-start;flex:1 1 240px;min-width:0;min-height:30px}
+.match-challenge-slot .match-challenge-label{max-width:100%;display:block}
+.compact-match>summary>.match-kda{margin-left:auto;flex:none}
+@media(max-width:650px){.compact-match>summary{flex-wrap:wrap}.compact-match>summary>.match-caption{flex:1 1 calc(100% - 85px)}.match-challenge-slot{order:4;flex:1 0 100%;padding-left:60px;min-height:0}.compact-match>summary>.match-kda{margin-left:auto}}
