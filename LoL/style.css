@@ -74,3 +74,10 @@ details.challenge-champion.challenge-done > summary {color:#ffe0a0;}
 .chroma-group-heading h3{margin:0}
 .chroma-bulk{font-size:12px;padding:7px 11px;border:1px solid var(--mint);border-radius:7px;color:var(--mint);background:#1a3034;cursor:pointer}
 .chroma-bulk:hover{background:#284649}
+
+/* Champion ownership controls on the overview cards */
+.champion-owned-toggle{margin:0 auto 12px;display:block;padding:7px 13px;border:1px solid var(--mint);border-radius:8px;background:transparent;color:var(--mint);cursor:pointer;font-size:13px;font-weight:600}
+.champion-owned-toggle.is-owned{background:#24483e;border-color:#d6b873;color:#f4d899}
+.champion-owned-toggle:hover{background:#304e4a}
+.chroma-group-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 10px}
+.chroma-group-heading h3{margin:0}
