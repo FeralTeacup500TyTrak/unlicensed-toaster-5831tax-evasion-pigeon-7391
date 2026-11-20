@@ -19,6 +19,40 @@ const asset=p=>p?.startsWith('/lol-game-data/assets/')?'https://raw.communitydra
 const id=(t,x)=>String(t==='eternals'||t==='titles'?x.itemId:x.id), name=x=>x.titleName||x.title||x.name||'(Unnamed)', champ=x=>D.champions.find(c=>c.id===Number(x)), image=(t,x)=>x.iconUrl||x.splashUrl||x.imageUrl||asset(x.inventoryIcon||x.imagePath||x.iconUnlit), own=(t,x)=>!!S.owned[t+':'+id(t,x)], regular=()=>D.champions.filter(x=>!x.isVariant);
 const skinLabel=(x,c)=>x?.isBase?(c?.name||champ(x.championId)?.name||name(x)):name(x);
 const chromaLabel=(x,skin)=>{const full=name(x), parent=skin?name(skin):'';if(parent&&full.startsWith(parent+' (')&&full.endsWith(')'))return full.slice(parent.length+2,-1);return full;};
+// Stable, virtual chroma-like entries for selectable Ultimate / Sanctum forms.
+// These are deliberately NOT additional skins and never modify the source JSON files.
+const specialForms={
+  99007:['Light','Fire','Water','Air','Nature','Ice','Storm','Magma','Mystic','Dark'],
+  21016:['Scarlet Fair','Zero Hour','Starswarm','Royal Arms'],
+  37006:['Kinetic','Concussive','Ethereal'],
+  37077:['HEARTSTEEL','True Damage','K/DA'],
+  147001:['Indie','Rising Star','Superstar'],
+  222060:['Hero of Zaun','Menace','Powder']
+};
+const formId=(skinId,index)=>-(Number(skinId)*100+index+1);
+const specialForm=x=>x?.isSpecialForm===true;
+// Owning a special skin selects its forms by default; each form remains independently toggleable.
+function selectSpecialFormsForSkin(skin){
+ if(!skin||!Object.hasOwn(specialForms,String(skin.id)))return 0;
+ let added=0;
+ for(const form of D.chromas.filter(q=>specialForm(q)&&Number(q.skinId)===Number(skin.id))){
+  const k='chromas:'+id('chromas',form);
+  if(S.owned[k])continue;
+  S.owned[k]=true;
+  added+=enrollOwnedCombination('chromas',form);
+ }
+ return added;
+}
+const formSkins=()=>D.skins.filter(x=>Object.hasOwn(specialForms,String(x.id)));
+function installSpecialForms(){
+ const seraphine=D.skins.find(x=>Number(x.id)===147001);if(seraphine)seraphine.name='K/DA ALL OUT Seraphine';
+ for(const skin of formSkins())for(const [index,form] of specialForms[skin.id].entries()){
+  const fid=formId(skin.id,index);
+  if(!D.chromas.some(x=>Number(x.id)===fid))D.chromas.push({id:fid,skinId:skin.id,championId:skin.championId,name:skin.name+' ('+form+')',isSpecialForm:true,isTFT:false,iconUrl:skin.iconUrl||skin.splashUrl});
+ }
+}
+// Special forms have independent collection checkboxes, just like regular chromas.
+// Their saved flags are independent of the parent skin's Owned flag.
 const portraitSkins=c=>D.skins.filter(x=>x.championId===c.id&&x.isTFT!==true).sort((a,b)=>Number(b.isBase)-Number(a.isBase)||name(a).localeCompare(name(b)));
 const skinPortrait=(c,skin)=>asset(skin?.tilePath)||skin?.splashUrl||c.iconUrl;
 const basePortrait=c=>{const skins=portraitSkins(c);return skinPortrait(c,skins.find(x=>String(x.id)===String(S.portraits?.[c.id]))||skins.find(x=>x.isBase))};
@@ -60,17 +94,35 @@ function challengeChampion(c,ch,ms,fields,entrySet=null,progress='',completed=fa
 }
 const challengeTypes={endless:'Endless',streak:'Win Streak',rounds:'Multi-round'};
 const entryOwner=(k,owners)=>k.startsWith('champ:')?Number(k.split(':')[1]):Number(owners.get(k.split(':')[0]));
-const matchKey=(c,m)=>c.includeSkins===false&&c.includeChromas===false?`champ:${m.championId}`:`${m.skinId}:${c.includeChromas===false?'base':m.chromaId??'base'}`;
-function challengeEntries(c){if(c.includeSkins===false&&c.includeChromas===false)return c.champions.map(i=>`champ:${i}`);const entries=[];const orderedSkins=[...D.skins].sort((a,b)=>Number(b.isBase)-Number(a.isBase));for(const x of orderedSkins){if(x.isTFT===true||!c.champions.map(Number).includes(x.championId)||(c.skins.length&&!c.skins.map(Number).includes(x.id)))continue;const qs=D.chromas.filter(q=>q.skinId===x.id&&q.isTFT!==true);if(c.includeSkins!==false)entries.push(`${x.id}:base`);if(c.includeChromas!==false)for(const q of qs)if(!c.chromas.length||c.chromas.map(Number).includes(q.id))entries.push(`${x.id}:${q.id}`);}return [...new Set(entries)];}
+const matchKey=(c,m)=>{const form=D.chromas.find(x=>Number(x.id)===Number(m.chromaId)&&specialForm(x)&&Number(x.skinId)===Number(m.skinId));if(form)return `${m.skinId}:${form.id}`;return c.includeSkins===false&&c.includeChromas===false?`champ:${m.championId}`:`${m.skinId}:${c.includeChromas===false?'base':m.chromaId??'base'}`;};
+function challengeEntries(c){
+ const championIds=c.champions.map(Number),entries=[];
+ if(c.includeSkins===false&&c.includeChromas===false){for(const i of championIds)entries.push(`champ:${i}`);}
+ else for(const x of [...D.skins].sort((a,b)=>Number(b.isBase)-Number(a.isBase))){
+  if(x.isTFT===true||!championIds.includes(x.championId)||(c.skins.length&&!c.skins.map(Number).includes(x.id)))continue;
+  const qs=D.chromas.filter(q=>Number(q.skinId)===Number(x.id)&&q.isTFT!==true);
+  const special=qs.filter(specialForm);
+  if(c.includeSkins!==false&&!special.length)entries.push(`${x.id}:base`);
+  if(c.includeChromas!==false)for(const q of qs.filter(q=>!specialForm(q)))if(!c.chromas.length||c.chromas.map(Number).includes(q.id))entries.push(`${x.id}:${q.id}`);
+ }
+ // Selectable forms are always eligible, even if regular chromas are disabled.
+ for(const skin of formSkins())if(championIds.includes(Number(skin.championId))&&(!c.skins.length||c.skins.map(Number).includes(skin.id))){
+  for(const q of D.chromas.filter(q=>specialForm(q)&&Number(q.skinId)===Number(skin.id)))entries.push(`${skin.id}:${q.id}`);
+ }
+ return [...new Set(entries)];
+}
+// New combinations have a fixed admission round. Existing matches are never rewritten.
 function challengeRun(c,ms){
- const entries=c.runEntries??challengeEntries(c),type=c.type||'endless';
- let active=new Set(entries),played=new Map(),round=1,ignored=0;
- const streaks=new Map(),accepted=[],rounds=[{entries:new Set(active),matches:[]}];
- if(type==='endless')return {accepted:ms.filter(m=>eligible(m,c)),active,round,played,ignored,streaks,rounds};
+ const entries=c.runEntries??challengeEntries(c), type=c.type||'endless';
+ const introductions=c.entryIntroductions||{};
+ const eligibleAt=n=>entries.filter(k=>Math.max(1,Number(introductions[k])||1)<=n);
+ let active=new Set(eligibleAt(1)), played=new Map(), round=1, ignored=0;
+ const streaks=new Map(), accepted=[], rounds=[{entries:new Set(active),matches:[]}];
+ if(type==='endless')return {accepted:ms.filter(m=>eligible(m,c)),active:new Set(entries),round,played,ignored,streaks,rounds};
  const owners=new Map(D.skins.map(x=>[String(x.id),Number(x.championId)]));
+ if(type==='streak')active=new Set(entries);
  for(const m of ms){
-  const k=matchKey(c,m),cid=Number(m.championId),ongoing=streaks.get(cid);
-  // Win streaks are independent for each champion, even when games are interleaved.
+  const k=matchKey(c,m), cid=Number(m.championId), ongoing=streaks.get(cid);
   if(!eligible(m,c)||!active.has(k)||typeof m.win!=='boolean'||(type==='rounds'&&played.has(k))||(type==='streak'&&ongoing&&ongoing!==k)){ignored++;continue;}
   accepted.push(m);rounds.at(-1).matches.push(m);
   if(type==='streak'){
@@ -79,13 +131,51 @@ function challengeRun(c,ms){
   }else{
    played.set(k,m.win);
    if(played.size===active.size){
-    active=new Set([...played].filter(([,w])=>w).map(([k])=>k));played=new Map();
-    if(active.size){round++;rounds.push({entries:new Set(active),matches:[]});}
+    const winners=new Set([...played].filter(([,w])=>w).map(([key])=>key));
+    const survivingChampions=new Set([...winners].map(key=>entryOwner(key,owners)));
+    played=new Map();round++;
+    active=new Set([...winners,...entries.filter(key=>Number(introductions[key])===round&&survivingChampions.has(entryOwner(key,owners)))]);
+    if(active.size)rounds.push({entries:new Set(active),matches:[]});
+    else round--;
    }
   }
  }
  return {accepted,active,round,played,ignored,streaks,rounds};
 }
+// Only newly owned combinations are enrolled. Historical matches and rounds remain intact.
+function enrollOwnedCombination(type,item){
+ if(!item||!['skins','chromas'].includes(type))return 0;
+ const skin=type==='skins'?item:D.skins.find(x=>Number(x.id)===Number(item.skinId));
+ if(!skin||skin.isTFT===true||item.isTFT===true)return 0;
+ const keys=type==='skins'&&specialForms[skin.id]?D.chromas.filter(q=>specialForm(q)&&Number(q.skinId)===Number(skin.id)&&own('chromas',q)).map(q=>`${skin.id}:${q.id}`):[type==='skins'?`${skin.id}:base`:`${skin.id}:${item.id}`];
+ let changed=0;
+ for(const raw of S.challenges){
+  const c=normalizeChallenge(raw);
+  if(c.deleted||c.archived||c.type==='endless'||!c.champions.map(Number).includes(Number(skin.championId)))continue;
+  if(type==='skins'&&c.includeSkins===false&&!specialForms[skin.id]||type==='chromas'&&c.includeChromas===false&&!specialForm(item))continue;
+  for(const key of keys){
+  if((raw.runEntries??challengeEntries(c)).includes(key))continue;
+  const r=getRun(c), owner=Number(skin.championId);
+  const ownerKeys=[...(c.runEntries??challengeEntries(c))].filter(k=>k.startsWith('champ:')?Number(k.slice(6))===owner:D.skins.some(x=>String(x.id)===k.split(':')[0]&&Number(x.championId)===owner));
+  if(!ownerKeys.length||!ownerKeys.some(k=>r.active.has(k)))continue;
+  let admission=1;
+  if(c.type==='rounds'){
+   const current=r.rounds.at(-1);
+   const outstanding=ownerKeys.some(k=>current?.entries.has(k)&&!r.played.has(k));
+   admission=outstanding?r.round:r.round+1;
+  }
+  raw.runEntries??=challengeEntries(c);
+  raw.runEntries.push(key);
+  if(c.type==='rounds'){
+   raw.entryIntroductions??={};raw.entryIntroductions[key]=admission;
+  }
+  // A newly admitted entry must not affect past match assignments.
+  changed++;
+  }
+ }
+ return changed;
+}
+
 function runSummary(c,r){if(!c.type||c.type==='endless')return '<p class="muted">Endless</p>';const n=(c.runEntries??challengeEntries(c)).length;return `<p><strong>${challengeTypes[c.type]}${c.type==='rounds'?` · Round ${r.round}`:''}</strong> · ${n===0?'No eligible combinations':r.active.size?'In progress':'Completed'} · ${r.active.size} remaining${c.type==='rounds'?` · ${r.played.size}/${r.active.size} played this round`:''}${r.ignored?` · ${r.ignored} assigned games outside the rules (excluded)`:''}</p>`;}
 const roundViews={}, archiveView={}, expandedChallenges=new Set();
 function rememberChallengeExpansion(){for(const el of V.querySelectorAll('details[data-challenge-panel]')){if(el.open)expandedChallenges.add(el.dataset.challengePanel);else expandedChallenges.delete(el.dataset.challengePanel);}}
@@ -122,11 +212,11 @@ function matches(){V.innerHTML=`<h2>Match History</h2><div class="compact-matche
 function rank(){V.innerHTML=`<h2>Ranked Progress</h2><form id="rankform" class="fields"><label>Date<input name="date" type="date" required value="${new Date().toISOString().slice(0,10)}"></label><label>Queue<select name="queue"><option>Ranked Solo/Duo</option><option>Ranked Flex</option></select></label><label>Rank<input name="tier" required placeholder="Gold II"></label><label>LP<input name="lp" type="number" min="0" required></label><button>Save Snapshot</button></form><div class="table"><table><tr><th>Date</th><th>Queue</th><th>Rank</th><th>LP</th></tr>${S.rank.slice().reverse().map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.queue)}</td><td>${esc(x.tier)}</td><td>${x.lp}</td></tr>`).join('')}</table></div>`}
 function backup(){V.innerHTML='<h2>Backup & Restore</h2><p>Export all League of Legends progress. Import replaces only League of Legends data, never Guild Wars 2.</p><button id="export">Export JSON</button> <input type="file" accept=".json" id="import">'}
 V.addEventListener('input',e=>{let t=e.target;if(t.id==='search'){query=t.value;cp=0;catalog();let n=$('#search');n.focus();n.setSelectionRange(query.length,query.length)}if(draft&&page==='Challenge Creator'){let k={dn:'name',dg:'goal',dm:'goalMetric',ds:'scope',dq:'mode',dt:'start'}[t.id];if(k)draft[k]=k==='goal'?Number(t.value):t.value}});
-V.addEventListener('change',async e=>{let t=e.target,d=t.dataset;if(t.id==='championSort'){championSort=t.value;championOverview();return}if(t.id==='portraitChampion'){portraitChampion=Number(t.value);settings();return}if(t.id==='filter'){filter=t.value;cp=0;catalog()}if(d.own!==undefined){S.owned[cat+':'+d.own]=t.checked;save()}if(d.mastery){let [i,k]=d.mastery.split(':');(S.mastery[i]||={})[k]=Math.max(0,Number(t.value)||0);save()}if(d.eternal){S.eternals[d.eternal]=Math.max(0,Number(t.value)||0);save()}if(t.id==='challengeType'){draft.type=t.value}if(d.inclusion){draft[d.inclusion]=t.checked;if(!t.checked)draft[d.inclusion==='includeSkins'?'skins':'chromas']=[]}if(d.mode){draft.modes=t.checked?[...draft.modes,d.mode]:draft.modes.filter(x=>x!==d.mode)}if(d.metric){const keys=progressBundles[d.metric]??[d.metric];draft.metrics=t.checked?[...new Set([...draft.metrics,...keys])]:draft.metrics.filter(x=>!keys.includes(x))}if(d.pick){let [k,i]=d.pick.split(':');i=Number(i);draft[k]=t.checked?[...draft[k],i]:draft[k].filter(x=>x!==i);if(k==='champions'){draft.skins=draft.skins.filter(i=>draft.champions.includes(D.skins.find(x=>x.id===i)?.championId));draft.chromas=draft.chromas.filter(i=>draft.champions.includes(D.chromas.find(x=>x.id===i)?.championId));creator()}}if(t.id==='mc'){ $('#ms').innerHTML='<option value="">Unknown</option>'+D.skins.filter(x=>x.championId===Number(t.value)).map(x=>`<option value="${x.id}">${esc(name(x))}</option>`).join('');$('#mch').innerHTML='<option value="">None / Unknown</option>'}if(t.id==='ms')$('#mch').innerHTML='<option value="">None / Unknown</option>'+D.chromas.filter(x=>x.skinId===Number(t.value)).map(x=>`<option value="${x.id}">${esc(name(x))}</option>`).join('');if(t.id==='import'){try{let a=JSON.parse(await t.files[0].text());if(a.version!==1||!['owned','mastery','eternals'].every(k=>a[k]&&typeof a[k]==='object'&&!Array.isArray(a[k]))||!['matches','challenges','rank'].every(k=>Array.isArray(a[k])))throw Error('Invalid backup');if(confirm('Replace current LoL progress?')){S=a;save();render()}}catch(e){status.textContent='Import failed: '+e.message}}});
+V.addEventListener('change',async e=>{let t=e.target,d=t.dataset;if(t.id==='championSort'){championSort=t.value;championOverview();return}if(t.id==='portraitChampion'){portraitChampion=Number(t.value);settings();return}if(t.id==='filter'){filter=t.value;cp=0;catalog()}if(d.own!==undefined&&!t.disabled){S.owned[cat+':'+d.own]=t.checked;if(t.checked){const item=D[cat]?.find(x=>String(id(cat,x))===String(d.own));if(cat==='skins')selectSpecialFormsForSkin(item);enrollOwnedCombination(cat,item)}save()}if(d.mastery){let [i,k]=d.mastery.split(':');(S.mastery[i]||={})[k]=Math.max(0,Number(t.value)||0);save()}if(d.eternal){S.eternals[d.eternal]=Math.max(0,Number(t.value)||0);save()}if(t.id==='challengeType'){draft.type=t.value}if(d.inclusion){draft[d.inclusion]=t.checked;if(!t.checked)draft[d.inclusion==='includeSkins'?'skins':'chromas']=[]}if(d.mode){draft.modes=t.checked?[...draft.modes,d.mode]:draft.modes.filter(x=>x!==d.mode)}if(d.metric){const keys=progressBundles[d.metric]??[d.metric];draft.metrics=t.checked?[...new Set([...draft.metrics,...keys])]:draft.metrics.filter(x=>!keys.includes(x))}if(d.pick){let [k,i]=d.pick.split(':');i=Number(i);draft[k]=t.checked?[...draft[k],i]:draft[k].filter(x=>x!==i);if(k==='champions'){draft.skins=draft.skins.filter(i=>draft.champions.includes(D.skins.find(x=>x.id===i)?.championId));draft.chromas=draft.chromas.filter(i=>draft.champions.includes(D.chromas.find(x=>x.id===i)?.championId));creator()}}if(t.id==='mc'){ $('#ms').innerHTML='<option value="">Unknown</option>'+D.skins.filter(x=>x.championId===Number(t.value)).map(x=>`<option value="${x.id}">${esc(name(x))}</option>`).join('');$('#mch').innerHTML='<option value="">None / Unknown</option>'}if(t.id==='ms')$('#mch').innerHTML='<option value="">None / Unknown</option>'+D.chromas.filter(x=>x.skinId===Number(t.value)).map(x=>`<option value="${x.id}">${esc(name(x))}</option>`).join('');if(t.id==='import'){try{let a=JSON.parse(await t.files[0].text());if(a.version!==1||!['owned','mastery','eternals'].every(k=>a[k]&&typeof a[k]==='object'&&!Array.isArray(a[k]))||!['matches','challenges','rank'].every(k=>Array.isArray(a[k])))throw Error('Invalid backup');if(confirm('Replace current LoL progress?')){S=a;save();render()}}catch(e){status.textContent='Import failed: '+e.message}}});
 document.addEventListener('click',e=>{let t=e.target.closest('button');if(!t)return;let d=t.dataset;if(page==='Settings'&&(d.portraitChampion!==undefined||t.id==='portraitBack')){portraitChampion=t.id==='portraitBack'?null:Number(d.portraitChampion);settings();return}if(page==='Settings'&&(d.portraitSkin!==undefined||t.id==='resetPortrait')){const c=champ(portraitChampion);if(!c)return;const skin=portraitSkins(c).find(x=>String(x.id)===d.portraitSkin);if(t.id!=='resetPortrait'&&!skin)return;if(!S.portraits||typeof S.portraits!=='object'||Array.isArray(S.portraits))S.portraits={};if(!skin||skin.isBase)delete S.portraits[c.id];else S.portraits[c.id]=skin.id;save();settings();return}if(d.go){if(d.go==='Settings')portraitChampion=null;if(d.go==='Challenge Creator')step=0;go(d.go)}if(d.wizard!==undefined){if(Number(d.wizard)>0&&!draft.modes.length){step=0;creator();creatorError('Select at least one game mode.');return}step=Number(d.wizard);creator()}if(d.lane){lane=d.lane;creator()}if(d.selectmetrics){draft.metrics=d.selectmetrics==='all'?Object.keys(metrics):[];creator()}if(d.cat){cat=d.cat;cp=0;query='';filter='All';catalog()}if(d.step){cp+=Number(d.step);catalog()}if(t.id==='allch'||t.id==='nonech'){draft.champions=t.id==='allch'?regular().map(x=>x.id):[];if(!draft.champions.length){draft.skins=[];draft.chromas=[]}creator()}if(t.id==='savechallenge'){let a=draft;if(!a.name.trim()||!a.modes.length||!a.champions.length||!a.metrics.length){step=!a.name.trim()||!a.modes.length?0:!a.champions.length?1:2;creator();creatorError(!a.name.trim()?'Enter a challenge name.':!a.modes.length?'Select at least one game mode.':!a.champions.length?'Select at least one champion.':'Select at least one statistic.');return}a.start=validStart(a.start)?a.start:localDate();a.scope='champion';a.mode='All';if(a.type&&a.type!=='endless'){a.runEntries=challengeEntries(a);if(!a.runEntries.length){creatorError('No eligible skin or chroma combinations. Check your collection tracking options and filters.');return}}else delete a.runEntries;S.challenges=S.challenges.filter(x=>x.id!==a.id);S.challenges.push(a);draft=null;save();go('My Challenges')}if(t.id==='cancelchallenge'){draft=null;go('My Challenges')}if(d.edit){draft=normalizeChallenge(structuredClone(S.challenges.find(x=>x.id===d.edit)));step=0;go('Challenge Creator')}if(d.delchallenge){const q=S.challenges.find(x=>x.id===d.delchallenge);if(q){q.deleted=true;save();render()}}if(d.restorechallenge){const q=S.challenges.find(x=>x.id===d.restorechallenge);if(q){delete q.deleted;save();render()}}if(d.purgechallenge){const q=S.challenges.find(x=>String(x.id)===d.purgechallenge&&x.deleted);if(q&&confirm('Permanently delete this challenge? Its challenge statistics will be removed, but match history will be kept. This cannot be undone.')){const id=String(q.id);for(const m of S.matches){const prior=assignment(m);if(prior===id||(!Object.hasOwn(m,'challengeId')&&(Array.isArray(m.challengeIds)?m.challengeIds.map(String).includes(id):eligible(m,q)))){m.challengeId=prior===id?null:prior;delete m.challengeIds;}}S.challenges=S.challenges.filter(x=>String(x.id)!==id);expandedChallenges.delete(id);overviewViews.delete(id);delete roundViews[id];V.querySelectorAll('details[data-challenge-panel]').forEach(el=>{if(el.dataset.challengePanel===id)el.remove()});save();render()}}if(d.delmatch&&confirm('Delete match?')){S.matches=S.matches.filter(x=>x.id!==d.delmatch);save();render()}if(t.id==='export'){let u=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:'application/json'}));let a=document.createElement('a');a.href=u;a.download='chairmode-lol-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}});
 V.addEventListener('submit',e=>{e.preventDefault();let a=Object.fromEntries(new FormData(e.target));if(e.target.id==='matchform'){for(let k of [...numeric,'masteryGained','masteryLevelGained','eternalsGained','championId','skinId','chromaId'])a[k]=a[k]===''?null:Number(a[k]);a.firstBloodCombined=true;a.win=a.win==='true';a.id=crypto.randomUUID();a.challengeId=null;S.matches.push(a)}else if(e.target.id==='rankform'){a.lp=Number(a.lp);S.rank.push(a)}else return;save();render()});
 
-const eligible=(m,c)=>{c=normalizeChallenge(c);const modes=c.modes??(c.mode==='All'||!c.mode?[]:[c.mode]);return (!c.champions.length||c.champions.map(Number).includes(Number(m.championId)))&&(c.includeSkins===false||!c.skins.length||c.skins.includes(m.skinId))&&(c.includeChromas===false||!c.chromas.length||c.chromas.includes(m.chromaId))&&(!(c.includeSkins===false&&c.includeChromas!==false)||m.chromaId!=null)&&(!modes.length||modes.includes(m.mode))&&(!c.start||m.date>=c.start)};
+const eligible=(m,c)=>{c=normalizeChallenge(c);const modes=c.modes??(c.mode==='All'||!c.mode?[]:[c.mode]);return (!c.champions.length||c.champions.map(Number).includes(Number(m.championId)))&&(c.includeSkins===false||!c.skins.length||c.skins.includes(m.skinId)||(c.runEntries||[]).includes(matchKey(c,m)))&&(c.includeChromas===false||!c.chromas.length||c.chromas.includes(m.chromaId)||(c.runEntries||[]).includes(matchKey(c,m))||D.chromas.some(q=>specialForm(q)&&Number(q.id)===Number(m.chromaId)))&&(!(c.includeSkins===false&&c.includeChromas!==false)||m.chromaId!=null)&&(!modes.length||modes.includes(m.mode))&&(!c.start||m.date>=c.start)};
 const assignment=m=>{if(Object.hasOwn(m,'challengeId'))return m.challengeId==null?null:String(m.challengeId);const ids=Array.isArray(m.challengeIds)?m.challengeIds.map(String):S.challenges.filter(c=>eligible(m,c)).map(c=>String(c.id));return ids.length===1?ids[0]:null};
 const assigned=(m,c)=>assignment(m)===String(c.id);
 const progression=['mastery','masteryLevel','eternals'];
@@ -144,7 +234,7 @@ function restoreChampionListScroll(){
  requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo(0,y)));
 }
 
-const collectionTile=(t,x,c)=>`<button type="button" class="collection-item ${own(t,x)?'collected':''}" data-collection="${t}:${esc(id(t,x))}" aria-pressed="${own(t,x)}"><img loading="lazy" src="${esc(t==='skins'?skinPortrait(c,x):x.imageUrl||asset(x.chromaPath))}" alt=""><span>${esc(t==='skins'?skinLabel(x,c):chromaLabel(x,D.skins.find(s=>s.id===x.skinId)))}</span></button>`;
+const collectionTile=(t,x,c)=>`<button type="button" class="collection-item ${own(t,x)?'collected':''}" data-collection="${t}:${esc(id(t,x))}" aria-pressed="${own(t,x)}"><img loading="lazy" src="${esc(t==='skins'?skinPortrait(c,x):x.imageUrl||asset(x.chromaPath)||x.iconUrl)}" alt=""><span>${esc(t==='skins'?skinLabel(x,c):chromaLabel(x,D.skins.find(s=>s.id===x.skinId)))}</span></button>`;
 const fold=(title,content)=>`<details class="profile-fold"><summary>${esc(title)}</summary><div class="fold-body">${content}</div></details>`;
 function profile(c){
  const skins=portraitSkins(c), chromas=D.chromas.filter(x=>x.championId===c.id&&x.isTFT!==true), es=D.eternals.filter(x=>x.championId===c.id&&x.isTFT!==true), m=S.mastery[c.id]||{}, ms=challengeMatches(S.matches.filter(x=>Number(x.championId)===c.id)), a=stats(ms), selected=skins.find(x=>String(x.id)===String(S.portraits?.[c.id]))||skins.find(x=>x.isBase), counts=xs=>xs.length?xs.length:0;
@@ -213,10 +303,10 @@ V.addEventListener('click',e=>{
  m.challengeId=String(c.id);delete m.challengeIds;m.skinId=next.skinId;m.chromaId=next.chromaId;
  matchDrafts.delete(String(m.id));save();refreshMatchAssignment(wrap,m);updateMatchChallengeLabel(m);
 });
-V.addEventListener('click',e=>{const toggle=e.target.closest('[data-toggle-champion]');if(toggle){const cid=toggle.dataset.toggleChampion;S.owned['champions:'+cid]=!S.owned['champions:'+cid];save();championOverview();return}const bulk=e.target.closest('[data-chroma-bulk]');if(bulk){const list=D.chromas.filter(x=>x.skinId===Number(bulk.dataset.chromaBulk)&&x.championId===Number(bulk.dataset.championId)&&x.isTFT!==true);const mark=!list.every(x=>own('chromas',x));for(const x of list)S.owned['chromas:'+id('chromas',x)]=mark;save();const details=[...V.querySelectorAll('.profile-fold')].filter(x=>x.open).map(x=>[...x.parentElement.children].indexOf(x));const y=window.scrollY;profile(champ(profileId));V.querySelectorAll('.profile-fold').forEach((x,i)=>{if(details.includes([...x.parentElement.children].indexOf(x)))x.open=true});window.scrollTo(0,y);return}const card=e.target.closest('[data-profile]');if(card){championListScrollY=window.scrollY;profileId=Number(card.dataset.profile);championOverview();window.scrollTo(0,0);return}if(e.target.closest('#profileBack')){profileId=null;championOverview();restoreChampionListScroll();return}const b=e.target.closest('[data-collection]');if(b){const k=b.dataset.collection;S.owned[k]=!S.owned[k];b.classList.toggle('collected',S.owned[k]);b.setAttribute('aria-pressed',String(S.owned[k]));save()}});
+V.addEventListener('click',e=>{const toggle=e.target.closest('[data-toggle-champion]');if(toggle){const cid=toggle.dataset.toggleChampion;S.owned['champions:'+cid]=!S.owned['champions:'+cid];save();championOverview();return}const bulk=e.target.closest('[data-chroma-bulk]');if(bulk){const list=D.chromas.filter(x=>x.skinId===Number(bulk.dataset.chromaBulk)&&x.championId===Number(bulk.dataset.championId)&&x.isTFT!==true);const mark=!list.every(x=>own('chromas',x));for(const x of list){S.owned['chromas:'+id('chromas',x)]=mark;if(mark)enrollOwnedCombination('chromas',x)}save();const details=[...V.querySelectorAll('.profile-fold')].filter(x=>x.open).map(x=>[...x.parentElement.children].indexOf(x));const y=window.scrollY;profile(champ(profileId));V.querySelectorAll('.profile-fold').forEach((x,i)=>{if(details.includes([...x.parentElement.children].indexOf(x)))x.open=true});window.scrollTo(0,y);return}const card=e.target.closest('[data-profile]');if(card){championListScrollY=window.scrollY;profileId=Number(card.dataset.profile);championOverview();window.scrollTo(0,0);return}if(e.target.closest('#profileBack')){profileId=null;championOverview();restoreChampionListScroll();return}const b=e.target.closest('[data-collection]');if(b){const k=b.dataset.collection;S.owned[k]=!S.owned[k];if(S.owned[k]){const [type,entryId]=k.split(':');const item=D[type]?.find(x=>String(id(type,x))===entryId);if(type==='skins')selectSpecialFormsForSkin(item);enrollOwnedCombination(type,item)}b.classList.toggle('collected',S.owned[k]);b.setAttribute('aria-pressed',String(S.owned[k]));save()}});
 V.addEventListener('keydown',e=>{if(e.target.matches('[data-profile]')&&['Enter',' '].includes(e.key)){e.preventDefault();e.target.click()}});
 V.addEventListener('change',e=>{const t=e.target;if(t.dataset.championOwned!==undefined){S.owned['champions:'+t.dataset.championOwned]=t.checked;save();return}const wrap=t.closest('[data-match]');if(!wrap)return;const m=S.matches.find(x=>String(x.id)===wrap.dataset.match);if(!m)return;if(t.dataset.matchField){m[t.dataset.matchField]=t.value?Number(t.value):null;if(t.dataset.matchField==='skinId')m.chromaId=null;save();wrap.outerHTML=matchAssignment(m)}else if(t.dataset.matchChallenge!==undefined||t.dataset.matchOverride!==undefined||t.dataset.matchSkin!==undefined||t.dataset.matchChroma!==undefined){const draft=matchDrafts.get(String(m.id))||{challengeId:assignment(m)||'',override:false,key:''};if(t.dataset.matchChallenge!==undefined){draft.challengeId=t.value;draft.override=false;draft.key=''}else if(t.dataset.matchOverride!==undefined){draft.override=t.checked;draft.key=''}else if(t.dataset.matchSkin!==undefined){const options=assignmentChoices(m,S.challenges.find(x=>String(x.id)===String(draft.challengeId)));draft.key=options.find(k=>k===t.value+':base'||k===t.value)||options.find(k=>k.split(':')[0]===t.value)||'';}else draft.key=t.value;matchDrafts.set(String(m.id),draft);refreshMatchAssignment(wrap,m)}else if(t.dataset.gain!==undefined||t.dataset.eternalGain!==undefined){if(t.value!==''&&(!validNumber(t.value)||!Number.isInteger(Number(t.value)))){t.reportValidity();return}if(t.dataset.gain!==undefined){m[t.dataset.gain+'Gained']=t.value===''?null:Number(t.value);if(t.value===''){m[t.dataset.gain+'Start']=null;m[t.dataset.gain+'End']=null}}else{m.eternalGains??={};if(t.value==='')delete m.eternalGains[t.dataset.eternalGain];else m.eternalGains[t.dataset.eternalGain]=Number(t.value)}save();const row=wrap.closest('tr');const keys=Object.keys(metrics).filter(k=>!['games','wins','losses','winrate','kills','deaths','assists'].includes(k));const a=stats([m]);keys.forEach((k,i)=>{if(row?.cells[i+5])row.cells[i+5].textContent=display(k,a[k])})}});
-(async()=>{try{for(const t of ['champions','skins','chromas','eternals','emotes','icons','titles','skinlines']){let r=await fetch('data/'+t+'.json');if(!r.ok)throw Error(t+' unavailable');let a=await r.json();D[t]=t==='eternals'?a.entries:a;if(!Array.isArray(D[t]))throw Error('Invalid '+t)}status.textContent='Catalogues loaded · Manual tracking mode';render()}catch(e){status.textContent='Loading failed: '+e.message+' — open via GitHub Pages, not file://.'}})();
+(async()=>{try{for(const t of ['champions','skins','chromas','eternals','emotes','icons','titles','skinlines']){let r=await fetch('data/'+t+'.json');if(!r.ok)throw Error(t+' unavailable');let a=await r.json();D[t]=t==='eternals'?a.entries:a;if(!Array.isArray(D[t]))throw Error('Invalid '+t)}installSpecialForms();let addedForms=0;for(const skin of formSkins())if(own('skins',skin))addedForms+=enrollOwnedCombination('skins',skin);if(addedForms)save();status.textContent='Catalogues loaded · Manual tracking mode';render()}catch(e){status.textContent='Loading failed: '+e.message+' — open via GitHub Pages, not file://.'}})();
 
 // Keep the horizontal control available while scrolling through long champion tables.
 function syncChallengeScroll(sc){
