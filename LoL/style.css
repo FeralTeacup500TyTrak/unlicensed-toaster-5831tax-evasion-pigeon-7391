@@ -96,3 +96,10 @@ details.challenge-champion.challenge-done > summary {color:#ffe0a0;}
 .match-challenge-slot .match-challenge-label{max-width:100%;display:block}
 .compact-match>summary>.match-kda{margin-left:auto;flex:none}
 @media(max-width:650px){.compact-match>summary{flex-wrap:wrap}.compact-match>summary>.match-caption{flex:1 1 calc(100% - 85px)}.match-challenge-slot{order:4;flex:1 0 100%;padding-left:60px;min-height:0}.compact-match>summary>.match-kda{margin-left:auto}}
+
+/* Manual per-challenge match entry */
+.manual-challenge{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:14px 0;background:var(--surface)}
+.manual-challenge>summary{cursor:pointer;font-weight:650;color:var(--mint)}
+.manual-challenge form{margin-top:14px}.manual-challenge .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.manual-challenge label{display:flex;flex-direction:column;gap:6px;font-size:13px}.manual-challenge input,.manual-challenge select{max-width:100%;box-sizing:border-box}
+.manual-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:14px 0}
